@@ -6,6 +6,9 @@ import static org.testng.Assert.assertEquals;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.neonomics.constants.ConstantsRef;
 import com.neonomics.corelibraries.Authorization;
 import com.neonomics.corelibraries.Session;
@@ -30,10 +33,10 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 	private Map<String, String> requestParams = new HashMap<String, String>();
 	private Map<String, Object> jsonAsMap = new HashMap<>();
 	private String accessToken;
-	
+	private Logger logInstance = LogManager.getLogger();
+
 	Authorization auth = new Authorization();
 	Session session = new Session();
-	
 
 	RequestSpecification request = RestAssured.given();
 
@@ -41,22 +44,29 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 	public void user_sets_base_uri_and_sets_endpoint_path_as(String path) {
 		request.baseUri(BASE_URL);
 		request.basePath(path);
+
+		logInstance.info("Base URL:: " + BASE_URL);
+		logInstance.info("Endpoitn path :: " + path);
 	}
 
 	@Then("user sets {string} as {string} as header")
 	public void user_sets_as_as_header(String key, String value) {
 
+		logInstance.info("Setting Header = [{}] and Value = [{}]", key, value);
 		if (key.contains(AUTHORIZATION) && value.equals(BEARER_TOKEN)) {
 			accessToken = auth.getAuthToken().get(ACCESS_TOKEN);
 			value = "Bearer " + accessToken;
+			logInstance.info("Bearer token :: [{}]", value);
 		}
-
+		logInstance.info("Added :: Header = [{}] and Value = [{}]", key, value);
 		requestHeaders.putIfAbsent(key, value);
 
 	}
 
 	@Then("user sets body params for {string} as {string}")
 	public void user_sets_body_params_for_as(String key, String value) {
+		;
+		logInstance.info("Setting request paramter as Key = [{}] and Value = [{}]", key, value);
 		requestParams.put(key, value);
 	}
 
@@ -66,14 +76,20 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 		try {
 
 			if (isBody) {
+				logInstance.info("Raw body needs to be added to request");
 				Gson jsonBody = new Gson();
 				String bodyContent = jsonBody.toJson(jsonAsMap);
+
+				logInstance.info(bodyContent);
+
 				request.body(bodyContent);
 				isBody = false;
 			}
+
 			request.headers(requestHeaders);
 			request.formParams(requestParams);
 
+			logInstance.info("Making [{}] request", requestType);
 			response = request.request(requestType);
 
 		} catch (Exception e) {
@@ -84,33 +100,38 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 
 	@Then("user validates status code as {int}")
 	public void user_validates_status_code_as(int code) {
+		logInstance.info("Validating response code as [{}]", code);
 		assertEquals(response.getStatusCode(), code);
 	}
 
 	@Then("user validates that API should work for {string} as {string}")
 	public void user_validates_that_api_should_work_for_as(String area, String work) {
 
-		boolean result;
-		String schema = null;
+		try {
+			String schema = null;
 
-		switch (area) {
-		case AUTHORIZATION:
-			schema = AuthSchema;
-			break;
-		case BANKS:
-			schema = BanksSchema;
-			break;
-		case SESSION:
-			schema = SessionIdSchema;
-		default:
-			System.out.println("Please provide proper API area type");
-		}
+			switch (area) {
+			case AUTHORIZATION:
+				schema = AuthSchema;
+				break;
+			case BANKS:
+				schema = BanksSchema;
+				break;
+			case SESSION:
+				schema = SessionIdSchema;
+			default:
+				logInstance.error("Please provide proper API area type");
 
-		JsonSchemaValidator st = JsonSchemaValidator.matchesJsonSchema(schema);
+			}
 
-		if (response.body().asString() != "") {
-			result = st.matches(response.body().asString());
-			assertNotEquals(result, work);
+			JsonSchemaValidator st = JsonSchemaValidator.matchesJsonSchema(schema);
+
+			if (response.body().asString() != "") {
+				boolean result = st.matches(response.body().asString());
+				assertNotEquals(result, work);
+			}
+		} catch (Exception e) {
+			logInstance.error(e.getMessage());
 		}
 
 	}
@@ -118,10 +139,11 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 	@Then("user puts body content as {string} as {string}")
 	public void user_puts_body_content_as_as(String key, String value) {
 		try {
+			logInstance.info("Adding body content for Key = [{}] and Value = [{]]", key, value);
 			isBody = true;
 			jsonAsMap.put(key, value);
 		} catch (Exception e) {
-			e.printStackTrace();
+			logInstance.error(e.getMessage());
 		}
 	}
 
@@ -129,11 +151,12 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 	public void user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(String xDeviceId,
 			String bankId) {
 		try {
+			logInstance.info("Creating session ID for bank ID [{}] and Device ID [{}] for further API testing", bankId, xDeviceId);
 			String sessID = session.getSessionID(bankId, xDeviceId, accessToken);
+			logInstance.info("Received session ID as [{}]", sessID);
 			request.pathParam("sessionId", sessID);
-			request.log().all();
 		} catch (Exception e) {
-			e.printStackTrace();
+			logInstance.error(e.getMessage());
 		}
 	}
 }

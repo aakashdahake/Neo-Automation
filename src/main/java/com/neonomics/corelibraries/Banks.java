@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
 
 import org.apache.http.HttpStatus;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,7 +23,7 @@ public class Banks extends Authorization implements Schemas{
 	
 	private static final String BASE_URL = ConfigManager.getInstance( ).getString("base_url");
 	private BankDataPOJO[] BankDB=null;
-	
+	private Logger logInstance = LogManager.getLogger();
 	
 	public Banks() {
         RestAssured.baseURI = BASE_URL;
@@ -42,10 +44,11 @@ public class Banks extends Authorization implements Schemas{
 				.assertThat().body(JsonSchemaValidator.matchesJsonSchema(BanksSchema))
 				.extract().body();
 		
+		logInstance.info("All banks information recieved Response::" + resp.asString());
 		try {	
 			BankDB = objMap.readValue(resp.asString(), BankDataPOJO[].class);
 		} catch (JsonMappingException e) {
-			e.printStackTrace();
+			logInstance.error(e.getMessage());
 		}
 		return BankDB;
 	}
@@ -54,14 +57,18 @@ public class Banks extends Authorization implements Schemas{
 	public BankDataPOJO getBankDetails(String bankName, String xDeviceID, String token) throws Exception {
 		
 		try {
+			logInstance.info("Getting information about bank [{}]", bankName);
+			
 			BankDataPOJO[] allBanks = getAllBanks(xDeviceID, token);
 			for(BankDataPOJO eachBank : allBanks) {
 				if(eachBank.getBankDisplayName().equalsIgnoreCase(bankName)){
+					logInstance.info("Found bank [{}] from all bank collection", eachBank.toString());
 					return eachBank;
 				}
 				}
+			logInstance.error("Did not find the requested bank info for [{}]", bankName);
 		} catch (Exception e) {
-			e.printStackTrace();
+			logInstance.error(e.getMessage());
 		}
 		return null;
 	}
@@ -69,9 +76,11 @@ public class Banks extends Authorization implements Schemas{
 	
 	public String getBankID(String bankName, String xDeviceID, String token) throws Exception {
 		
+		logInstance.info("Getting b=bank ID for bank [{}]", bankName);
 		BankDataPOJO bankInfo = getBankDetails(bankName,xDeviceID, token);
 		assertEquals(bankInfo.getBankDisplayName(), bankName);
 		if(bankInfo.getBankDisplayName().equals(bankName)) {
+			logInstance.info("Found bank ID as [{}]",bankInfo.getId());
 			assertNotEquals(bankInfo.getId(), null);
 			return bankInfo.getId();
 		}

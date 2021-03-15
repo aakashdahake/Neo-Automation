@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="20" time="11.155">
-    <testcase classname="API testing" name="Verity that Auth token API works for various combinations" time="2.033">
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="20" time="11.919">
+    <testcase classname="API testing" name="Verity that Auth token API works for various combinations" time="2.284">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
 Then user sets "Content-Type" as "application/x-www-form-urlencoded" as header.passed
 And user sets body params for "grant_type" as "client_credentials"..........passed
@@ -11,7 +11,7 @@ Then user validates status code as 200......................................pass
 Then user validates that API should work for "Authorization" as "true"......passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verity that Auth token API works for various combinations 2" time="0.212">
+    <testcase classname="API testing" name="Verity that Auth token API works for various combinations 2" time="0.223">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
 Then user sets "Content-Type" as "application/json" as header...............passed
 And user sets body params for "grant_type" as "client_credentials"..........passed
@@ -22,7 +22,7 @@ Then user validates status code as 510......................................pass
 Then user validates that API should work for "Authorization" as "false".....passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verity that Auth token API works for various combinations 3" time="0.43">
+    <testcase classname="API testing" name="Verity that Auth token API works for various combinations 3" time="0.41">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
 Then user sets "Content-Type" as "application/x-www-form-urlencoded" as header.passed
 And user sets body params for "grant_type" as "authorization_code"..........passed
@@ -33,7 +33,7 @@ Then user validates status code as 510......................................pass
 Then user validates that API should work for "Authorization" as "false".....passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verity that Auth token API works for various combinations 4" time="0.434">
+    <testcase classname="API testing" name="Verity that Auth token API works for various combinations 4" time="0.417">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
 Then user sets "Content-Type" as "application/x-www-form-urlencoded" as header.passed
 And user sets body params for "grant_type" as "client_credentials"..........passed
@@ -44,7 +44,7 @@ Then user validates status code as 510......................................pass
 Then user validates that API should work for "Authorization" as "false".....passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verity that Auth token API works for various combinations 5" time="0.406">
+    <testcase classname="API testing" name="Verity that Auth token API works for various combinations 5" time="0.427">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
 Then user sets "Content-Type" as "application/json" as header...............passed
 And user sets body params for "grant_type" as "client_credentials"..........passed
@@ -55,7 +55,7 @@ Then user validates status code as 510......................................pass
 Then user validates that API should work for "Authorization" as "false".....passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that Banks API works for various combinations" time="1.15">
+    <testcase classname="API testing" name="Verify that Banks API works for various combinations" time="1.138">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/banks"..........passed
 Then user sets "Accept" as "application/json" as header.....................passed
 And user sets "Authorization" as "Bearer Token" as header...................passed
@@ -65,7 +65,7 @@ Then user validates status code as 200......................................pass
 Then user validates that API should work for "Banks" as "true"..............passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that Banks API works for various combinations 2" time="0.437">
+    <testcase classname="API testing" name="Verify that Banks API works for various combinations 2" time="0.434">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/banksss"........passed
 Then user sets "Accept" as "application/json" as header.....................passed
 And user sets "Authorization" as "Bearer Token" as header...................passed
@@ -75,7 +75,7 @@ Then user validates status code as 510......................................pass
 Then user validates that API should work for "Banks" as "false".............passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that Banks API works for various combinations 3" time="0.177">
+    <testcase classname="API testing" name="Verify that Banks API works for various combinations 3" time="0.175">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/banks"..........passed
 Then user sets "Accept" as "application/json" as header.....................passed
 And user sets "Authorization" as "" as header...............................passed
@@ -85,7 +85,7 @@ Then user validates status code as 510......................................pass
 Then user validates that API should work for "Banks" as "false".............passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that Banks API works for various combinations 4" time="0.442">
+    <testcase classname="API testing" name="Verify that Banks API works for various combinations 4" time="0.418">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/banks"..........passed
 Then user sets "Accept" as "application/x-www-form-urlencoded" as header....passed
 And user sets "Authorization" as "Bearer Token" as header...................passed
@@ -95,7 +95,7 @@ Then user validates status code as 406......................................pass
 Then user validates that API should work for "Banks" as "false".............passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that Banks API works for various combinations 5" time="0.176">
+    <testcase classname="API testing" name="Verify that Banks API works for various combinations 5" time="0.395">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/banks"..........passed
 Then user sets "Accept" as "" as header.....................................passed
 And user sets "Authorization" as "" as header...............................passed
@@ -105,7 +105,7 @@ Then user validates status code as 510......................................pass
 Then user validates that API should work for "Banks" as "false".............passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations" time="0.421">
+    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations" time="0.436">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session"........passed
 Then user sets "Content-Type" as "application/json" as header...............passed
 And user sets "Authorization" as "Bearer Token" as header...................passed
@@ -116,7 +116,7 @@ Then user validates status code as 201......................................pass
 Then user validates that API should work for "Session" as "true"............passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations 2" time="0.428">
+    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations 2" time="0.417">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/sessioned"......passed
 Then user sets "Content-Type" as "application/json" as header...............passed
 And user sets "Authorization" as "Bearer Token" as header...................passed
@@ -127,7 +127,7 @@ Then user validates status code as 510......................................pass
 Then user validates that API should work for "Session" as "false"...........passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations 3" time="0.634">
+    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations 3" time="0.648">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session"........passed
 Then user sets "Content-Type" as "application/javascript" as header.........passed
 And user sets "Authorization" as "Bearer Token" as header...................passed
@@ -138,7 +138,7 @@ Then user validates status code as 520......................................pass
 Then user validates that API should work for "Session" as "false"...........passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations 4" time="0.404">
+    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations 4" time="0.435">
         <failure message="expected [401] but found [201]" type="java.lang.AssertionError"><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session"........passed
 Then user sets "Content-Type" as "application/json" as header...............passed
 And user sets "Authorization" as "" as header...............................passed
@@ -156,11 +156,11 @@ java.lang.AssertionError: expected [401] but found [201]
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:907)
 	at org.testng.Assert.assertEquals(Assert.java:917)
-	at stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(StepDefinitions_API_Test.java:86)
+	at stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(StepDefinitions_API_Test.java:104)
 	at ✽.user validates status code as 401(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/API_Tests.feature:48)
 ]]></failure>
     </testcase>
-    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations 5" time="0.39">
+    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations 5" time="0.405">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session"........passed
 Then user sets "Content-Type" as "application/json" as header...............passed
 And user sets "Authorization" as "Bearer Token" as header...................passed
@@ -171,7 +171,7 @@ Then user validates status code as 510......................................pass
 Then user validates that API should work for "Session" as "false"...........passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations" time="0.927">
+    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations" time="0.885">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session/{sessionId}".passed
 Then user sets "Accept" as "application/json" as header.....................passed
 And user sets "Authorization" as "Bearer Token" as header...................passed
@@ -181,7 +181,7 @@ When user makes "GET" request to endpoint...................................pass
 Then user validates status code as 200......................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations 2" time="0.594">
+    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations 2" time="0.604">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/sn/asa{sessionId}".passed
 Then user sets "Accept" as "application/json" as header.....................passed
 And user sets "Authorization" as "Bearer Token" as header...................passed
@@ -191,7 +191,7 @@ When user makes "GET" request to endpoint...................................pass
 Then user validates status code as 510......................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations 3" time="0.181">
+    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations 3" time="0.188">
         <failure message="1 expectation failed.&#10;Expected status code &lt;201&gt; but was &lt;510&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session/{sessionId}".passed
 Then user sets "Accept" as "application/json" as header.....................passed
 And user sets "Authorization" as "" as header...............................passed
@@ -240,12 +240,12 @@ Expected status code <201> but was <510>.
 	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
 	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
 	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
-	at com.neonomics.corelibraries.Session.getSessionID(Session.java:37)
-	at stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(StepDefinitions_API_Test.java:131)
+	at com.neonomics.corelibraries.Session.getSessionID(Session.java:33)
+	at stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(StepDefinitions_API_Test.java:155)
 	at ✽.user creates session ID with device id as "" and bankId as "anVzdG9iYW5rLnYxSlVTVE5PS0s=" and puts it in endpoint URI(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/API_Tests.feature:65)
 ]]></failure>
     </testcase>
-    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations 4" time="0.805">
+    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations 4" time="0.815">
         <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session/{sessionId}".passed
 Then user sets "Accept" as "application/x-www-form-urlencoded" as header....passed
 And user sets "Authorization" as "Bearer Token" as header...................passed
@@ -255,7 +255,7 @@ When user makes "GET" request to endpoint...................................pass
 Then user validates status code as 406......................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations 5" time="0.17">
+    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations 5" time="0.169">
         <failure message="1 expectation failed.&#10;Expected status code &lt;201&gt; but was &lt;510&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session/{sessionId}".passed
 Then user sets "Accept" as "" as header.....................................passed
 And user sets "Authorization" as "" as header...............................passed
@@ -302,8 +302,8 @@ Expected status code <201> but was <510>.
 	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
 	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
 	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
-	at com.neonomics.corelibraries.Session.getSessionID(Session.java:37)
-	at stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(StepDefinitions_API_Test.java:131)
+	at com.neonomics.corelibraries.Session.getSessionID(Session.java:33)
+	at stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(StepDefinitions_API_Test.java:155)
 	at ✽.user creates session ID with device id as "" and bankId as "anVzdG9iYW5rLnYxSlVTVE5PS0s=" and puts it in endpoint URI(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/API_Tests.feature:65)
 ]]></failure>
     </testcase>
