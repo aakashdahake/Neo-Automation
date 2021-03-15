@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="32ce6285-e63f-4f28-aa41-f0b8cc0c7484" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gRlz19UhtltQQb0mohdPOOtBlH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.48314607" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.TestPOSTPerson.testPOSTCreatePerson">
+    <configuration name="apidemo [clean,test]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="test" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestGETPerson.testGetAllpersons" type="TestNG" nameIsGenerated="true">
+      <module name="apidemo" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scrolltest.apidemo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.scrolltest.apidemo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.scrolltest.apidemo.tests.TestGETPerson" />
+      <option name="METHOD_NAME" value="testGetAllpersons" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGETPerson.testGetAllpersons" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apidemo" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scrolltest.apidemo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.scrolltest.apidemo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.scrolltest.apidemo.tests.TestGETPerson" />
+      <option name="METHOD_NAME" value="testGetAllpersons" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGETPerson.testGetAllpersons" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apidemo" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scrolltest.apidemo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.scrolltest.apidemo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.scrolltest.apidemo.tests.TestGETPerson" />
+      <option name="METHOD_NAME" value="testGetAllpersons" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGETPerson.testGetAllpersons" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apidemo" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scrolltest.apidemo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.scrolltest.apidemo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.scrolltest.apidemo.tests.TestGETPerson" />
+      <option name="METHOD_NAME" value="testGetAllpersons" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPOSTPerson.testPOSTCreatePerson" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apidemo" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scrolltest.apidemo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.scrolltest.apidemo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.scrolltest.apidemo.tests.TestPOSTPerson" />
+      <option name="METHOD_NAME" value="testPOSTCreatePerson" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPOSTPerson.testPOSTPerson" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="apidemo" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.scrolltest.apidemo.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.scrolltest.apidemo.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.scrolltest.apidemo.tests.TestPOSTPerson" />
+      <option name="METHOD_NAME" value="testPOSTPerson" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.apidemo [clean,test]" />
+      <item itemvalue="TestNG.TestGETPerson.testGetAllpersons" />
+      <item itemvalue="TestNG.TestPOSTPerson.testPOSTPerson" />
+      <item itemvalue="TestNG.TestPOSTPerson.testPOSTCreatePerson" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.TestPOSTPerson.testPOSTCreatePerson" />
+        <item itemvalue="TestNG.TestPOSTPerson.testPOSTPerson" />
+        <item itemvalue="TestNG.TestGETPerson.testGetAllpersons" />
+        <item itemvalue="TestNG.TestGETPerson.testGetAllpersons" />
+        <item itemvalue="TestNG.TestGETPerson.testGetAllpersons" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32ce6285-e63f-4f28-aa41-f0b8cc0c7484" name="Default Changelist" comment="" />
+      <created>1598085544893</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598085544893</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="186" y="179" width="1067" height="666" key="#Project_Structure" timestamp="1598362974606">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="186" y="179" width="1067" height="666" key="#Project_Structure/0.23.1680.978@0.23.1680.978" timestamp="1598362974606" />
+    <state x="304" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598620805647">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="304" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.978@0.23.1680.978" timestamp="1598620805647" />
+    <state x="653" y="207" key="#com.intellij.ide.util.MemberChooser" timestamp="1598588726348">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="653" y="207" key="#com.intellij.ide.util.MemberChooser/0.23.1680.978@0.23.1680.978" timestamp="1598588726348" />
+    <state x="578" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598245298142">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="578" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.978@0.23.1680.978" timestamp="1598245298142" />
+    <state width="1638" height="398" key="GridCell.Tab.0.bottom" timestamp="1598620852240">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state width="1638" height="398" key="GridCell.Tab.0.bottom/0.23.1680.978@0.23.1680.978" timestamp="1598620852240" />
+    <state width="1638" height="398" key="GridCell.Tab.0.center" timestamp="1598620852239">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state width="1638" height="398" key="GridCell.Tab.0.center/0.23.1680.978@0.23.1680.978" timestamp="1598620852239" />
+    <state width="1638" height="398" key="GridCell.Tab.0.left" timestamp="1598620852239">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state width="1638" height="398" key="GridCell.Tab.0.left/0.23.1680.978@0.23.1680.978" timestamp="1598620852239" />
+    <state width="1638" height="398" key="GridCell.Tab.0.right" timestamp="1598620852239">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state width="1638" height="398" key="GridCell.Tab.0.right/0.23.1680.978@0.23.1680.978" timestamp="1598620852239" />
+    <state width="1638" height="326" key="GridCell.Tab.1.bottom" timestamp="1598087631816">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state width="1638" height="326" key="GridCell.Tab.1.bottom/0.23.1680.978@0.23.1680.978" timestamp="1598087631816" />
+    <state width="1638" height="326" key="GridCell.Tab.1.center" timestamp="1598087631816">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state width="1638" height="326" key="GridCell.Tab.1.center/0.23.1680.978@0.23.1680.978" timestamp="1598087631816" />
+    <state width="1638" height="326" key="GridCell.Tab.1.left" timestamp="1598087631815">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state width="1638" height="326" key="GridCell.Tab.1.left/0.23.1680.978@0.23.1680.978" timestamp="1598087631815" />
+    <state width="1638" height="326" key="GridCell.Tab.1.right" timestamp="1598087631816">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state width="1638" height="326" key="GridCell.Tab.1.right/0.23.1680.978@0.23.1680.978" timestamp="1598087631816" />
+    <state x="505" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1598620353373">
+      <screen x="0" y="23" width="1680" height="978" />
+    </state>
+    <state x="505" y="238" width="670" height="676" key="search.everywhere.popup/0.23.1680.978@0.23.1680.978" timestamp="1598620353373" />
+  </component>
+</project>
