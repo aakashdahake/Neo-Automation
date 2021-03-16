@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-16T13:27:31.708Z",
+        "start_timestamp": "2021-03-16T14:50:35.149Z",
         "line": 3,
         "name": "User retrieves accounts from Justo Bank",
         "description": "",
@@ -13,19 +13,19 @@
         "steps": [
           {
             "result": {
-              "duration": 3204843400,
+              "duration": 4182092400,
               "status": "passed"
             },
             "line": 4,
             "name": "user gets authentication token for Neonomics platform",
             "match": {
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_gets_authentication_token_for_neonomics_platform()"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_gets_authetication_token_for_neonomics_platform()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 866959000,
+              "duration": 882312200,
               "status": "passed"
             },
             "line": 5,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 510334300,
+              "duration": 1515711700,
               "status": "passed"
             },
             "line": 6,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 500477800,
+              "duration": 646201300,
               "status": "passed"
             },
             "line": 7,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 6992607000,
+              "duration": 8355513900,
               "status": "passed"
             },
             "line": 8,
@@ -109,7 +109,7 @@
           },
           {
             "result": {
-              "duration": 557028300,
+              "duration": 736591400,
               "status": "passed"
             },
             "line": 9,
@@ -127,9 +127,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c204\u003e but was \u003c520\u003e.\n\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)\r\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)\r\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)\r\n\tat com.neonomics.corelibraries.Session.terminateSession(Session.java:58)\r\n\tat stepDefinition.StepDefinitions_Functional_Test.user_session_for(StepDefinitions_Functional_Test.java:93)\r\n\tat ✽.user \"delete\" session for \"Justo Bank\"(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/Get_All_Accounts.feature:10)\r\n",
-              "duration": 419647300,
-              "status": "failed"
+              "duration": 601881600,
+              "status": "passed"
             },
             "line": 10,
             "name": "user \"delete\" session for \"Justo Bank\"",
@@ -148,275 +147,10 @@
             },
             "keyword": "Then "
           }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T13:27:44.835Z",
-        "line": 12,
-        "name": "User retrives account details for a customer and transfer money to another user",
-        "description": "",
-        "id": "functional-testing;user-retrives-account-details-for-a-customer-and-transfer-money-to-another-user",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
+        ],
+        "tags": [
           {
-            "result": {
-              "duration": 500816000,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "user gets authentication token for Neonomics platform",
-            "match": {
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_gets_authentication_token_for_neonomics_platform()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 455345400,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "user retrieves bank ID for \"Justo Bank\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Justo Bank\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_retrieves_bank_id_for(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 411195400,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "user \"create\" session for \"Justo Bank\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"create\"",
-                  "offset": 5
-                },
-                {
-                  "val": "\"Justo Bank\"",
-                  "offset": 26
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_session_for(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 401437100,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "user validates session status for \"Justo Bank\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Justo Bank\"",
-                  "offset": 34
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_validates_session_status_for(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 403884100,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "user retrieves bank ID for \"Hizonti Bank\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Hizonti Bank\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_retrieves_bank_id_for(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 411721100,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "user \"create\" session for \"Hizonti Bank\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"create\"",
-                  "offset": 5
-                },
-                {
-                  "val": "\"Hizonti Bank\"",
-                  "offset": 26
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_session_for(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 439352300,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "user validates session status for \"Hizonti Bank\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Hizonti Bank\"",
-                  "offset": 34
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_validates_session_status_for(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 5666129800,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "user checks for \"Justo Bank\" consent and \"Accept\" if required provided redirect URL as \"\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Justo Bank\"",
-                  "offset": 16
-                },
-                {
-                  "val": "\"Accept\"",
-                  "offset": 41
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 87
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_checks_for_consent_and_if_required_provided_redirect_url_as(java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 6081031400,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "user checks for \"Hizonti Bank\" consent and \"Accept\" if required provided redirect URL as \"\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Hizonti Bank\"",
-                  "offset": 16
-                },
-                {
-                  "val": "\"Accept\"",
-                  "offset": 43
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 89
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_checks_for_consent_and_if_required_provided_redirect_url_as(java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2386612900,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "user transfer amount of \"5\" \"EUR\" from \"Justo Bank\" bank account \"IABN\" \"NO6404948998640\" to \"Hizonti Bank\" bank account \"NO4313081115656\" with \"sepa-credit\" payment method",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"5\"",
-                  "offset": 24
-                },
-                {
-                  "val": "\"EUR\"",
-                  "offset": 28
-                },
-                {
-                  "val": "\"Justo Bank\"",
-                  "offset": 39
-                },
-                {
-                  "val": "\"IABN\"",
-                  "offset": 65
-                },
-                {
-                  "val": "\"NO6404948998640\"",
-                  "offset": 72
-                },
-                {
-                  "val": "\"Hizonti Bank\"",
-                  "offset": 93
-                },
-                {
-                  "val": "\"NO4313081115656\"",
-                  "offset": 121
-                },
-                {
-                  "val": "\"sepa-credit\"",
-                  "offset": 144
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_transfer_amount_of_from_bank_account_to_bank_account_with_payment_method(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "user validates payment request is initiated",
-            "match": {
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_validates_payment_request_is_initiated()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "user authorizes the the payment and obtains authorization URL",
-            "match": {
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_authorizes_the_the_payment_and_obtains_authorization_url()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "user authorizes process using authorization URL",
-            "match": {
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_authorizes_process_using_authorization_url()"
-            },
-            "keyword": "Then "
+            "name": "@test"
           }
         ]
       }

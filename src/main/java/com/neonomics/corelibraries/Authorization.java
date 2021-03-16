@@ -25,14 +25,19 @@ public class Authorization implements Schemas, ConstantsRef {
 	private static final String CLIENT_SECRET = ConfigManager.getInstance().getString("client_secret");
 	private Logger logInstance = LogManager.getLogger();
 
+	/**
+	 * Instantiates a new authorization.
+	 */
 	public Authorization() {
 		RestAssured.baseURI = BASE_URL;
 	}
 
-	public static void send_Post_Request() {
 
-	}
-
+	/**
+	 * Gets the auth token.
+	 *
+	 * @return the auth token
+	 */
 	public HashMap<String, String> getAuthToken() {
 
 		HashMap<String, String> keySet = new HashMap<>();

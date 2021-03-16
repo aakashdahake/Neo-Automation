@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/java/featureFiles/Get_All_Accounts.feature", glue = "stepDefinition", plugin = {
+@CucumberOptions(features = "src/test/java/featureFiles/Get_All_Accounts.feature", glue = "stepDefinition", tags = "@test", plugin = {
 		"pretty", "json:test-output/cucumber.json", "junit:test-output/cucumber.xml",
 		"html:test-output/Accounts.html" }, publish = true, monochrome = true, dryRun = false)
 

@@ -1,5 +1,5 @@
 Feature: Functional testing
-
+	@test
   Scenario: User retrieves accounts from Justo Bank
     Given user gets authentication token for Neonomics platform
     Then user retrieves bank ID for "Justo Bank"

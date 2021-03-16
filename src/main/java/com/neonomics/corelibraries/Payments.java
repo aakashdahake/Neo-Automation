@@ -20,13 +20,13 @@ public class Payments implements Schemas{
 	
 	private Logger logInstance = LogManager.getLogger();
 	
-	public HashMap<String, String> initiateSEPAPayment(PaymentRequestPOJO payData, Map<String, String> heder) {
+	public HashMap<String, String> initiateSEPAPayment(PaymentRequestPOJO payData, Map<String, String> headData) {
 
 		HashMap<String, String> paymentStatus = new HashMap<String, String>();
 		Response resp =  RestAssured.given()
 						.accept(ContentType.JSON)
 						.contentType(ContentType.JSON)
-						.headers(heder)
+						.headers(headData)
 						.body(payData)
 						.post(Endpoints.SEPA_CREDIT_PAYMENT).then()
 						.assertThat().statusCode(HttpStatus.SC_CREATED)

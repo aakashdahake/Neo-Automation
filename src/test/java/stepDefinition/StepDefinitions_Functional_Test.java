@@ -44,8 +44,9 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 	private HashMap<String, String> header = new HashMap<String, String>();
 	private HashMap<String, String> paymentResponseData = new HashMap<String, String>();
 
+	
 	@Given("user gets authentication token for Neonomics platform")
-	public void user_gets_authentication_token_for_neonomics_platform() {
+	public void user_gets_authetication_token_for_neonomics_platform() {
 
 		try {
 			token = auth.getAuthToken();
@@ -88,11 +89,13 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 				logInstance.info("Recieved session ID as [{}]", sessId);
 				sessionIDS.put(bankName, sessId);
 				break;
+				
 			case SESSION_DELETE:
 				logInstance.info("Deleting session for bank [{}]", bankName);
-				session.terminateSession(bankIDS.get(bankName), header);
-				logInstance.info("Deleted session ID as [{}]", bankIDS.get(bankName));
+				session.terminateSession( sessionIDS.get(bankName), header);
+				logInstance.info("Deleted session ID as [{}]", sessionIDS.get(bankName));
 				break;
+				
 			default:
 				logInstance.error("Please provide proper action, it should be [create] or [delete]!!");
 
@@ -144,9 +147,16 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 				logInstance.info("Bank [{}] requires PSU ID, provided PSU ID [{}]", bankName, XPSUID);
 				psuID = XPSUID;
 			}
-
+			
+			header.clear();
+			header.put(AUTHORIZATION, "Bearer " + token.get(ACCESS_TOKEN));
+			header.put(X_DEVICE_ID, XDEVICEID);
+			header.put(X_REDIRECT_URL, redirectURL);
+			header.put(X_SESSION_ID, sessionIDS.get(bankName));
+			header.put(X_PSU_ID, psuID);
+			
 			logInstance.info("Handling bank consent");
-			account.handleBankConsent(sessionIDS.get(bankName), XDEVICEID, token.get(ACCESS_TOKEN), action, psuID, redirectURL);
+			account.handleBankConsent(header, action);
 
 		} catch (Exception e) {
 			logInstance.error(e.getMessage());

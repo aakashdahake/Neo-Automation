@@ -30,14 +30,15 @@ public class Accounts implements Schemas, ConstantsRef {
 	private ObjectMapper objMap = new ObjectMapper();
 	private Logger logInstance = LogManager.getLogger();
 
+	/**
+	 * Instantiates a new accounts.
+	 */
 	public Accounts() {
 		RestAssured.baseURI = BASE_URL;
 	}
 
-	private String getConsentWebURL(String consentURI, String xDeviceID, String token, String psuID,
-			String redirectURL) {
-		Response resp = RestAssured.given().contentType(ContentType.JSON).header(AUTHORIZATION, "Bearer " + token)
-				.header(X_DEVICE_ID, xDeviceID).header("x-psu-id", psuID).header(X_REDIRECT_URL, redirectURL).when()
+	private String getConsentWebURL(String consentURI, HashMap<String, String> headData) {
+		Response resp = RestAssured.given().contentType(ContentType.JSON).headers(headData).when()
 				.get(consentURI).then().assertThat().statusCode(HttpStatus.SC_OK).assertThat()
 				.body(JsonSchemaValidator.matchesJsonSchema(ConsentResponseSchema)).extract().response();
 		
@@ -45,12 +46,11 @@ public class Accounts implements Schemas, ConstantsRef {
 		return resp.jsonPath().getString("links.href[0]");
 	}
 
-	private void handleConsent(String consentURL, String xDeviceID, String token, String action, String psuID,
-			String redirectURL) {
+	private void handleConsent(String consentURL, HashMap<String, String> headData, String action) {
 
 		HandleConsentUI handleUI = new HandleConsentUI();
 
-		String webURL = getConsentWebURL(consentURL, xDeviceID, token, psuID, redirectURL);
+		String webURL = getConsentWebURL(consentURL, headData);
 		assertNotEquals(webURL, null);
 		
         logInstance.info("Consent Web URL [{}] and user action [{}]", webURL, action);
@@ -58,12 +58,9 @@ public class Accounts implements Schemas, ConstantsRef {
 
 	}
 
-	public void handleBankConsent(String sessionID, String xDeviceID, String token, String action, String psuID,
-			String redirectURL) {
+	public void handleBankConsent(HashMap<String, String> headData, String action) {
 
-		Response resp = RestAssured.given().header("Accept", ContentType.JSON).header(AUTHORIZATION, "Bearer " + token)
-				.header(X_DEVICE_ID, xDeviceID).header("x-session-id", sessionID).header("x-psu-id", psuID)
-				.header(X_REDIRECT_URL, redirectURL).when().get(Endpoints.GET_ACCOUNTS).then().extract().response();
+		Response resp = RestAssured.given().header("Accept", ContentType.JSON).headers(headData).when().get(Endpoints.GET_ACCOUNTS).then().extract().response();
 		
 		// Handling consent required
 		if (resp.jsonPath().getString("errorCode").contains(String.valueOf(1426))
@@ -73,7 +70,7 @@ public class Accounts implements Schemas, ConstantsRef {
 			logInstance.info("Bank consent is needed, therefore invoking consent handling mechenism using Web URL");
 			
 			assertThat(resp.body().asString(), JsonSchemaValidator.matchesJsonSchema(ConsentRequiredSchema));
-			handleConsent(resp.jsonPath().getString("links.href[0]"), xDeviceID, token, action, psuID, redirectURL);
+			handleConsent(resp.jsonPath().getString("links.href[0]"), headData, action);
 		}
 	}
 

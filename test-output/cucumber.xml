@@ -1,74 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="30.454">
-    <testcase classname="Functional testing" name="User retrieves accounts from Justo Bank" time="13.108">
-        <failure message="1 expectation failed.&#10;Expected status code &lt;204&gt; but was &lt;520&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[Given user gets authentication token for Neonomics platform.................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="17.131">
+    <testcase classname="Functional testing" name="User retrieves accounts from Justo Bank" time="16.976">
+        <system-out><![CDATA[Given user gets authentication token for Neonomics platform.................passed
 Then user retrieves bank ID for "Justo Bank"................................passed
 Then user "create" session for "Justo Bank".................................passed
 And user validates session status for "Justo Bank"..........................passed
 Then user checks for "Justo Bank" consent and "Accept" if required provided redirect URL as "".passed
 And user fetches all accounts from "Justo Bank".............................passed
-Then user "delete" session for "Justo Bank".................................failed
-
-StackTrace:
-java.lang.AssertionError: 1 expectation failed.
-Expected status code <204> but was <520>.
-
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
-	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
-	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
-	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
-	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
-	at com.neonomics.corelibraries.Session.terminateSession(Session.java:58)
-	at stepDefinition.StepDefinitions_Functional_Test.user_session_for(StepDefinitions_Functional_Test.java:93)
-	at ✽.user "delete" session for "Justo Bank"(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/Get_All_Accounts.feature:10)
-]]></failure>
-    </testcase>
-    <testcase classname="Functional testing" name="User retrives account details for a customer and transfer money to another user" time="17.162">
-        <system-out><![CDATA[Given user gets authentication token for Neonomics platform.................passed
-Then user retrieves bank ID for "Justo Bank"................................passed
-Then user "create" session for "Justo Bank".................................passed
-And user validates session status for "Justo Bank"..........................passed
-Then user retrieves bank ID for "Hizonti Bank"..............................passed
-Then user "create" session for "Hizonti Bank"...............................passed
-And user validates session status for "Hizonti Bank"........................passed
-Then user checks for "Justo Bank" consent and "Accept" if required provided redirect URL as "".passed
-Then user checks for "Hizonti Bank" consent and "Accept" if required provided redirect URL as "".passed
-Then user transfer amount of "5" "EUR" from "Justo Bank" bank account "IABN" "NO6404948998640" to "Hizonti Bank" bank account "NO4313081115656" with "sepa-credit" payment method.passed
-And user validates payment request is initiated.............................passed
-Then user authorizes the the payment and obtains authorization URL..........passed
-Then user authorizes process using authorization URL........................passed
+Then user "delete" session for "Justo Bank".................................passed
 ]]></system-out>
     </testcase>
 </testsuite>
