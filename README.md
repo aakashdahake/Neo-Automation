@@ -51,7 +51,7 @@ Scenario Outline: Verity that Auth token API works for various combinations
     Then user validates that API should work for "Authorization" as "<ShouldWork>"
 
 Examples: 
-| **ContentType**                       | **GrantType**          | **ClientID**    | **ClientSecretID** | **ExpectedStatusCode** | **ShouldWork** |
+| ContentType                       | GrantType          | ClientID    | ClientSecretID | ExpectedStatusCode | ShouldWork |
 | application/x-www-form-urlencoded | client_credentials | valid       | valid          |                200 | true       |
 | application/json                  | client_credentials | valid       | valid          |                510 | false      |
 | application/x-www-form-urlencoded | authorization_code | valid       | valid          |                510 | false      |
