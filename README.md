@@ -6,7 +6,7 @@
 Scenario 1 : Tests functional flow to retrieve all accounts from "Justo Bank"
 
 Scenario: User retrieves accounts from Justo Bank
-    Given user gets authentication token for Neonomics platform
+    Given user gets authetication token for Neonomics platform
     Then user retrieves bank ID for "Justo Bank"
     Then user "create" session for "Justo Bank"
     And user validates session status for "Justo Bank"
@@ -20,8 +20,8 @@ Scenario: User retrieves accounts from Justo Bank
 ```
 Scenario 2 : Initiates payment from an account of Justo bank to Hizonti bank 
 
-Scenario: User retrieves account details for a customer and transfer money to another user
-    Given user gets authentication token for Neonomics platform
+Scenario: User retrives account details for a customer and transfer money to another user
+    Given user gets authetication token for Neonomics platform
     Then user retrieves bank ID for "Justo Bank"
     Then user "create" session for "Justo Bank"
     And user validates session status for "Justo Bank"
@@ -62,6 +62,9 @@ Examples:
 - **Functional Tests** focuses on funtional test of API for expected implementation usage, designed with Scenario
 - **API Tests** focus on testing Neonomics API for various suuny and rainy days scenarios and its functionality on API level
 
+### Framework overview
+- This is a hybrid maven based framework that uses Rest-Assured Java DSL library, Selenium (lilttle UI part), TestNG, JNUnit and Cucumber (Gherkin)
+
 ### Prerequisites
 - Java version 1.8.0_251
 - Chrome version 89.0.4389.90
@@ -74,13 +77,20 @@ To run these files, we need to run test Runner class created (package = src/test
 These runner clases provides glue between feature file and step definition file.
 To tun specific feature file, **Right click > Run as > JUnit test** or **Right Click feature file > Run as > Cucumber Feature**
 
+### Reports
+##### 4 type of reports are being created under **/test-ouput** folder
+  1 Accounts.html
+  2 API_Tests.html
+  3 Cucumber.xml
+  4 Cucumber.json
+
 ### Future Implementation needed
 - More data validation mechenism for accounts
 - More API to be part of suite for complete test
 
 
 
-## Author
+### Author
 ##### Aakash Dahake
 ##### 16/03/2021
 
