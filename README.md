@@ -63,7 +63,7 @@ Examples:
 - **API Tests** focus on testing Neonomics API for various suuny and rainy days scenarios and its functionality on API level
 
 ### Framework overview
-- This is a hybrid maven based framework that uses Rest-Assured Java DSL library, Selenium (lilttle UI part), TestNG, JNUnit and Cucumber (Gherkin)
+- This is a hybrid maven based framework that uses Rest-Assured Java DSL library, Selenium (lilttle UI part), TestNG, JUnit and Cucumber (Gherkin)
 
 ### Prerequisites
 - Java version 1.8.0_251
