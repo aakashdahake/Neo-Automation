@@ -21,11 +21,12 @@ import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
+/**
+ * @author Aakash
+ *
+ */
 public class Accounts implements Schemas, ConstantsRef {
 
-	private static final String X_DEVICE_ID = "x-device-id";
-	private static final String X_REDIRECT_URL = "x-redirect-url";
-	private static final String AUTHORIZATION = "Authorization";
 	private static final String BASE_URL = ConfigManager.getInstance().getString("base_url");
 	private ObjectMapper objMap = new ObjectMapper();
 	private Logger logInstance = LogManager.getLogger();
@@ -37,6 +38,13 @@ public class Accounts implements Schemas, ConstantsRef {
 		RestAssured.baseURI = BASE_URL;
 	}
 
+	/**
+	 * Gets the consent web URL.
+	 *
+	 * @param consentURI the consent URI
+	 * @param headData the head data
+	 * @return the consent web URL
+	 */
 	private String getConsentWebURL(String consentURI, HashMap<String, String> headData) {
 		Response resp = RestAssured.given().contentType(ContentType.JSON).headers(headData).when()
 				.get(consentURI).then().assertThat().statusCode(HttpStatus.SC_OK).assertThat()
@@ -46,6 +54,13 @@ public class Accounts implements Schemas, ConstantsRef {
 		return resp.jsonPath().getString("links.href[0]");
 	}
 
+	/**
+	 * Handle consent.
+	 *
+	 * @param consentURL the consent URL
+	 * @param headData the head data
+	 * @param action the action
+	 */
 	private void handleConsent(String consentURL, HashMap<String, String> headData, String action) {
 
 		HandleConsentUI handleUI = new HandleConsentUI();
@@ -58,6 +73,12 @@ public class Accounts implements Schemas, ConstantsRef {
 
 	}
 
+	/**
+	 * Handle bank consent.
+	 *
+	 * @param headData the head data
+	 * @param action the action
+	 */
 	public void handleBankConsent(HashMap<String, String> headData, String action) {
 
 		Response resp = RestAssured.given().header("Accept", ContentType.JSON).headers(headData).when().get(Endpoints.GET_ACCOUNTS).then().extract().response();
@@ -74,6 +95,12 @@ public class Accounts implements Schemas, ConstantsRef {
 		}
 	}
 
+	/**
+	 * Gets the accounts from bank.
+	 *
+	 * @param headData the head data
+	 * @return the accounts from bank
+	 */
 	public AccountDataPOJO[] getAccountsFromBank(HashMap<String, String> headData){
 		
 		logInstance.info("Retrieving list of accounts with session ID provided as [{}]", headData.get(X_SESSION_ID));
@@ -89,6 +116,14 @@ public class Accounts implements Schemas, ConstantsRef {
 		return accountDetails;
 	}
 
+	/**
+	 * Validate account belong to bank.
+	 *
+	 * @param headData the head data
+	 * @param accNoType the acc no type
+	 * @param accNumber the acc number
+	 * @return the boolean
+	 */
 	public Boolean validateAccountBelongToBank(HashMap<String, String> headData, String accNoType,
 			String accNumber) {
 

@@ -17,6 +17,13 @@ public class HandleConsentUI extends WebDriverManager implements ConstantsRef {
 	private static final String username = ConfigManager.getInstance( ).getString("username");
 	private static final String password = ConfigManager.getInstance( ).getString("password");
 	
+	/**
+	 * Gets the consent via web.
+	 *
+	 * @param consentURL- the consent URL
+	 * @param action - Accept/Decline
+	 * @return the consent via web
+	 */
 	public void getConsentViaWeb(String consentURL, String action) {
 		
 		logInstance.info("Getting consent via Web page");

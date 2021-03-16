@@ -65,6 +65,7 @@ Feature: API testing
     Then user creates session ID with device id as "<XDeviceID>" and bankId as "anVzdG9iYW5rLnYxSlVTVE5PS0s=" and puts it in endpoint URI
     When user makes "GET" request to endpoint
     Then user validates status code as <ExpectedStatusCode>
+    Then user validates that API should work for "SessionStatus" as "<ShouldWork>
 
     Examples: 
       | Endpoint                    | ContentType                       | Bearer Token | XDeviceID                 | ExpectedStatusCode | ShouldWork |

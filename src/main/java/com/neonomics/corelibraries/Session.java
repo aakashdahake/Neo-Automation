@@ -19,17 +19,16 @@ public class Session extends Authorization {
 	private static final String BASE_URL = ConfigManager.getInstance().getString("base_url");
 	private Logger logInstance = LogManager.getLogger();
 
-	/**
-	 * 
-	 */
 	public Session() {
 		RestAssured.baseURI = BASE_URL;
 	}
 
 	/**
-	 * @param bankID
-	 * @param headData
-	 * @return
+	 * Gets the session ID.
+	 *
+	 * @param bankID the bank ID
+	 * @param headData the head data
+	 * @return the session ID
 	 */
 	public String getSessionID(String bankID, HashMap<String, String> headData) {
 
@@ -44,10 +43,13 @@ public class Session extends Authorization {
 
 	}
 
+
 	/**
-	 * @param sessionID
-	 * @param headData
-	 * @return
+	 * Gets the session status.
+	 *
+	 * @param sessionID the session ID
+	 * @param headData the head data
+	 * @return the session status
 	 */
 	public HashMap<String, String> getSessionStatus(String sessionID, HashMap<String, String> headData) {
 
@@ -62,9 +64,12 @@ public class Session extends Authorization {
 		return bankInfo;
 	}
 
+	
 	/**
-	 * @param sessionID
-	 * @param headData
+	 * Terminate session.
+	 *
+	 * @param sessionID the session ID
+	 * @param headData the head data
 	 */
 	public void terminateSession(String sessionID, HashMap<String, String> headData) {
 

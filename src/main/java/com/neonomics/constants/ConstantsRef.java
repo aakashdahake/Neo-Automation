@@ -1,9 +1,6 @@
 package com.neonomics.constants;
 
-// TODO: Auto-generated Javadoc
-/**
- * The Interface ConstantsRef.
- */
+
 public interface ConstantsRef {
 	
 
@@ -51,6 +48,9 @@ public interface ConstantsRef {
 	
 	/** The Constant SESSION. */
 	public static final String SESSION = "Session";
+	
+	/** The Constant SESSION_STATUS. */
+	public static final String SESSION_STATUS = "SessionStatus";
 	
 	/** The Constant BEARER_TOKEN. */
 	public static final String BEARER_TOKEN = "Bearer Token";

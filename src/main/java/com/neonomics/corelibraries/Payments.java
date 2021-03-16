@@ -18,8 +18,16 @@ import io.restassured.response.Response;
 
 public class Payments implements Schemas{
 	
+
 	private Logger logInstance = LogManager.getLogger();
 	
+	/**
+	 * Initiate SEPA payment.
+	 *
+	 * @param payData the payload data
+	 * @param headData the header data
+	 * @return the hash map of status and payment Id
+	 */
 	public HashMap<String, String> initiateSEPAPayment(PaymentRequestPOJO payData, Map<String, String> headData) {
 
 		HashMap<String, String> paymentStatus = new HashMap<String, String>();
@@ -38,4 +46,12 @@ public class Payments implements Schemas{
 		return paymentStatus;
 		
 	}
+	
+	
+	
+	/**
+	
+	Methods for Domestic transfer and Scheduled domestic transfer
+	
+	*/
 }

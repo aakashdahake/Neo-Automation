@@ -45,8 +45,8 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 		request.baseUri(BASE_URL);
 		request.basePath(path);
 
-		logInstance.info("Base URL:: " + BASE_URL);
-		logInstance.info("Endpoitn path :: " + path);
+		logInstance.info("Base URL [{}]", BASE_URL);
+		logInstance.info("Endpoint path [{}]", path);
 	}
 
 	@Then("user sets {string} as {string} as header")
@@ -65,7 +65,6 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 
 	@Then("user sets body params for {string} as {string}")
 	public void user_sets_body_params_for_as(String key, String value) {
-		;
 		logInstance.info("Setting request paramter as Key = [{}] and Value = [{}]", key, value);
 		requestParams.put(key, value);
 	}
@@ -93,7 +92,7 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 			response = request.request(requestType);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			logInstance.error(e.getMessage());
 		}
 
 	}
@@ -119,9 +118,10 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 				break;
 			case SESSION:
 				schema = SessionIdSchema;
+			case SESSION_STATUS:
+				schema = SessionStatusSchema;
 			default:
 				logInstance.error("Please provide proper API area type");
-
 			}
 
 			JsonSchemaValidator st = JsonSchemaValidator.matchesJsonSchema(schema);

@@ -31,6 +31,13 @@ public class Banks extends Authorization implements Schemas {
 		RestAssured.baseURI = BASE_URL;
 	}
 
+	/**
+	 * Gets the all banks.
+	 *
+	 * @param headData the head data
+	 * @return the all banks
+	 * @throws Exception the exception
+	 */
 	public BankDataPOJO[] getAllBanks(HashMap<String, String> headData) throws Exception {
 
 		ObjectMapper objMap = new ObjectMapper();
@@ -47,6 +54,14 @@ public class Banks extends Authorization implements Schemas {
 		return BankDB;
 	}
 
+	/**
+	 * Gets the bank details.
+	 *
+	 * @param bankName the bank name
+	 * @param header the header
+	 * @return the bank details
+	 * @throws Exception the exception
+	 */
 	public BankDataPOJO getBankDetails(String bankName, HashMap<String, String> header) throws Exception {
 
 		try {
@@ -65,6 +80,14 @@ public class Banks extends Authorization implements Schemas {
 		return null;
 	}
 
+	/**
+	 * Gets the bank ID.
+	 *
+	 * @param bankName the bank name
+	 * @param headData the head data
+	 * @return the bank ID
+	 * @throws Exception the exception
+	 */
 	public String getBankID(String bankName, HashMap<String, String> headData) throws Exception {
 
 		String bankId = null;
@@ -82,6 +105,14 @@ public class Banks extends Authorization implements Schemas {
 
 	}
 
+	/**
+	 * Validate supported payment type for bank.
+	 *
+	 * @param bankName the bank name
+	 * @param headData the head data
+	 * @param paymentType the payment type
+	 * @return the boolean
+	 */
 	public Boolean validateSupportedPaymentTypeForBank(String bankName, HashMap<String, String> headData, String paymentType) {
 		Boolean isSupported = false;
 

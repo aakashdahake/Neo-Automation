@@ -24,6 +24,11 @@ public class WebDriverManager {
 	}
  
 
+	/**
+	 * Creates the webdriver driver instance.
+	 *
+	 * @return the web driver instance
+	 */
 	public WebDriver createDriver() {
 		
 		switch (driverType) {	    
@@ -44,6 +49,9 @@ public class WebDriverManager {
 		return driver;
 	}
  
+	/**
+	 * Close driver and quit driver instance
+	 */
 	public void closeDriver() {
 		driver.close();
 		driver.quit();
