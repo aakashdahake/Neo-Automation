@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
 import com.neonomics.constants.ConstantsRef;
 import com.neonomics.corelibraries.Authorization;
 import com.neonomics.corelibraries.Session;
-import com.neonomics.model.Schemas;
+import com.neonomics.model.responseschema.Schemas;
 import com.neonomics.utils.ConfigManager;
 
 import io.cucumber.java.en.Given;
@@ -151,8 +151,12 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 	public void user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(String xDeviceId,
 			String bankId) {
 		try {
+			HashMap<String, String> header = new HashMap<>();
+			header.put(AUTHORIZATION, accessToken);
+			header.put(X_DEVICE_ID, xDeviceId);
+			
 			logInstance.info("Creating session ID for bank ID [{}] and Device ID [{}] for further API testing", bankId, xDeviceId);
-			String sessID = session.getSessionID(bankId, xDeviceId, accessToken);
+			String sessID = session.getSessionID(bankId, header);
 			logInstance.info("Received session ID as [{}]", sessID);
 			request.pathParam("sessionId", sessID);
 		} catch (Exception e) {

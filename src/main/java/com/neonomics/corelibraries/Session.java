@@ -23,28 +23,26 @@ public class Session extends Authorization {
 		RestAssured.baseURI = BASE_URL;
 	}
 
-	public String getSessionID(String bankID, String xDeviceID, String token) {
+	public String getSessionID(String bankID, HashMap<String, String> headData) {
 
 		HashMap<String, String> payload = new HashMap<String, String>();
 		payload.put("bankId", bankID);
 
-		Response resp = (Response) RestAssured.given().contentType(ContentType.JSON)
-				.header("Authorization", "Bearer " + token).header("x-device-id", xDeviceID).body(payload).when()
-				.post(Endpoints.CREATE_SESSION_ID).then().assertThat().statusCode(HttpStatus.SC_CREATED).assertThat()
-				.body(JsonSchemaValidator.matchesJsonSchema(SessionIdSchema)).extract().body();
+		Response resp = RestAssured.given().contentType(ContentType.JSON).headers(headData).body(payload).when()
+				.post(Endpoints.CREATE_SESSION_ID).then().assertThat().statusCode(HttpStatus.SC_CREATED).assertThat().body(JsonSchemaValidator.matchesJsonSchema(SessionIdSchema)).extract()
+				.response();
 
 		logInstance.info("Response recieved for getting session ID ::" + resp.asString());
 		return resp.jsonPath().get("sessionId");
 
 	}
 
-	public HashMap<String, String> getSessionStatus(String sessionID, String xDeviceID, String token) {
+	public HashMap<String, String> getSessionStatus(String sessionID, HashMap<String, String> headData) {
 
 		HashMap<String, String> bankInfo = new HashMap<String, String>();
-		Response resp = (Response) RestAssured.given().accept(ContentType.JSON).pathParam("sessionId", sessionID)
-				.header("Authorization", "Bearer " + token).header("x-device-id", xDeviceID)
-				.get(Endpoints.SESSION_STATUS).then().assertThat().statusCode(HttpStatus.SC_OK).assertThat()
-				.body(JsonSchemaValidator.matchesJsonSchema(SessionStatusSchema)).extract().body();
+		Response resp = RestAssured.given().accept(ContentType.JSON).pathParam("sessionId", sessionID).headers(headData)
+				.get(Endpoints.SESSION_STATUS).then().assertThat().statusCode(HttpStatus.SC_OK).assertThat().body(JsonSchemaValidator.matchesJsonSchema(SessionStatusSchema)).extract()
+				.response();
 
 		logInstance.info("Response recieved for getting current session status ::" + resp.asString());
 		bankInfo.put(BANK_NAME, resp.jsonPath().get(BANK_NAME));
@@ -53,12 +51,11 @@ public class Session extends Authorization {
 		return bankInfo;
 	}
 
-	public void terminateSession(String sessionID, String xDeviceID, String token) {
+	public void terminateSession(String sessionID,HashMap<String, String> headData ) {
 
 		logInstance.info("Terminating session for session ID [{}]", sessionID);
-		RestAssured.given().accept(ContentType.JSON).header("Authorization", "Bearer " + token)
-				.header("x-device-id", xDeviceID).pathParam("sessionId", sessionID).delete(Endpoints.SESSION_STATUS)
-				.then().assertThat().statusCode(HttpStatus.SC_NO_CONTENT).extract().body();
+		RestAssured.given().accept(ContentType.JSON).headers(headData).pathParam("sessionId", sessionID)
+				.delete(Endpoints.SESSION_STATUS).then().assertThat().statusCode(HttpStatus.SC_NO_CONTENT);
 
 		logInstance.info("Terminated session for session ID [{}]", sessionID);
 

@@ -27,7 +27,7 @@ public class HandleConsentUI extends WebDriverManager implements ConstantsRef {
 		//Access Consent Webpage
 		logInstance.info("Opening link in browser::[{}]", consentURL);
 		driver.get(consentURL);
-		assertEquals(driver.getTitle(), LOGINPAGETITLE);
+		assertEquals(driver.getTitle().contains(LOGINPAGETITLE), true);
 		
 		//Enter Username
 		logInstance.info("Entering username in consent page as [{}]",username);

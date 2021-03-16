@@ -1,7 +1,6 @@
 package com.neonomics.corelibraries;
 
 import static org.junit.Assert.assertNotEquals;
-import static org.testng.Assert.assertEquals;
 
 import java.util.HashMap;
 
@@ -11,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.neonomics.constants.ConstantsRef;
 import com.neonomics.constants.Endpoints;
-import com.neonomics.model.Schemas;
+import com.neonomics.model.responseschema.Schemas;
 import com.neonomics.utils.ConfigManager;
 
 import io.restassured.RestAssured;
@@ -38,24 +37,24 @@ public class Authorization implements Schemas, ConstantsRef {
 
 		HashMap<String, String> keySet = new HashMap<>();
 
-		Response resp = (Response) RestAssured.given().contentType(ContentType.URLENC.withCharset("UTF-8"))
+		Response resp = RestAssured.given().contentType(ContentType.URLENC.withCharset("UTF-8"))
 				.formParam("grant_type", CLIENT_CREDENTIALS).formParam("client_id", CLIENT_ID)
 				.formParam("client_secret", CLIENT_SECRET).when().post(Endpoints.GET_TOKEN).then().assertThat()
 				.body(JsonSchemaValidator.matchesJsonSchema(AuthSchema)).assertThat().statusCode(HttpStatus.SC_OK)
-				.extract().body();
-		
+				.extract().response();
+
 		logInstance.info("Response recieved for auth API ::" + resp.asString());
-		assertEquals(resp.jsonPath().get("access_token").toString().length(), 1191);
+
 		assertNotEquals(resp.jsonPath().get("access_token"), null);
 		assertNotEquals(resp.jsonPath().get("refresh_token"), null);
-		
+
 		keySet.put(ACCESS_TOKEN, resp.jsonPath().get("access_token"));
 		keySet.put(REFRESH_TOKEN, resp.jsonPath().get("refresh_token"));
 
 		return keySet;
 
 	}
-	
-	/////Refresh token library - to be implemented
+
+	///// Refresh token library - to be implemented
 
 }

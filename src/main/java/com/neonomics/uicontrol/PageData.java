@@ -34,7 +34,7 @@ public class PageData implements ConstantsRef {
 	@FindBy(xpath = "//input[@id = 'kc-cancel' and @type='submit' and @name='cancel']") 
 	private WebElement submitDecline;
 	
-	@FindBy(xpath = "//a[contains(text(),'You have successfully granted consent to JUSTNOKK')]") 
+	@FindBy(xpath = "//a[contains(text(),'You have successfully granted consent to')]") 
 	private WebElement confirmText;
 	
 	public void enterUserName() {
@@ -58,7 +58,7 @@ public class PageData implements ConstantsRef {
 	}
 	
 	public void confirmConsentGranted() {
-		assertEquals(confirmText.getText(), CONFIRMCONSENTTEXT);
+		assertEquals(confirmText.getText().contains(CONFIRMCONSENTTEXT), true);
 	}
 
 }

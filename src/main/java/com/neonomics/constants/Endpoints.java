@@ -10,4 +10,7 @@ public class Endpoints {
 		public static final String SESSION_STATUS = "/ics/v3/session/{sessionId}";
 		public static final String GET_CONSENT = "/ics/v3/consent/{sessionId}";
 		public static final String GET_ACCOUNTS = "/ics/v3/accounts";
+		public static final String SEPA_CREDIT_PAYMENT = "/ics/v3/payments/sepa-credit";
+		
+		
 }
