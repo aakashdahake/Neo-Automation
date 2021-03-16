@@ -44,8 +44,8 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 	private HashMap<String, String> header = new HashMap<String, String>();
 	private HashMap<String, String> paymentResponseData = new HashMap<String, String>();
 
-	@Given("user gets authetication token for Neonomics platform")
-	public void user_gets_authetication_token_for_neonomics_platform() {
+	@Given("user gets authentication token for Neonomics platform")
+	public void user_gets_authentication_token_for_neonomics_platform() {
 
 		try {
 			token = auth.getAuthToken();
