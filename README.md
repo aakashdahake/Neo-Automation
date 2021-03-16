@@ -75,7 +75,7 @@ Examples:
 Funtional tests and API test are kept in two different feature files.
 To run these files, we need to run test Runner class created (package = src/test/java/testRunner)
 These runner clases provides glue between feature file and step definition file.
-To tun specific feature file, **Right click > Run as > JUnit test** or **Right Click feature file > Run as > Cucumber Feature**
+To run specific feature file, **Right click > Run as > JUnit test** or **Right Click feature file > Run as > Cucumber Feature**
 
 ### Reports
 ##### 4 type of reports are being created under **/test-ouput** folder
