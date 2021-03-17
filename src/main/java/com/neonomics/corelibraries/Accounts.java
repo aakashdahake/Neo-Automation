@@ -46,9 +46,15 @@ public class Accounts implements Schemas, ConstantsRef {
 	 * @return the consent web URL
 	 */
 	private String getConsentWebURL(String consentURI, HashMap<String, String> headData) {
-		Response resp = RestAssured.given().contentType(ContentType.JSON).headers(headData).when()
-				.get(consentURI).then().assertThat().statusCode(HttpStatus.SC_OK).assertThat()
-				.body(JsonSchemaValidator.matchesJsonSchema(ConsentResponseSchema)).extract().response();
+		Response resp = RestAssured.given()
+						.contentType(ContentType.JSON)
+						.headers(headData)
+						.when()
+						.get(consentURI)
+						.then()
+						.assertThat().statusCode(HttpStatus.SC_OK)
+						.assertThat().body(JsonSchemaValidator.matchesJsonSchema(ConsentResponseSchema))
+						.extract().response();
 		
 		logInstance.info("Found consent web URL [{}]",resp.jsonPath().getString("links.href[0]"));
 		return resp.jsonPath().getString("links.href[0]");
@@ -81,7 +87,13 @@ public class Accounts implements Schemas, ConstantsRef {
 	 */
 	public void handleBankConsent(HashMap<String, String> headData, String action) {
 
-		Response resp = RestAssured.given().header("Accept", ContentType.JSON).headers(headData).when().get(Endpoints.GET_ACCOUNTS).then().extract().response();
+		Response resp = RestAssured.given()
+						.header("Accept", ContentType.JSON)
+						.headers(headData)
+						.when()
+						.get(Endpoints.GET_ACCOUNTS)
+						.then()
+						.extract().response();
 		
 		// Handling consent required
 		if (resp.jsonPath().getString("errorCode").contains(String.valueOf(1426))
@@ -105,8 +117,13 @@ public class Accounts implements Schemas, ConstantsRef {
 		
 		logInstance.info("Retrieving list of accounts with session ID provided as [{}]", headData.get(X_SESSION_ID));
 		AccountDataPOJO[] accountDetails = null;
-		Response resp = RestAssured.given().header("Accept", ContentType.JSON).headers(headData).when().get(Endpoints.GET_ACCOUNTS)
-				.then().assertThat().extract().response();
+		Response resp = RestAssured.given()
+						.header("Accept", ContentType.JSON)
+						.headers(headData)
+						.when()
+						.get(Endpoints.GET_ACCOUNTS)
+						.then()
+						.extract().response();
 
 		try {
 			accountDetails = objMap.readValue(resp.asString(), AccountDataPOJO[].class);

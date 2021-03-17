@@ -42,11 +42,17 @@ public class Authorization implements Schemas, ConstantsRef {
 
 		HashMap<String, String> keySet = new HashMap<>();
 
-		Response resp = RestAssured.given().contentType(ContentType.URLENC.withCharset("UTF-8"))
-				.formParam("grant_type", CLIENT_CREDENTIALS).formParam("client_id", CLIENT_ID)
-				.formParam("client_secret", CLIENT_SECRET).when().post(Endpoints.GET_TOKEN).then().assertThat()
-				.body(JsonSchemaValidator.matchesJsonSchema(AuthSchema)).assertThat().statusCode(HttpStatus.SC_OK)
-				.extract().response();
+		Response resp = RestAssured.given()
+						.contentType(ContentType.URLENC.withCharset("UTF-8"))
+						.formParam("grant_type", CLIENT_CREDENTIALS)
+						.formParam("client_id", CLIENT_ID)
+						.formParam("client_secret", CLIENT_SECRET).when()
+						.post(Endpoints.GET_TOKEN)
+						.then()
+						.assertThat()
+						.body(JsonSchemaValidator.matchesJsonSchema(AuthSchema))
+						.assertThat().statusCode(HttpStatus.SC_OK)
+						.extract().response();
 
 		logInstance.info("Response recieved for auth API ::" + resp.asString());
 

@@ -42,8 +42,15 @@ public class Banks extends Authorization implements Schemas {
 
 		ObjectMapper objMap = new ObjectMapper();
 
-		Response resp = RestAssured.given().accept(ContentType.JSON).headers(headData).when().get(Endpoints.GET_BANKS).then().assertThat().statusCode(HttpStatus.SC_OK).assertThat()
-				.body(JsonSchemaValidator.matchesJsonSchema(BanksSchema)).extract().response();
+		Response resp = RestAssured.given()
+						.accept(ContentType.JSON)
+						.headers(headData)
+						.when()
+						.get(Endpoints.GET_BANKS)
+						.then()
+						.assertThat().statusCode(HttpStatus.SC_OK)
+						.assertThat().body(JsonSchemaValidator.matchesJsonSchema(BanksSchema))
+						.extract().response();
 
 		logInstance.info("All banks information recieved Response::" + resp.asString());
 		try {
