@@ -65,6 +65,11 @@ Examples:
 ### Framework overview
 - This is a hybrid maven based framework that uses Rest-Assured Java DSL library, Selenium (lilttle UI part), TestNG, JUnit and Cucumber (Gherkin)
 
+### Future Implementation needed
+- Data validation of response (Headers, ContentiType and Response time)
+- More data validation mechenism for accounts
+- More API to be part of suite for complete test
+
 ### Prerequisites
 - Java version 1.8.0_251
 - Chrome version 89.0.4389.90
@@ -82,7 +87,6 @@ password= = <Neonomics login password for bank login, to obtain consent>
 ```
 _Note : These settings are placed for temperory purpose, one should have test data file seperatly in future_
 
-
 ### Running the tests
 **Given scenario is automated using selenium cucumber. Gherkin language is used in cucumber for these scenario.**
 Funtional tests and API test are kept in two different feature files.
@@ -97,9 +101,7 @@ To tun specific feature file, **Right click > Run as > JUnit test** or **Right C
   3 Cucumber.xml
   4 Cucumber.json
 
-### Future Implementation needed
-- More data validation mechenism for accounts
-- More API to be part of suite for complete test
+
 
 
 
