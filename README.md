@@ -66,7 +66,7 @@ Examples:
 - This is a hybrid maven based framework that uses Rest-Assured Java DSL library, Selenium (lilttle UI part), TestNG, JUnit and Cucumber (Gherkin)
 
 ### Future Implementation needed
-- Data validation of response (Headers, ContentiType and Response time)
+- Data validation of response (Headers, Content-Type and Response time)
 - More data validation mechenism for accounts
 - More API to be part of suite for complete test
 
