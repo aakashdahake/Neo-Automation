@@ -254,6 +254,7 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 
 				paymentResponseData = payment.initiateSEPAPayment(payReqBody, header);
 				logInstance.info("Payment initiation Response data [{}]", paymentResponseData);
+				
 			}
 
 		} catch (Exception e) {

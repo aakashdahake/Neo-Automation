@@ -1,5 +1,7 @@
 package com.neonomics.corelibraries;
 
+import static org.junit.Assert.assertNotEquals;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,6 +42,8 @@ public class Payments implements Schemas{
 						.assertThat().statusCode(HttpStatus.SC_CREATED)
 						.assertThat().body(JsonSchemaValidator.matchesJsonSchema(PaymentInitiatedResponseSchema)).extract().response();
 		logInstance.info("Response for SEPA payyment initiation :: "+ resp.asString());
+		assertNotEquals(resp.jsonPath().get("paymentId"), null);
+		assertNotEquals(resp.jsonPath().get("status"), null);
 		paymentStatus.put("paymentId", resp.jsonPath().getString("paymentId"));
 		paymentStatus.put("status", resp.jsonPath().getString("status"));
 		

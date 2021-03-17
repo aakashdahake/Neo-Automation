@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-17T04:37:50.798Z",
+        "start_timestamp": "2021-03-17T10:00:22.898Z",
         "line": 3,
         "name": "User retrieves accounts from Justo Bank",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2426913200,
+              "duration": 2154583100,
               "status": "passed"
             },
             "line": 4,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 321116200,
+              "duration": 280753600,
               "status": "passed"
             },
             "line": 5,
@@ -43,7 +43,7 @@
           },
           {
             "result": {
-              "duration": 306557200,
+              "duration": 346233300,
               "status": "passed"
             },
             "line": 6,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 246674500,
+              "duration": 1001720500,
               "status": "passed"
             },
             "line": 7,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 6526267100,
+              "duration": 4806293000,
               "status": "passed"
             },
             "line": 8,
@@ -109,7 +109,7 @@
           },
           {
             "result": {
-              "duration": 412444300,
+              "duration": 238335500,
               "status": "passed"
             },
             "line": 9,
@@ -127,7 +127,7 @@
           },
           {
             "result": {
-              "duration": 206521300,
+              "duration": 208637600,
               "status": "passed"
             },
             "line": 10,
@@ -155,7 +155,7 @@
         ]
       },
       {
-        "start_timestamp": "2021-03-17T04:38:01.303Z",
+        "start_timestamp": "2021-03-17T10:00:31.995Z",
         "line": 12,
         "name": "User initiates payment and transfer money to another user in another bank",
         "description": "",
@@ -165,7 +165,7 @@
         "steps": [
           {
             "result": {
-              "duration": 300825500,
+              "duration": 234581600,
               "status": "passed"
             },
             "line": 13,
@@ -177,7 +177,7 @@
           },
           {
             "result": {
-              "duration": 233054200,
+              "duration": 215044500,
               "status": "passed"
             },
             "line": 14,
@@ -195,7 +195,7 @@
           },
           {
             "result": {
-              "duration": 208058600,
+              "duration": 226449900,
               "status": "passed"
             },
             "line": 15,
@@ -217,7 +217,7 @@
           },
           {
             "result": {
-              "duration": 233403000,
+              "duration": 213991200,
               "status": "passed"
             },
             "line": 16,
@@ -235,7 +235,7 @@
           },
           {
             "result": {
-              "duration": 223508000,
+              "duration": 197257200,
               "status": "passed"
             },
             "line": 17,
@@ -253,7 +253,7 @@
           },
           {
             "result": {
-              "duration": 223590400,
+              "duration": 180158600,
               "status": "passed"
             },
             "line": 18,
@@ -275,7 +275,7 @@
           },
           {
             "result": {
-              "duration": 241941900,
+              "duration": 223789100,
               "status": "passed"
             },
             "line": 19,
@@ -293,7 +293,7 @@
           },
           {
             "result": {
-              "duration": 4646188300,
+              "duration": 4700822300,
               "status": "passed"
             },
             "line": 20,
@@ -319,7 +319,7 @@
           },
           {
             "result": {
-              "duration": 4746580700,
+              "duration": 4427477200,
               "status": "passed"
             },
             "line": 21,
@@ -345,8 +345,9 @@
           },
           {
             "result": {
-              "duration": 1523035800,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: Values should be different. Actual: null\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.failEquals(Assert.java:185)\r\n\tat org.junit.Assert.assertNotEquals(Assert.java:161)\r\n\tat org.junit.Assert.assertNotEquals(Assert.java:175)\r\n\tat com.neonomics.corelibraries.Payments.initiateSEPAPayment(Payments.java:45)\r\n\tat stepDefinition.StepDefinitions_Functional_Test.user_transfer_amount_of_from_bank_account_to_bank_account_with_payment_method(StepDefinitions_Functional_Test.java:255)\r\n\tat ✽.user transfer amount of \"5\" \"EUR\" from \"Justo Bank\" bank account \"IABN\" \"NO6404948998640\" to \"Hizonti Bank\" bank account \"NO4313081115656\" with \"sepa-credit\" payment method(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/Get_All_Accounts.feature:22)\r\n",
+              "duration": 1729896900,
+              "status": "failed"
             },
             "line": 22,
             "name": "user transfer amount of \"5\" \"EUR\" from \"Justo Bank\" bank account \"IABN\" \"NO6404948998640\" to \"Hizonti Bank\" bank account \"NO4313081115656\" with \"sepa-credit\" payment method",
@@ -391,8 +392,7 @@
           },
           {
             "result": {
-              "duration": 1200400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 23,
             "name": "user validates payment request is initiated",
@@ -403,7 +403,7 @@
           },
           {
             "result": {
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 24,
             "name": "user authorizes the the payment and obtains authorization URL",
@@ -414,7 +414,7 @@
           },
           {
             "result": {
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 25,
             "name": "user authorizes process using authorization URL",
@@ -425,8 +425,7 @@
           },
           {
             "result": {
-              "duration": 195897000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 26,
             "name": "user \"delete\" session for \"Justo Bank\"",
@@ -447,8 +446,8 @@
           },
           {
             "result": {
-              "duration": 201450800,
-              "status": "passed"
+              "duration": 998500,
+              "status": "skipped"
             },
             "line": 27,
             "name": "user \"delete\" session for \"Hizonti Bank\"",

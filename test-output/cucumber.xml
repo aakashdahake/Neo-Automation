@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="23.641">
-    <testcase classname="Functional testing" name="User retrieves accounts from Justo Bank" time="10.491">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="21.595">
+    <testcase classname="Functional testing" name="User retrieves accounts from Justo Bank" time="9.084">
         <system-out><![CDATA[Given user gets authentication token for Neonomics platform.................passed
 Then user retrieves bank ID for "Justo Bank"................................passed
 Then user "create" session for "Justo Bank".................................passed
@@ -10,8 +10,8 @@ And user fetches all accounts from "Justo Bank".............................pass
 Then user "delete" session for "Justo Bank".................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Functional testing" name="User initiates payment and transfer money to another user in another bank" time="12.983">
-        <system-out><![CDATA[Given user gets authentication token for Neonomics platform.................passed
+    <testcase classname="Functional testing" name="User initiates payment and transfer money to another user in another bank" time="12.357">
+        <failure message="Values should be different. Actual: null" type="java.lang.AssertionError"><![CDATA[Given user gets authentication token for Neonomics platform.................passed
 Then user retrieves bank ID for "Justo Bank"................................passed
 Then user "create" session for "Justo Bank".................................passed
 And user validates session status for "Justo Bank"..........................passed
@@ -20,12 +20,22 @@ Then user "create" session for "Hizonti Bank"...............................pass
 And user validates session status for "Hizonti Bank"........................passed
 Then user checks for "Justo Bank" consent and "Accept" if required provided redirect URL as "".passed
 Then user checks for "Hizonti Bank" consent and "Accept" if required provided redirect URL as "".passed
-Then user transfer amount of "5" "EUR" from "Justo Bank" bank account "IABN" "NO6404948998640" to "Hizonti Bank" bank account "NO4313081115656" with "sepa-credit" payment method.passed
-And user validates payment request is initiated.............................passed
-Then user authorizes the the payment and obtains authorization URL..........passed
-Then user authorizes process using authorization URL........................passed
-Then user "delete" session for "Justo Bank".................................passed
-Then user "delete" session for "Hizonti Bank"...............................passed
-]]></system-out>
+Then user transfer amount of "5" "EUR" from "Justo Bank" bank account "IABN" "NO6404948998640" to "Hizonti Bank" bank account "NO4313081115656" with "sepa-credit" payment method.failed
+And user validates payment request is initiated.............................skipped
+Then user authorizes the the payment and obtains authorization URL..........skipped
+Then user authorizes process using authorization URL........................skipped
+Then user "delete" session for "Justo Bank".................................skipped
+Then user "delete" session for "Hizonti Bank"...............................skipped
+
+StackTrace:
+java.lang.AssertionError: Values should be different. Actual: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failEquals(Assert.java:185)
+	at org.junit.Assert.assertNotEquals(Assert.java:161)
+	at org.junit.Assert.assertNotEquals(Assert.java:175)
+	at com.neonomics.corelibraries.Payments.initiateSEPAPayment(Payments.java:45)
+	at stepDefinition.StepDefinitions_Functional_Test.user_transfer_amount_of_from_bank_account_to_bank_account_with_payment_method(StepDefinitions_Functional_Test.java:255)
+	at ✽.user transfer amount of "5" "EUR" from "Justo Bank" bank account "IABN" "NO6404948998640" to "Hizonti Bank" bank account "NO4313081115656" with "sepa-credit" payment method(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/Get_All_Accounts.feature:22)
+]]></failure>
     </testcase>
 </testsuite>
