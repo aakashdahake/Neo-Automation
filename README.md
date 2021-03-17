@@ -20,7 +20,7 @@ Scenario: User retrieves accounts from Justo Bank
 ```
 Scenario 2 : Initiates payment from an account of Justo bank to Hizonti bank 
 
-Scenario: User retrives account details for a customer and transfer money to another user
+Scenario: User initiates payment and transfer money to another user in another bank
     Given user gets authetication token for Neonomics platform
     Then user retrieves bank ID for "Justo Bank"
     Then user "create" session for "Justo Bank"
