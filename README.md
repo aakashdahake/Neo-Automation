@@ -60,7 +60,7 @@ Examples:
 ```
 ### Explanation
 - **Functional Tests** focuses on funtional test of API for expected implementation usage, designed with Scenario
-- **API Tests** focus on testing Neonomics API for various suuny and rainy days scenarios and its functionality on API level designed with Scenario outline
+- **API Tests** focus on testing Neonomics API for various sunny and rainy days scenarios and its functionality on API level designed with Scenario outline
 
 ### Framework overview
 - This is a hybrid maven based framework that uses Rest-Assured Java DSL library, Selenium (lilttle UI part), TestNG, JUnit and Cucumber (Gherkin)
