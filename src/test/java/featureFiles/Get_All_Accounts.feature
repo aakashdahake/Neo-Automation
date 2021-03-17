@@ -9,7 +9,7 @@ Feature: Functional testing
     And user fetches all accounts from "Justo Bank"
     Then user "delete" session for "Justo Bank"
 
-  Scenario: User retrives account details for a customer and transfer money to another user
+  Scenario: User initiates payment and transfer money to another user in another bank
     Given user gets authentication token for Neonomics platform
     Then user retrieves bank ID for "Justo Bank"
     Then user "create" session for "Justo Bank"
