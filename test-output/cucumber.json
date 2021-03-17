@@ -3,3381 +3,478 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-16T17:08:42.447Z",
-        "line": 16,
-        "name": "Verity that Auth token API works for various combinations",
+        "start_timestamp": "2021-03-17T04:37:50.798Z",
+        "line": 3,
+        "name": "User retrieves accounts from Justo Bank",
         "description": "",
-        "id": "api-testing;verity-that-auth-token-api-works-for-various-combinations;;2",
+        "id": "functional-testing;user-retrieves-accounts-from-justo-bank",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 695653500,
+              "duration": 2426913200,
               "status": "passed"
             },
-            "line": 5,
-            "name": "user sets base URI and sets endpoint path as \"/auth/realms/sandbox/protocol/openid-connect/token\"",
+            "line": 4,
+            "name": "user gets authentication token for Neonomics platform",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"/auth/realms/sandbox/protocol/openid-connect/token\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_gets_authetication_token_for_neonomics_platform()"
             },
             "keyword": "Given "
           },
           {
             "result": {
+              "duration": 321116200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user retrieves bank ID for \"Justo Bank\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Justo Bank\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_retrieves_bank_id_for(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 306557200,
               "status": "passed"
             },
             "line": 6,
-            "name": "user sets \"Content-Type\" as \"application/x-www-form-urlencoded\" as header",
+            "name": "user \"create\" session for \"Justo Bank\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Content-Type\"",
-                  "offset": 10
+                  "val": "\"create\"",
+                  "offset": 5
                 },
                 {
-                  "val": "\"application/x-www-form-urlencoded\"",
-                  "offset": 28
+                  "val": "\"Justo Bank\"",
+                  "offset": 26
                 }
               ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_session_for(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
+              "duration": 246674500,
               "status": "passed"
             },
             "line": 7,
-            "name": "user sets body params for \"grant_type\" as \"client_credentials\"",
+            "name": "user validates session status for \"Justo Bank\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"grant_type\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"client_credentials\"",
-                  "offset": 42
+                  "val": "\"Justo Bank\"",
+                  "offset": 34
                 }
               ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_validates_session_status_for(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1001800,
+              "duration": 6526267100,
               "status": "passed"
             },
             "line": 8,
-            "name": "user sets body params for \"client_id\" as \"b2b640b5-c68c-4cb0-863b-20f1aec8af21\"",
+            "name": "user checks for \"Justo Bank\" consent and \"Accept\" if required provided redirect URL as \"\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"client_id\"",
-                  "offset": 26
+                  "val": "\"Justo Bank\"",
+                  "offset": 16
                 },
                 {
-                  "val": "\"b2b640b5-c68c-4cb0-863b-20f1aec8af21\"",
+                  "val": "\"Accept\"",
                   "offset": 41
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user sets body params for \"client_secret\" as \"0b83fb21-56f8-45fd-bad8-7a59d6bd978e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"client_secret\"",
-                  "offset": 26
                 },
                 {
-                  "val": "\"0b83fb21-56f8-45fd-bad8-7a59d6bd978e\"",
-                  "offset": 45
+                  "val": "\"\"",
+                  "offset": 87
                 }
               ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1212412800,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user makes \"POST\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"POST\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1990700,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user validates status code as 200",
-            "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_checks_for_consent_and_if_required_provided_redirect_url_as(java.lang.String,java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 280050000,
+              "duration": 412444300,
               "status": "passed"
             },
-            "line": 12,
-            "name": "user validates that API should work for \"Authorization\" as \"true\"",
+            "line": 9,
+            "name": "user fetches all accounts from \"Justo Bank\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Authorization\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"true\"",
-                  "offset": 59
+                  "val": "\"Justo Bank\"",
+                  "offset": 31
                 }
               ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_fetches_all_accounts_from(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 206521300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user \"delete\" session for \"Justo Bank\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"delete\"",
+                  "offset": 5
+                },
+                {
+                  "val": "\"Justo Bank\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_session_for(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@authAPI"
+            "name": "@test"
           }
         ]
       },
       {
-        "start_timestamp": "2021-03-16T17:08:44.712Z",
-        "line": 17,
-        "name": "Verity that Auth token API works for various combinations",
+        "start_timestamp": "2021-03-17T04:38:01.303Z",
+        "line": 12,
+        "name": "User initiates payment and transfer money to another user in another bank",
         "description": "",
-        "id": "api-testing;verity-that-auth-token-api-works-for-various-combinations;;3",
+        "id": "functional-testing;user-initiates-payment-and-transfer-money-to-another-user-in-another-bank",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1000900,
+              "duration": 300825500,
               "status": "passed"
             },
-            "line": 5,
-            "name": "user sets base URI and sets endpoint path as \"/auth/realms/sandbox/protocol/openid-connect/token\"",
+            "line": 13,
+            "name": "user gets authentication token for Neonomics platform",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"/auth/realms/sandbox/protocol/openid-connect/token\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_gets_authetication_token_for_neonomics_platform()"
             },
             "keyword": "Given "
           },
           {
             "result": {
+              "duration": 233054200,
               "status": "passed"
             },
-            "line": 6,
-            "name": "user sets \"Content-Type\" as \"application/json\" as header",
+            "line": 14,
+            "name": "user retrieves bank ID for \"Justo Bank\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Content-Type\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/json\"",
-                  "offset": 28
+                  "val": "\"Justo Bank\"",
+                  "offset": 27
                 }
               ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_retrieves_bank_id_for(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1000600,
+              "duration": 208058600,
               "status": "passed"
             },
-            "line": 7,
-            "name": "user sets body params for \"grant_type\" as \"client_credentials\"",
+            "line": 15,
+            "name": "user \"create\" session for \"Justo Bank\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"grant_type\"",
-                  "offset": 26
+                  "val": "\"create\"",
+                  "offset": 5
                 },
                 {
-                  "val": "\"client_credentials\"",
-                  "offset": 42
+                  "val": "\"Justo Bank\"",
+                  "offset": 26
                 }
               ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_session_for(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 233403000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user validates session status for \"Justo Bank\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Justo Bank\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_validates_session_status_for(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
+              "duration": 223508000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "user sets body params for \"client_id\" as \"b2b640b5-c68c-4cb0-863b-20f1aec8af21\"",
+            "line": 17,
+            "name": "user retrieves bank ID for \"Hizonti Bank\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"client_id\"",
-                  "offset": 26
+                  "val": "\"Hizonti Bank\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_retrieves_bank_id_for(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 223590400,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user \"create\" session for \"Hizonti Bank\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"create\"",
+                  "offset": 5
                 },
                 {
-                  "val": "\"b2b640b5-c68c-4cb0-863b-20f1aec8af21\"",
+                  "val": "\"Hizonti Bank\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_session_for(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 241941900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user validates session status for \"Hizonti Bank\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Hizonti Bank\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_validates_session_status_for(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4646188300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user checks for \"Justo Bank\" consent and \"Accept\" if required provided redirect URL as \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Justo Bank\"",
+                  "offset": 16
+                },
+                {
+                  "val": "\"Accept\"",
                   "offset": 41
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user sets body params for \"client_secret\" as \"0b83fb21-56f8-45fd-bad8-7a59d6bd978e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"client_secret\"",
-                  "offset": 26
                 },
                 {
-                  "val": "\"0b83fb21-56f8-45fd-bad8-7a59d6bd978e\"",
-                  "offset": 45
+                  "val": "\"\"",
+                  "offset": 87
                 }
               ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 205546000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user makes \"POST\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"POST\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user validates status code as 510",
-            "match": {
-              "arguments": [
-                {
-                  "val": "510",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_checks_for_consent_and_if_required_provided_redirect_url_as(java.lang.String,java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 7998800,
+              "duration": 4746580700,
               "status": "passed"
             },
-            "line": 12,
-            "name": "user validates that API should work for \"Authorization\" as \"false\"",
+            "line": 21,
+            "name": "user checks for \"Hizonti Bank\" consent and \"Accept\" if required provided redirect URL as \"\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Authorization\"",
-                  "offset": 40
+                  "val": "\"Hizonti Bank\"",
+                  "offset": 16
                 },
                 {
-                  "val": "\"false\"",
-                  "offset": 59
+                  "val": "\"Accept\"",
+                  "offset": 43
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 89
                 }
               ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_checks_for_consent_and_if_required_provided_redirect_url_as(java.lang.String,java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@authAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:44.938Z",
-        "line": 18,
-        "name": "Verity that Auth token API works for various combinations",
-        "description": "",
-        "id": "api-testing;verity-that-auth-token-api-works-for-various-combinations;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 999800,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user sets base URI and sets endpoint path as \"/auth/realms/sandbox/protocol/openid-connect/token\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/auth/realms/sandbox/protocol/openid-connect/token\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1000600,
+              "duration": 1523035800,
               "status": "passed"
             },
-            "line": 6,
-            "name": "user sets \"Content-Type\" as \"application/x-www-form-urlencoded\" as header",
+            "line": 22,
+            "name": "user transfer amount of \"5\" \"EUR\" from \"Justo Bank\" bank account \"IABN\" \"NO6404948998640\" to \"Hizonti Bank\" bank account \"NO4313081115656\" with \"sepa-credit\" payment method",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Content-Type\"",
-                  "offset": 10
+                  "val": "\"5\"",
+                  "offset": 24
                 },
                 {
-                  "val": "\"application/x-www-form-urlencoded\"",
+                  "val": "\"EUR\"",
                   "offset": 28
+                },
+                {
+                  "val": "\"Justo Bank\"",
+                  "offset": 39
+                },
+                {
+                  "val": "\"IABN\"",
+                  "offset": 65
+                },
+                {
+                  "val": "\"NO6404948998640\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"Hizonti Bank\"",
+                  "offset": 93
+                },
+                {
+                  "val": "\"NO4313081115656\"",
+                  "offset": 121
+                },
+                {
+                  "val": "\"sepa-credit\"",
+                  "offset": 144
                 }
               ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_transfer_amount_of_from_bank_account_to_bank_account_with_payment_method(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
+              "duration": 1200400,
               "status": "passed"
             },
-            "line": 7,
-            "name": "user sets body params for \"grant_type\" as \"authorization_code\"",
+            "line": 23,
+            "name": "user validates payment request is initiated",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"grant_type\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"authorization_code\"",
-                  "offset": 42
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_validates_payment_request_is_initiated()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1000200,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user sets body params for \"client_id\" as \"b2b640b5-c68c-4cb0-863b-20f1aec8af21\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"client_id\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"b2b640b5-c68c-4cb0-863b-20f1aec8af21\"",
-                  "offset": 41
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user sets body params for \"client_secret\" as \"0b83fb21-56f8-45fd-bad8-7a59d6bd978e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"client_secret\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"0b83fb21-56f8-45fd-bad8-7a59d6bd978e\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 689706900,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user makes \"POST\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"POST\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user validates status code as 510",
-            "match": {
-              "arguments": [
-                {
-                  "val": "510",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2999900,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "user validates that API should work for \"Authorization\" as \"false\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"false\"",
-                  "offset": 59
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@authAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:45.644Z",
-        "line": 19,
-        "name": "Verity that Auth token API works for various combinations",
-        "description": "",
-        "id": "api-testing;verity-that-auth-token-api-works-for-various-combinations;;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1014500,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user sets base URI and sets endpoint path as \"/auth/realms/sandbox/protocol/openid-connect/token\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/auth/realms/sandbox/protocol/openid-connect/token\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "user sets \"Content-Type\" as \"application/x-www-form-urlencoded\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Content-Type\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/x-www-form-urlencoded\"",
-                  "offset": 28
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1016700,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user sets body params for \"grant_type\" as \"client_credentials\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"grant_type\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"client_credentials\"",
-                  "offset": 42
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user sets body params for \"client_id\" as \"b2b640b5-c68c-4cb0-863b-20f1ae\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"client_id\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"b2b640b5-c68c-4cb0-863b-20f1ae\"",
-                  "offset": 41
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user sets body params for \"client_secret\" as \"0b83fb21-56f8-45fd-bad8-7a59d6bd978e\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"client_secret\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"0b83fb21-56f8-45fd-bad8-7a59d6bd978e\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 438070100,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user makes \"POST\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"POST\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1000500,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user validates status code as 510",
-            "match": {
-              "arguments": [
-                {
-                  "val": "510",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2999500,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "user validates that API should work for \"Authorization\" as \"false\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"false\"",
-                  "offset": 59
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@authAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:46.095Z",
-        "line": 20,
-        "name": "Verity that Auth token API works for various combinations",
-        "description": "",
-        "id": "api-testing;verity-that-auth-token-api-works-for-various-combinations;;6",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user sets base URI and sets endpoint path as \"/auth/realms/sandbox/protocol/openid-connect/token\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/auth/realms/sandbox/protocol/openid-connect/token\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "user sets \"Content-Type\" as \"application/json\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Content-Type\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/json\"",
-                  "offset": 28
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user sets body params for \"grant_type\" as \"client_credentials\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"grant_type\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"client_credentials\"",
-                  "offset": 42
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user sets body params for \"client_id\" as \"b2b640b5-c68c-4cb0-863b-20f1aec8af21\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"client_id\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"b2b640b5-c68c-4cb0-863b-20f1aec8af21\"",
-                  "offset": 41
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user sets body params for \"client_secret\" as \"0b83fb21-56f8-45fd-bad8\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"client_secret\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"0b83fb21-56f8-45fd-bad8\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_body_params_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 406082400,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user makes \"POST\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"POST\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 992800,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user validates status code as 510",
-            "match": {
-              "arguments": [
-                {
-                  "val": "510",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3000600,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "user validates that API should work for \"Authorization\" as \"false\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"false\"",
-                  "offset": 59
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@authAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:46.512Z",
-        "line": 34,
-        "name": "Verify that Banks API works for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-banks-api-works-for-various-combinations;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1015100,
               "status": "passed"
             },
             "line": 24,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/banks\"",
+            "name": "user authorizes the the payment and obtains authorization URL",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/banks\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_authorizes_the_the_payment_and_obtains_authorization_url()"
             },
-            "keyword": "Given "
+            "keyword": "Then "
           },
           {
             "result": {
               "status": "passed"
             },
             "line": 25,
-            "name": "user sets \"Accept\" as \"application/json\" as header",
+            "name": "user authorizes process using authorization URL",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Accept\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/json\"",
-                  "offset": 22
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_authorizes_process_using_authorization_url()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 931796800,
+              "duration": 195897000,
               "status": "passed"
             },
             "line": 26,
-            "name": "user sets \"Authorization\" as \"Bearer Token\" as header",
+            "name": "user \"delete\" session for \"Justo Bank\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Authorization\"",
-                  "offset": 10
+                  "val": "\"delete\"",
+                  "offset": 5
                 },
                 {
-                  "val": "\"Bearer Token\"",
-                  "offset": 29
+                  "val": "\"Justo Bank\"",
+                  "offset": 26
                 }
               ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_session_for(java.lang.String,java.lang.String)"
             },
-            "keyword": "And "
+            "keyword": "Then "
           },
           {
             "result": {
+              "duration": 201450800,
               "status": "passed"
             },
             "line": 27,
-            "name": "user sets \"x-device-id\" as \"example_id_for_quickstart\" as header",
+            "name": "user \"delete\" session for \"Hizonti Bank\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
+                  "val": "\"delete\"",
+                  "offset": 5
                 },
                 {
-                  "val": "\"example_id_for_quickstart\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 239048900,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "user makes \"GET\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"GET\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1010200,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "user validates status code as 200",
-            "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 10984600,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "user validates that API should work for \"Banks\" as \"true\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Banks\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"true\"",
-                  "offset": 51
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@bankAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:47.702Z",
-        "line": 35,
-        "name": "Verify that Banks API works for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-banks-api-works-for-various-combinations;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/banksss\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/banksss\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1000900,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "user sets \"Accept\" as \"application/json\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Accept\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/json\"",
-                  "offset": 22
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 262938600,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "user sets \"Authorization\" as \"Bearer Token\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"Bearer Token\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1000900,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "user sets \"x-device-id\" as \"example_id_for_quickstart\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"example_id_for_quickstart\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 194084400,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "user makes \"GET\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"GET\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "user validates status code as 510",
-            "match": {
-              "arguments": [
-                {
-                  "val": "510",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1993400,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "user validates that API should work for \"Banks\" as \"false\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Banks\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"false\"",
-                  "offset": 51
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@bankAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:48.169Z",
-        "line": 36,
-        "name": "Verify that Banks API works for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-banks-api-works-for-various-combinations;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1009800,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/banks\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/banks\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 988700,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "user sets \"Accept\" as \"application/json\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Accept\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/json\"",
-                  "offset": 22
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "user sets \"Authorization\" as \"\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "user sets \"x-device-id\" as \"\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 185378500,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "user makes \"GET\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"GET\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "user validates status code as 510",
-            "match": {
-              "arguments": [
-                {
-                  "val": "510",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3001700,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "user validates that API should work for \"Banks\" as \"false\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Banks\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"false\"",
-                  "offset": 51
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@bankAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:48.365Z",
-        "line": 37,
-        "name": "Verify that Banks API works for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-banks-api-works-for-various-combinations;;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/banks\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/banks\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 999400,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "user sets \"Accept\" as \"application/x-www-form-urlencoded\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Accept\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/x-www-form-urlencoded\"",
-                  "offset": 22
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 234551800,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "user sets \"Authorization\" as \"Bearer Token\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"Bearer Token\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "user sets \"x-device-id\" as \"anything-different\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"anything-different\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 228676400,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "user makes \"GET\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"GET\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 992700,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "user validates status code as 406",
-            "match": {
-              "arguments": [
-                {
-                  "val": "406",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1000400,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "user validates that API should work for \"Banks\" as \"false\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Banks\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"false\"",
-                  "offset": 51
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@bankAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:48.837Z",
-        "line": 38,
-        "name": "Verify that Banks API works for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-banks-api-works-for-various-combinations;;6",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1000100,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/banks\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/banks\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "user sets \"Accept\" as \"\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Accept\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 22
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "user sets \"Authorization\" as \"\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 996000,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "user sets \"x-device-id\" as \"\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 218936200,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "user makes \"GET\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"GET\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1000200,
-              "status": "passed"
-            },
-            "line": 29,
-            "name": "user validates status code as 510",
-            "match": {
-              "arguments": [
-                {
-                  "val": "510",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 7001500,
-              "status": "passed"
-            },
-            "line": 30,
-            "name": "user validates that API should work for \"Banks\" as \"false\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Banks\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"false\"",
-                  "offset": 51
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@bankAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:49.071Z",
-        "line": 53,
-        "name": "Verify that session API works to create new session for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-session-api-works-to-create-new-session-for-various-combinations;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 998000,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/session\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/session\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "user sets \"Content-Type\" as \"application/json\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Content-Type\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/json\"",
-                  "offset": 28
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 238695800,
-              "status": "passed"
-            },
-            "line": 44,
-            "name": "user sets \"Authorization\" as \"Bearer Token\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"Bearer Token\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 45,
-            "name": "user sets \"x-device-id\" as \"example_id_for_quickstart\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"example_id_for_quickstart\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "user puts body content as \"bankId\" as \"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"bankId\"",
+                  "val": "\"Hizonti Bank\"",
                   "offset": 26
-                },
-                {
-                  "val": "\"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-                  "offset": 38
                 }
               ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_puts_body_content_as_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 202573200,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "user makes \"POST\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"POST\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1002600,
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "user validates status code as 201",
-            "match": {
-              "arguments": [
-                {
-                  "val": "201",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
+              "location": "stepDefinition.StepDefinitions_Functional_Test.user_session_for(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1998100,
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "user validates that API should work for \"Session\" as \"true\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Session\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"true\"",
-                  "offset": 53
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sessionAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:49.521Z",
-        "line": 54,
-        "name": "Verify that session API works to create new session for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-session-api-works-to-create-new-session-for-various-combinations;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1017400,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/sessioned\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/sessioned\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "user sets \"Content-Type\" as \"application/json\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Content-Type\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/json\"",
-                  "offset": 28
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 247044800,
-              "status": "passed"
-            },
-            "line": 44,
-            "name": "user sets \"Authorization\" as \"Bearer Token\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"Bearer Token\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 998100,
-              "status": "passed"
-            },
-            "line": 45,
-            "name": "user sets \"x-device-id\" as \"example_id_for_quickstart\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"example_id_for_quickstart\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "user puts body content as \"bankId\" as \"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"bankId\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-                  "offset": 38
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_puts_body_content_as_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 189533800,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "user makes \"POST\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"POST\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "user validates status code as 510",
-            "match": {
-              "arguments": [
-                {
-                  "val": "510",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3002300,
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "user validates that API should work for \"Session\" as \"false\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Session\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"false\"",
-                  "offset": 53
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sessionAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:49.967Z",
-        "line": 55,
-        "name": "Verify that session API works to create new session for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-session-api-works-to-create-new-session-for-various-combinations;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1011700,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/session\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/session\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 988000,
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "user sets \"Content-Type\" as \"application/javascript\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Content-Type\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/javascript\"",
-                  "offset": 28
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 449410900,
-              "status": "passed"
-            },
-            "line": 44,
-            "name": "user sets \"Authorization\" as \"Bearer Token\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"Bearer Token\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 45,
-            "name": "user sets \"x-device-id\" as \"example_id_for_quickstart\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"example_id_for_quickstart\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "user puts body content as \"bankId\" as \"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"bankId\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-                  "offset": 38
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_puts_body_content_as_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 175228300,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "user makes \"POST\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"POST\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 977900,
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "user validates status code as 520",
-            "match": {
-              "arguments": [
-                {
-                  "val": "520",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1999000,
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "user validates that API should work for \"Session\" as \"false\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Session\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"false\"",
-                  "offset": 53
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sessionAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:50.601Z",
-        "line": 56,
-        "name": "Verify that session API works to create new session for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-session-api-works-to-create-new-session-for-various-combinations;;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/session\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/session\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1000200,
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "user sets \"Content-Type\" as \"application/json\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Content-Type\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/json\"",
-                  "offset": 28
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 44,
-            "name": "user sets \"Authorization\" as \"\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 45,
-            "name": "user sets \"x-device-id\" as \"example_id_for_quickstart\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"example_id_for_quickstart\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "user puts body content as \"bankId\" as \"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"bankId\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-                  "offset": 38
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_puts_body_content_as_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 405269700,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "user makes \"POST\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"POST\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "error_message": "java.lang.AssertionError: expected [401] but found [201]\r\n\tat org.testng.Assert.fail(Assert.java:99)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:1037)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:140)\r\n\tat org.testng.Assert.assertEquals(Assert.java:122)\r\n\tat org.testng.Assert.assertEquals(Assert.java:907)\r\n\tat org.testng.Assert.assertEquals(Assert.java:917)\r\n\tat stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(StepDefinitions_API_Test.java:103)\r\n\tat ✽.user validates status code as 401(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/API_Tests.feature:48)\r\n",
-              "duration": 2002600,
-              "status": "failed"
-            },
-            "line": 48,
-            "name": "user validates status code as 401",
-            "match": {
-              "arguments": [
-                {
-                  "val": "401",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 49,
-            "name": "user validates that API should work for \"Session\" as \"false\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Session\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"false\"",
-                  "offset": 53
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sessionAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:51.019Z",
-        "line": 57,
-        "name": "Verify that session API works to create new session for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-session-api-works-to-create-new-session-for-various-combinations;;6",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 993000,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/session\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/session\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "user sets \"Content-Type\" as \"application/json\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Content-Type\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/json\"",
-                  "offset": 28
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 217371300,
-              "status": "passed"
-            },
-            "line": 44,
-            "name": "user sets \"Authorization\" as \"Bearer Token\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"Bearer Token\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 45,
-            "name": "user sets \"x-device-id\" as \"\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 986400,
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "user puts body content as \"bankId\" as \"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"bankId\"",
-                  "offset": 26
-                },
-                {
-                  "val": "\"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-                  "offset": 38
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_puts_body_content_as_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 409131100,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "user makes \"POST\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"POST\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 979000,
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "user validates status code as 510",
-            "match": {
-              "arguments": [
-                {
-                  "val": "510",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 2001100,
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "user validates that API should work for \"Session\" as \"false\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Session\"",
-                  "offset": 40
-                },
-                {
-                  "val": "\"false\"",
-                  "offset": 53
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_that_api_should_work_for_as(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sessionAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:51.672Z",
-        "line": 72,
-        "name": "Verify that session API for getting current status works for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-session-api-for-getting-current-status-works-for-various-combinations;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1001100,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/session/{sessionId}\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/session/{sessionId}\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "user sets \"Accept\" as \"application/json\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Accept\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/json\"",
-                  "offset": 22
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 488857400,
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "user sets \"Authorization\" as \"Bearer Token\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"Bearer Token\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 992800,
-              "status": "passed"
-            },
-            "line": 64,
-            "name": "user sets \"x-device-id\" as \"example_id_for_quickstart\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"example_id_for_quickstart\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 280037800,
-              "status": "passed"
-            },
-            "line": 65,
-            "name": "user creates session ID with device id as \"example_id_for_quickstart\" and bankId as \"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\" and puts it in endpoint URI",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"example_id_for_quickstart\"",
-                  "offset": 42
-                },
-                {
-                  "val": "\"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-                  "offset": 84
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 206820900,
-              "status": "passed"
-            },
-            "line": 66,
-            "name": "user makes \"GET\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"GET\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 994100,
-              "status": "passed"
-            },
-            "line": 67,
-            "name": "user validates status code as 200",
-            "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 68,
-            "name": "user validates that API should work for \"SessionStatus\" as \"true",
-            "match": {},
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sessionAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:52.657Z",
-        "line": 73,
-        "name": "Verify that session API for getting current status works for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-session-api-for-getting-current-status-works-for-various-combinations;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1008000,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/sn/asa{sessionId}\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/sn/asa{sessionId}\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "user sets \"Accept\" as \"application/json\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Accept\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/json\"",
-                  "offset": 22
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 237941100,
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "user sets \"Authorization\" as \"Bearer Token\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"Bearer Token\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 64,
-            "name": "user sets \"x-device-id\" as \"example_id_for_quickstart\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"example_id_for_quickstart\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 219078200,
-              "status": "passed"
-            },
-            "line": 65,
-            "name": "user creates session ID with device id as \"example_id_for_quickstart\" and bankId as \"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\" and puts it in endpoint URI",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"example_id_for_quickstart\"",
-                  "offset": 42
-                },
-                {
-                  "val": "\"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-                  "offset": 84
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 183431200,
-              "status": "passed"
-            },
-            "line": 66,
-            "name": "user makes \"GET\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"GET\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 977900,
-              "status": "passed"
-            },
-            "line": 67,
-            "name": "user validates status code as 510",
-            "match": {
-              "arguments": [
-                {
-                  "val": "510",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 68,
-            "name": "user validates that API should work for \"SessionStatus\" as \"false",
-            "match": {},
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sessionAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:53.304Z",
-        "line": 74,
-        "name": "Verify that session API for getting current status works for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-session-api-for-getting-current-status-works-for-various-combinations;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1011100,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/session/{sessionId}\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/session/{sessionId}\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "user sets \"Accept\" as \"application/json\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Accept\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/json\"",
-                  "offset": 22
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "user sets \"Authorization\" as \"\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 989500,
-              "status": "passed"
-            },
-            "line": 64,
-            "name": "user sets \"x-device-id\" as \"\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c201\u003e but was \u003c510\u003e.\n\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor242.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)\r\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)\r\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)\r\n\tat com.neonomics.corelibraries.Session.getSessionID(Session.java:39)\r\n\tat stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(StepDefinitions_API_Test.java:159)\r\n\tat ✽.user creates session ID with device id as \"\" and bankId as \"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\" and puts it in endpoint URI(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/API_Tests.feature:65)\r\n",
-              "duration": 209315700,
-              "status": "failed"
-            },
-            "line": 65,
-            "name": "user creates session ID with device id as \"\" and bankId as \"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\" and puts it in endpoint URI",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"\"",
-                  "offset": 42
-                },
-                {
-                  "val": "\"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-                  "offset": 59
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 66,
-            "name": "user makes \"GET\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"GET\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 67,
-            "name": "user validates status code as 510",
-            "match": {
-              "arguments": [
-                {
-                  "val": "510",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 68,
-            "name": "user validates that API should work for \"SessionStatus\" as \"false",
-            "match": {},
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sessionAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:53.522Z",
-        "line": 75,
-        "name": "Verify that session API for getting current status works for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-session-api-for-getting-current-status-works-for-various-combinations;;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1000100,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/session/{sessionId}\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/session/{sessionId}\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "user sets \"Accept\" as \"application/x-www-form-urlencoded\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Accept\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"application/x-www-form-urlencoded\"",
-                  "offset": 22
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 450864800,
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "user sets \"Authorization\" as \"Bearer Token\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"Bearer Token\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 64,
-            "name": "user sets \"x-device-id\" as \"anything-different\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"anything-different\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 201533000,
-              "status": "passed"
-            },
-            "line": 65,
-            "name": "user creates session ID with device id as \"anything-different\" and bankId as \"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\" and puts it in endpoint URI",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"anything-different\"",
-                  "offset": 42
-                },
-                {
-                  "val": "\"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-                  "offset": 77
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 211942700,
-              "status": "passed"
-            },
-            "line": 66,
-            "name": "user makes \"GET\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"GET\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 67,
-            "name": "user validates status code as 406",
-            "match": {
-              "arguments": [
-                {
-                  "val": "406",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 68,
-            "name": "user validates that API should work for \"SessionStatus\" as \"false",
-            "match": {},
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sessionAPI"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-16T17:08:54.393Z",
-        "line": 76,
-        "name": "Verify that session API for getting current status works for various combinations",
-        "description": "",
-        "id": "api-testing;verify-that-session-api-for-getting-current-status-works-for-various-combinations;;6",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 988000,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "user sets base URI and sets endpoint path as \"/ics/v3/session/{sessionId}\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"/ics/v3/session/{sessionId}\"",
-                  "offset": 45
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_base_uri_and_sets_endpoint_path_as(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 62,
-            "name": "user sets \"Accept\" as \"\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Accept\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 22
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1008300,
-              "status": "passed"
-            },
-            "line": 63,
-            "name": "user sets \"Authorization\" as \"\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Authorization\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 29
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 64,
-            "name": "user sets \"x-device-id\" as \"\" as header",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"x-device-id\"",
-                  "offset": 10
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_sets_as_as_header(java.lang.String,java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c201\u003e but was \u003c510\u003e.\n\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat jdk.internal.reflect.GeneratedMethodAccessor242.invoke(Unknown Source)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)\r\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)\r\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)\r\n\tat com.neonomics.corelibraries.Session.getSessionID(Session.java:39)\r\n\tat stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(StepDefinitions_API_Test.java:159)\r\n\tat ✽.user creates session ID with device id as \"\" and bankId as \"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\" and puts it in endpoint URI(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/API_Tests.feature:65)\r\n",
-              "duration": 183704100,
-              "status": "failed"
-            },
-            "line": 65,
-            "name": "user creates session ID with device id as \"\" and bankId as \"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\" and puts it in endpoint URI",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"\"",
-                  "offset": 42
-                },
-                {
-                  "val": "\"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d\"",
-                  "offset": 59
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 66,
-            "name": "user makes \"GET\" request to endpoint",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"GET\"",
-                  "offset": 11
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_makes_request_to_endpoint(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 67,
-            "name": "user validates status code as 510",
-            "match": {
-              "arguments": [
-                {
-                  "val": "510",
-                  "offset": 30
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(int)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 68,
-            "name": "user validates that API should work for \"SessionStatus\" as \"false",
-            "match": {},
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@sessionAPI"
           }
         ]
       }
     ],
-    "name": "API testing",
+    "name": "Functional testing",
     "description": "",
-    "id": "api-testing",
+    "id": "functional-testing",
     "keyword": "Feature",
-    "uri": "file:src/test/java/featureFiles/API_Tests.feature",
+    "uri": "file:src/test/java/featureFiles/Get_All_Accounts.feature",
     "tags": []
   }
 ]
