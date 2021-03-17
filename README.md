@@ -70,6 +70,19 @@ Examples:
 - Chrome version 89.0.4389.90
 - Compatible chromedriver.exe
 
+### Details required in **resources/config.properties**
+```
+#Account Settings
+client_id= <client id for token generation>
+client_secret= <secret client id for token generation>
+x-device-id= <device ID that would be needed>
+x-psu-id= <psu id if needed>
+username= <Neonomics login username for bank login, to obtain consent>
+password= = <Neonomics login password for bank login, to obtain consent>
+```
+_Note : These settings are placed for temperory purpose, one should have test data file seperatly in future_
+
+
 ### Running the tests
 **Given scenario is automated using selenium cucumber. Gherkin language is used in cucumber for these scenario.**
 Funtional tests and API test are kept in two different feature files.
