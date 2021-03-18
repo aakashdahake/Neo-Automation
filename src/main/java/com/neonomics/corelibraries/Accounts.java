@@ -99,8 +99,8 @@ public class Accounts implements Schemas, ConstantsRef {
 		if (resp.jsonPath().getString("errorCode").contains(String.valueOf(1426))
 				&& resp.jsonPath().get("type").equals("CONSENT")) {
 			
-			logInstance.info("Response to check whether cosnent is needed = [{}]", resp.asString());
-			logInstance.info("Bank consent is needed, therefore invoking consent handling mechenism using Web URL");
+			logInstance.info("Response to check whether consent is needed = [{}]", resp.asString());
+			logInstance.info("Bank consent is needed, therefore invoking consent handling mechanism using Web URL");
 			
 			assertThat(resp.body().asString(), JsonSchemaValidator.matchesJsonSchema(ConsentRequiredSchema));
 			handleConsent(resp.jsonPath().getString("links.href[0]"), headData, action);

@@ -27,7 +27,7 @@ public class HandleConsentUI extends WebDriverManager implements ConstantsRef {
 	public void getConsentViaWeb(String consentURL, String action) {
 		
 		logInstance.info("Getting consent via Web page");
-		logInstance.info("Creating selenium webdriver insatnce");
+		logInstance.info("Creating selenium webdriver instance");
 		WebDriver driver = createDriver();
 		PageData pageHandle = new PageData(driver);
 		
