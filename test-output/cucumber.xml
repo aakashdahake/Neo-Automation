@@ -1,41 +1,326 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="21.595">
-    <testcase classname="Functional testing" name="User retrieves accounts from Justo Bank" time="9.084">
-        <system-out><![CDATA[Given user gets authentication token for Neonomics platform.................passed
-Then user retrieves bank ID for "Justo Bank"................................passed
-Then user "create" session for "Justo Bank".................................passed
-And user validates session status for "Justo Bank"..........................passed
-Then user checks for "Justo Bank" consent and "Accept" if required provided redirect URL as "".passed
-And user fetches all accounts from "Justo Bank".............................passed
-Then user "delete" session for "Justo Bank".................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Functional testing" name="User initiates payment and transfer money to another user in another bank" time="12.357">
-        <failure message="Values should be different. Actual: null" type="java.lang.AssertionError"><![CDATA[Given user gets authentication token for Neonomics platform.................passed
-Then user retrieves bank ID for "Justo Bank"................................passed
-Then user "create" session for "Justo Bank".................................passed
-And user validates session status for "Justo Bank"..........................passed
-Then user retrieves bank ID for "Hizonti Bank"..............................passed
-Then user "create" session for "Hizonti Bank"...............................passed
-And user validates session status for "Hizonti Bank"........................passed
-Then user checks for "Justo Bank" consent and "Accept" if required provided redirect URL as "".passed
-Then user checks for "Hizonti Bank" consent and "Accept" if required provided redirect URL as "".passed
-Then user transfer amount of "5" "EUR" from "Justo Bank" bank account "IABN" "NO6404948998640" to "Hizonti Bank" bank account "NO4313081115656" with "sepa-credit" payment method.failed
-And user validates payment request is initiated.............................skipped
-Then user authorizes the the payment and obtains authorization URL..........skipped
-Then user authorizes process using authorization URL........................skipped
-Then user "delete" session for "Justo Bank".................................skipped
-Then user "delete" session for "Hizonti Bank"...............................skipped
+<testsuite errors="0" failures="7" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="20" time="12.629">
+    <testcase classname="API testing" name="Verity that Auth token API works for various combinations" time="1.855">
+        <failure message="expected [200] but found [510]" type="java.lang.AssertionError"><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
+Then user sets "Content-Type" as "application/x-www-form-urlencoded" as header.passed
+And user sets body params for "grant_type" as "client_credentials"..........passed
+And user sets body params for "client_id" as "valid"........................passed
+And user sets body params for "client_secret" as "valid"....................passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 200......................................failed
+Then user validates that API should work for "Authorization" as "true"......skipped
 
 StackTrace:
-java.lang.AssertionError: Values should be different. Actual: null
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failEquals(Assert.java:185)
-	at org.junit.Assert.assertNotEquals(Assert.java:161)
-	at org.junit.Assert.assertNotEquals(Assert.java:175)
-	at com.neonomics.corelibraries.Payments.initiateSEPAPayment(Payments.java:45)
-	at stepDefinition.StepDefinitions_Functional_Test.user_transfer_amount_of_from_bank_account_to_bank_account_with_payment_method(StepDefinitions_Functional_Test.java:255)
-	at ✽.user transfer amount of "5" "EUR" from "Justo Bank" bank account "IABN" "NO6404948998640" to "Hizonti Bank" bank account "NO4313081115656" with "sepa-credit" payment method(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/Get_All_Accounts.feature:22)
+java.lang.AssertionError: expected [200] but found [510]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(StepDefinitions_API_Test.java:106)
+	at ✽.user validates status code as 200(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/API_Tests.feature:11)
+]]></failure>
+    </testcase>
+    <testcase classname="API testing" name="Verity that Auth token API works for various combinations 2" time="0.682">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
+Then user sets "Content-Type" as "application/json" as header...............passed
+And user sets body params for "grant_type" as "client_credentials"..........passed
+And user sets body params for "client_id" as "valid"........................passed
+And user sets body params for "client_secret" as "valid"....................passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Authorization" as "false".....passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verity that Auth token API works for various combinations 3" time="0.456">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
+Then user sets "Content-Type" as "application/x-www-form-urlencoded" as header.passed
+And user sets body params for "grant_type" as "authorization_code"..........passed
+And user sets body params for "client_id" as "valid"........................passed
+And user sets body params for "client_secret" as "valid"....................passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Authorization" as "false".....passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verity that Auth token API works for various combinations 4" time="0.467">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
+Then user sets "Content-Type" as "application/x-www-form-urlencoded" as header.passed
+And user sets body params for "grant_type" as "client_credentials"..........passed
+And user sets body params for "client_id" as "invalid"......................passed
+And user sets body params for "client_secret" as "valid"....................passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Authorization" as "false".....passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verity that Auth token API works for various combinations 5" time="0.429">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
+Then user sets "Content-Type" as "application/json" as header...............passed
+And user sets body params for "grant_type" as "client_credentials"..........passed
+And user sets body params for "client_id" as "valid"........................passed
+And user sets body params for "client_secret" as "invalid"..................passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Authorization" as "false".....passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verify that Banks API works for various combinations" time="1.166">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/banks"..........passed
+Then user sets "Accept" as "application/json" as header.....................passed
+And user sets "Authorization" as "Bearer Token" as header...................passed
+And user sets "x-device-id" as "example_id_for_quickstart" as header........passed
+When user makes "GET" request to endpoint...................................passed
+Then user validates status code as 200......................................passed
+Then user validates that API should work for "Banks" as "true"..............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verify that Banks API works for various combinations 2" time="0.457">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/banksss"........passed
+Then user sets "Accept" as "application/json" as header.....................passed
+And user sets "Authorization" as "Bearer Token" as header...................passed
+And user sets "x-device-id" as "example_id_for_quickstart" as header........passed
+When user makes "GET" request to endpoint...................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Banks" as "false".............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verify that Banks API works for various combinations 3" time="0.234">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/banks"..........passed
+Then user sets "Accept" as "application/json" as header.....................passed
+And user sets "Authorization" as "" as header...............................passed
+And user sets "x-device-id" as "" as header.................................passed
+When user makes "GET" request to endpoint...................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Banks" as "false".............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verify that Banks API works for various combinations 4" time="0.765">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/banks"..........passed
+Then user sets "Accept" as "application/x-www-form-urlencoded" as header....passed
+And user sets "Authorization" as "Bearer Token" as header...................passed
+And user sets "x-device-id" as "anything-different" as header...............passed
+When user makes "GET" request to endpoint...................................passed
+Then user validates status code as 406......................................passed
+Then user validates that API should work for "Banks" as "false".............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verify that Banks API works for various combinations 5" time="0.223">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/banks"..........passed
+Then user sets "Accept" as "" as header.....................................passed
+And user sets "Authorization" as "" as header...............................passed
+And user sets "x-device-id" as "" as header.................................passed
+When user makes "GET" request to endpoint...................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Banks" as "false".............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations" time="0.581">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session"........passed
+Then user sets "Content-Type" as "application/json" as header...............passed
+And user sets "Authorization" as "Bearer Token" as header...................passed
+And user sets "x-device-id" as "example_id_for_quickstart" as header........passed
+And user puts body content as "bankId" as "anVzdG9iYW5rLnYxSlVTVE5PS0s="....passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 201......................................passed
+Then user validates that API should work for "Session" as "true"............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations 2" time="0.441">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/sessioned"......passed
+Then user sets "Content-Type" as "application/json" as header...............passed
+And user sets "Authorization" as "Bearer Token" as header...................passed
+And user sets "x-device-id" as "example_id_for_quickstart" as header........passed
+And user puts body content as "bankId" as "anVzdG9iYW5rLnYxSlVTVE5PS0s="....passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Session" as "false"...........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations 3" time="0.671">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session"........passed
+Then user sets "Content-Type" as "application/javascript" as header.........passed
+And user sets "Authorization" as "Bearer Token" as header...................passed
+And user sets "x-device-id" as "example_id_for_quickstart" as header........passed
+And user puts body content as "bankId" as "anVzdG9iYW5rLnYxSlVTVE5PS0s="....passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 520......................................passed
+Then user validates that API should work for "Session" as "false"...........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations 4" time="0.423">
+        <failure message="expected [401] but found [201]" type="java.lang.AssertionError"><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session"........passed
+Then user sets "Content-Type" as "application/json" as header...............passed
+And user sets "Authorization" as "" as header...............................passed
+And user sets "x-device-id" as "example_id_for_quickstart" as header........passed
+And user puts body content as "bankId" as "anVzdG9iYW5rLnYxSlVTVE5PS0s="....passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 401......................................failed
+Then user validates that API should work for "Session" as "false"...........skipped
+
+StackTrace:
+java.lang.AssertionError: expected [401] but found [201]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(StepDefinitions_API_Test.java:106)
+	at ✽.user validates status code as 401(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/API_Tests.feature:48)
+]]></failure>
+    </testcase>
+    <testcase classname="API testing" name="Verify that session API works to create new session for various combinations 5" time="0.449">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session"........passed
+Then user sets "Content-Type" as "application/json" as header...............passed
+And user sets "Authorization" as "Bearer Token" as header...................passed
+And user sets "x-device-id" as "" as header.................................passed
+And user puts body content as "bankId" as "anVzdG9iYW5rLnYxSlVTVE5PS0s="....passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Session" as "false"...........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations" time="0.951">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session/{sessionId}".passed
+Then user sets "Accept" as "application/json" as header.....................passed
+And user sets "Authorization" as "Bearer Token" as header...................passed
+And user sets "x-device-id" as "example_id_for_quickstart" as header........passed
+Then user creates session ID with device id as "example_id_for_quickstart" and bankId as "anVzdG9iYW5rLnYxSlVTVE5PS0s=" and puts it in endpoint URI.passed
+When user makes "GET" request to endpoint...................................passed
+Then user validates status code as 200......................................passed
+Then user validates that API should work for "SessionStatus" as "true.......undefined
+]]></failure>
+    </testcase>
+    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations 2" time="0.662">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/sn/asa{sessionId}".passed
+Then user sets "Accept" as "application/json" as header.....................passed
+And user sets "Authorization" as "Bearer Token" as header...................passed
+And user sets "x-device-id" as "example_id_for_quickstart" as header........passed
+Then user creates session ID with device id as "example_id_for_quickstart" and bankId as "anVzdG9iYW5rLnYxSlVTVE5PS0s=" and puts it in endpoint URI.passed
+When user makes "GET" request to endpoint...................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "SessionStatus" as "false......undefined
+]]></failure>
+    </testcase>
+    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations 3" time="0.205">
+        <failure message="1 expectation failed.&#10;Expected status code &lt;201&gt; but was &lt;510&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session/{sessionId}".passed
+Then user sets "Accept" as "application/json" as header.....................passed
+And user sets "Authorization" as "" as header...............................passed
+And user sets "x-device-id" as "" as header.................................passed
+Then user creates session ID with device id as "" and bankId as "anVzdG9iYW5rLnYxSlVTVE5PS0s=" and puts it in endpoint URI.failed
+When user makes "GET" request to endpoint...................................skipped
+Then user validates status code as 510......................................skipped
+Then user validates that API should work for "SessionStatus" as "false......skipped
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected status code <201> but was <510>.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at jdk.internal.reflect.GeneratedMethodAccessor248.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.neonomics.corelibraries.Session.getSessionID(Session.java:45)
+	at stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(StepDefinitions_API_Test.java:161)
+	at ✽.user creates session ID with device id as "" and bankId as "anVzdG9iYW5rLnYxSlVTVE5PS0s=" and puts it in endpoint URI(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/API_Tests.feature:65)
+]]></failure>
+    </testcase>
+    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations 4" time="0.981">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session/{sessionId}".passed
+Then user sets "Accept" as "application/x-www-form-urlencoded" as header....passed
+And user sets "Authorization" as "Bearer Token" as header...................passed
+And user sets "x-device-id" as "anything-different" as header...............passed
+Then user creates session ID with device id as "anything-different" and bankId as "anVzdG9iYW5rLnYxSlVTVE5PS0s=" and puts it in endpoint URI.passed
+When user makes "GET" request to endpoint...................................passed
+Then user validates status code as 406......................................passed
+Then user validates that API should work for "SessionStatus" as "false......undefined
+]]></failure>
+    </testcase>
+    <testcase classname="API testing" name="Verify that session API for getting current status works for various combinations 5" time="0.204">
+        <failure message="1 expectation failed.&#10;Expected status code &lt;201&gt; but was &lt;510&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[Given user sets base URI and sets endpoint path as "/ics/v3/session/{sessionId}".passed
+Then user sets "Accept" as "" as header.....................................passed
+And user sets "Authorization" as "" as header...............................passed
+And user sets "x-device-id" as "" as header.................................passed
+Then user creates session ID with device id as "" and bankId as "anVzdG9iYW5rLnYxSlVTVE5PS0s=" and puts it in endpoint URI.failed
+When user makes "GET" request to endpoint...................................skipped
+Then user validates status code as 510......................................skipped
+Then user validates that API should work for "SessionStatus" as "false......skipped
+
+StackTrace:
+java.lang.AssertionError: 1 expectation failed.
+Expected status code <201> but was <510>.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at jdk.internal.reflect.GeneratedMethodAccessor248.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.neonomics.corelibraries.Session.getSessionID(Session.java:45)
+	at stepDefinition.StepDefinitions_API_Test.user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(StepDefinitions_API_Test.java:161)
+	at ✽.user creates session ID with device id as "" and bankId as "anVzdG9iYW5rLnYxSlVTVE5PS0s=" and puts it in endpoint URI(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/API_Tests.feature:65)
 ]]></failure>
     </testcase>
 </testsuite>

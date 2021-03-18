@@ -1,7 +1,7 @@
 Feature: API testing
 
   @authAPI
-  Scenario Outline: Verity that Auth token API works for various combinations
+  Scenario Outline: Verify that Auth token API works for various combinations
     Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token"
     Then user sets "Content-Type" as "<ContentType>" as header
     And user sets body params for "grant_type" as "<GrantType>"

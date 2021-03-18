@@ -22,6 +22,8 @@ import com.neonomics.model.pojos.DebtorAccount;
 import com.neonomics.model.pojos.PaymentRequestPOJO;
 import com.neonomics.utils.ConfigManager;
 
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
@@ -43,7 +45,16 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 	private HashMap<String, String> bankIDS = new HashMap<String, String>();
 	private HashMap<String, String> header = new HashMap<String, String>();
 	private HashMap<String, String> paymentResponseData = new HashMap<String, String>();
+	Scenario scenario;
 
+	@Before
+    public void before(Scenario scenario) {
+        this.scenario = scenario;
+        logInstance.info("********************************************************************************************************");
+		logInstance.info("--- Execution Started :::: {}",scenario.getName());
+		logInstance.info("********************************************************************************************************");
+
+    }
 	
 	@Given("user gets authentication token for Neonomics platform")
 	public void user_gets_authetication_token_for_neonomics_platform() {

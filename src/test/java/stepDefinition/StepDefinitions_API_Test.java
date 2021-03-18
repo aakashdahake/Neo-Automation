@@ -15,6 +15,7 @@ import com.neonomics.corelibraries.Session;
 import com.neonomics.model.responseschema.Schemas;
 import com.neonomics.utils.ConfigManager;
 
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -34,7 +35,7 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 	private Map<String, Object> jsonAsMap = new HashMap<>();
 	private String accessToken;
 	private Logger logInstance = LogManager.getLogger();
-
+	Scenario scenario;
 	Authorization auth = new Authorization();
 	Session session = new Session();
 
@@ -42,6 +43,7 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 
 	@Given("user sets base URI and sets endpoint path as {string}")
 	public void user_sets_base_uri_and_sets_endpoint_path_as(String path) {
+
 		request.baseUri(BASE_URL);
 		request.basePath(path);
 
@@ -148,13 +150,12 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 	}
 
 	@Then("user creates session ID with device id as {string} and bankId as {string} and puts it in endpoint URI")
-	public void user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(String xDeviceId,
-			String bankId) {
+	public void user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(String xDeviceId, String bankId) {
 		try {
 			HashMap<String, String> header = new HashMap<>();
 			header.put(AUTHORIZATION, accessToken);
 			header.put(X_DEVICE_ID, xDeviceId);
-			
+
 			logInstance.info("Creating session ID for bank ID [{}] and Device ID [{}] for further API testing", bankId, xDeviceId);
 			String sessID = session.getSessionID(bankId, header);
 			logInstance.info("Received session ID as [{}]", sessID);
