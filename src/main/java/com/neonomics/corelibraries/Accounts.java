@@ -150,14 +150,14 @@ public class Accounts implements Schemas, ConstantsRef {
 		logInstance.info("Validating that account belong to bank with session ID [{}]", headData.get(X_SESSION_ID));
 		for (AccountDataPOJO account : accData) {
 
-			if (accNoType.contains(accNoType)) {
+			if (accNoType.contains(IBAN)) {
 
 				if (account.getIban().equals(accNumber)) {
 					logInstance.info("Account number [{}] found as [{}]", accNumber, accNoType);
 					isAccHosted = true;
 				}
 
-			} else if (accNoType.contains(accNoType)) {
+			} else if (accNoType.contains(BBAN)) {
 				if (account.getBban().equals(accNumber)) {
 					logInstance.info("Account number [{}] found as [{}]", accNumber, accNoType);
 					isAccHosted = true;
