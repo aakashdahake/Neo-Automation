@@ -12,12 +12,12 @@ Feature: API testing
     Then user validates that API should work for "Authorization" as "<ShouldWork>"
 
     Examples: 
-      | ContentType                       | GrantType          | ClientID                             | ClientSecretID                       | ExpectedStatusCode | ShouldWork |
-      | application/x-www-form-urlencoded | client_credentials | b2b640b5-c68c-4cb0-863b-20f1aec8af21 | 0b83fb21-56f8-45fd-bad8-7a59d6bd978e |                200 | true       |
-      | application/json                  | client_credentials | b2b640b5-c68c-4cb0-863b-20f1aec8af21 | 0b83fb21-56f8-45fd-bad8-7a59d6bd978e |                510 | false      |
-      | application/x-www-form-urlencoded | authorization_code | b2b640b5-c68c-4cb0-863b-20f1aec8af21 | 0b83fb21-56f8-45fd-bad8-7a59d6bd978e |                510 | false      |
-      | application/x-www-form-urlencoded | client_credentials | b2b640b5-c68c-4cb0-863b-20f1ae       | 0b83fb21-56f8-45fd-bad8-7a59d6bd978e |                510 | false      |
-      | application/json                  | client_credentials | b2b640b5-c68c-4cb0-863b-20f1aec8af21 | 0b83fb21-56f8-45fd-bad8              |                510 | false      |
+      | ContentType                       | GrantType          | ClientID | ClientSecretID | ExpectedStatusCode | ShouldWork |
+      | application/x-www-form-urlencoded | client_credentials | valid    | valid          |                200 | true       |
+      | application/json                  | client_credentials | valid    | valid          |                510 | false      |
+      | application/x-www-form-urlencoded | authorization_code | valid    | valid          |                510 | false      |
+      | application/x-www-form-urlencoded | client_credentials | invalid  | valid          |                510 | false      |
+      | application/json                  | client_credentials | valid    | invalid        |                510 | false      |
 
   @bankAPI
   Scenario Outline: Verify that Banks API works for various combinations
