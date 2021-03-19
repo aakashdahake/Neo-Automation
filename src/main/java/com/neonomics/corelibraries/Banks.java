@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
 
 import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
@@ -41,18 +42,26 @@ public class Banks extends Authorization implements Schemas {
 	public BankDataPOJO[] getAllBanks(HashMap<String, String> headData) throws Exception {
 
 		ObjectMapper objMap = new ObjectMapper();
-
-		Response resp = RestAssured.given()
-						.accept(ContentType.JSON)
-						.headers(headData)
-						.when()
-						.get(Endpoints.GET_BANKS)
-						.then()
-						.assertThat().statusCode(HttpStatus.SC_OK)
-						.assertThat().body(JsonSchemaValidator.matchesJsonSchema(BanksSchema))
-						.extract().response();
-
-		logInstance.info("All banks information recieved Response::" + resp.asString());
+		
+		
+			Response resp = RestAssured.given()
+							.accept(ContentType.JSON)
+							.headers(headData)
+							.when()
+							.get(Endpoints.GET_BANKS)
+							.then()
+							.assertThat().statusCode(HttpStatus.SC_OK)
+							.assertThat().body(JsonSchemaValidator.matchesJsonSchema(BanksSchema))
+							.extract().response();
+		
+			logInstance.info("Headers :: [{}]",resp.getHeaders());
+			logInstance.info("Cookies :: [{}]",resp.getCookies());
+			logInstance.info("Status Code :: [{}]",resp.getStatusCode());
+			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
+			logInstance.info("Session ID :: [{}]",resp.getSessionId());
+			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
+			logInstance.info("Response :: [{}]",resp.print());
+		
 		try {
 			BankDB = objMap.readValue(resp.asString(), BankDataPOJO[].class);
 		} catch (JsonMappingException e) {

@@ -4,6 +4,7 @@ import static org.junit.Assert.assertNotEquals;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
@@ -41,7 +42,14 @@ public class Payments implements Schemas{
 						.post(Endpoints.SEPA_CREDIT_PAYMENT).then()
 						.assertThat().statusCode(HttpStatus.SC_CREATED)
 						.assertThat().body(JsonSchemaValidator.matchesJsonSchema(PaymentInitiatedResponseSchema)).extract().response();
-		logInstance.info("Response for SEPA payyment initiation :: "+ resp.asString());
+		logInstance.info("Headers :: [{}]",resp.getHeaders());
+		logInstance.info("Cookies :: [{}]",resp.getCookies());
+		logInstance.info("Status Code :: [{}]",resp.getStatusCode());
+		logInstance.info("Status Line :: [{}]",resp.getStatusLine());
+		logInstance.info("Session ID :: [{}]",resp.getSessionId());
+		logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
+		logInstance.info("Response for SEPA payyment initiation :: "+ resp.print());
+		
 		assertNotEquals(resp.jsonPath().get("paymentId"), null);
 		assertNotEquals(resp.jsonPath().get("status"), null);
 		paymentStatus.put("paymentId", resp.jsonPath().getString("paymentId"));

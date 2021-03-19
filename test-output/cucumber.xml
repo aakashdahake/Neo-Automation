@@ -1,31 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="22.309">
-    <testcase classname="Functional testing" name="User retrieves accounts from Justo Bank" time="9.454">
-        <system-out><![CDATA[Given user gets authentication token for Neonomics platform.................passed
-Then user retrieves bank ID for "Justo Bank"................................passed
-Then user "create" session for "Justo Bank".................................passed
-And user validates session status for "Justo Bank"..........................passed
-Then user checks for "Justo Bank" consent and "Accept" if required provided redirect URL as "".passed
-And user fetches all accounts from "Justo Bank".............................passed
-Then user "delete" session for "Justo Bank".................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="3.647">
+    <testcase classname="API testing" name="Verify that Auth token API works for various combinations" time="1.793">
+        <failure message="expected [200] but found [510]" type="java.lang.AssertionError"><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
+Then user sets "Content-Type" as "application/x-www-form-urlencoded" as header.passed
+And user sets body params for "grant_type" as "client_credentials"..........passed
+And user sets body params for "client_id" as "valid"........................passed
+And user sets body params for "client_secret" as "valid"....................passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 200......................................failed
+Then user validates that API should work for "Authorization" as "true"......skipped
+
+StackTrace:
+java.lang.AssertionError: expected [200] but found [510]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.Assert.assertEquals(Assert.java:917)
+	at stepDefinition.StepDefinitions_API_Test.user_validates_status_code_as(StepDefinitions_API_Test.java:125)
+	at ✽.user validates status code as 200(file:///D:/Frameworks/API%20TestFrame/src/test/java/featureFiles/API_Tests.feature:11)
+]]></failure>
+    </testcase>
+    <testcase classname="API testing" name="Verify that Auth token API works for various combinations 2" time="0.382">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
+Then user sets "Content-Type" as "application/json" as header...............passed
+And user sets body params for "grant_type" as "client_credentials"..........passed
+And user sets body params for "client_id" as "valid"........................passed
+And user sets body params for "client_secret" as "valid"....................passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Authorization" as "false".....passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Functional testing" name="User initiates payment and transfer money to another user in another bank" time="12.674">
-        <system-out><![CDATA[Given user gets authentication token for Neonomics platform.................passed
-Then user retrieves bank ID for "Justo Bank"................................passed
-Then user "create" session for "Justo Bank".................................passed
-And user validates session status for "Justo Bank"..........................passed
-Then user retrieves bank ID for "Hizonti Bank"..............................passed
-Then user "create" session for "Hizonti Bank"...............................passed
-And user validates session status for "Hizonti Bank"........................passed
-Then user checks for "Justo Bank" consent and "Accept" if required provided redirect URL as "".passed
-Then user checks for "Hizonti Bank" consent and "Accept" if required provided redirect URL as "".passed
-Then user transfer amount of "5" "EUR" from "Justo Bank" bank account "IABN" "NO6404948998640" to "Hizonti Bank" bank account "NO4313081115656" with "sepa-credit" payment method.passed
-And user validates payment request is initiated.............................passed
-Then user authorizes the the payment and obtains authorization URL..........passed
-Then user authorizes process using authorization URL........................passed
-Then user "delete" session for "Justo Bank".................................passed
-Then user "delete" session for "Hizonti Bank"...............................passed
+    <testcase classname="API testing" name="Verify that Auth token API works for various combinations 3" time="0.419">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
+Then user sets "Content-Type" as "application/x-www-form-urlencoded" as header.passed
+And user sets body params for "grant_type" as "authorization_code"..........passed
+And user sets body params for "client_id" as "valid"........................passed
+And user sets body params for "client_secret" as "valid"....................passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Authorization" as "false".....passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verify that Auth token API works for various combinations 4" time="0.407">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
+Then user sets "Content-Type" as "application/x-www-form-urlencoded" as header.passed
+And user sets body params for "grant_type" as "client_credentials"..........passed
+And user sets body params for "client_id" as "invalid"......................passed
+And user sets body params for "client_secret" as "valid"....................passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Authorization" as "false".....passed
+]]></system-out>
+    </testcase>
+    <testcase classname="API testing" name="Verify that Auth token API works for various combinations 5" time="0.397">
+        <system-out><![CDATA[Given user sets base URI and sets endpoint path as "/auth/realms/sandbox/protocol/openid-connect/token".passed
+Then user sets "Content-Type" as "application/json" as header...............passed
+And user sets body params for "grant_type" as "client_credentials"..........passed
+And user sets body params for "client_id" as "valid"........................passed
+And user sets body params for "client_secret" as "invalid"..................passed
+When user makes "POST" request to endpoint..................................passed
+Then user validates status code as 510......................................passed
+Then user validates that API should work for "Authorization" as "false".....passed
 ]]></system-out>
     </testcase>
 </testsuite>

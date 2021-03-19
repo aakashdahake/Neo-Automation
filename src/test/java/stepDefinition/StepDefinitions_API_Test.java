@@ -5,6 +5,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.http.impl.conn.LoggingSessionInputBuffer;
 import org.apache.logging.log4j.LogManager;
@@ -104,12 +105,13 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 			logInstance.info("Making [{}] request", requestType);
 			response = request.request(requestType);
 			
-			logInstance.info("Headers ::[{}]",response.getHeaders());
-			logInstance.info("Cookies ::[{}]",response.getCookies());
+			logInstance.info("Headers :: [{}]",response.getHeaders());
+			logInstance.info("Cookies :: [{}]",response.getCookies());
 			logInstance.info("Status Code :: [{}]",response.getStatusCode());
-			logInstance.info("Status Line ::[{}]",response.getStatusLine());
-			logInstance.info("Session ID ::[{}]",response.getSessionId());
-			logInstance.info("Headers ::[{}]",response.prettyPrint());
+			logInstance.info("Status Line :: [{}]",response.getStatusLine());
+			logInstance.info("Session ID :: [{}]",response.getSessionId());
+			logInstance.info("Response Time :: [{}] milliseconds",response.getTimeIn(TimeUnit.MILLISECONDS));
+			logInstance.info("Response :: [{}]",response.print());
 
 		} catch (Exception e) {
 			logInstance.error(e.getMessage());

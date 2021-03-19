@@ -3,6 +3,7 @@ package com.neonomics.corelibraries;
 import static org.junit.Assert.assertNotEquals;
 
 import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
@@ -49,12 +50,17 @@ public class Authorization implements Schemas, ConstantsRef {
 						.formParam("client_secret", CLIENT_SECRET).when()
 						.post(Endpoints.GET_TOKEN)
 						.then()
-						.assertThat()
-						.body(JsonSchemaValidator.matchesJsonSchema(AuthSchema))
+						.assertThat().body(JsonSchemaValidator.matchesJsonSchema(AuthSchema))
 						.assertThat().statusCode(HttpStatus.SC_OK)
 						.extract().response();
 
-		logInstance.info("Response recieved for auth API ::" + resp.asString());
+		logInstance.info("Headers :: [{}]",resp.getHeaders());
+		logInstance.info("Cookies :: [{}]",resp.getCookies());
+		logInstance.info("Status Code :: [{}]",resp.getStatusCode());
+		logInstance.info("Status Line :: [{}]",resp.getStatusLine());
+		logInstance.info("Session ID :: [{}]",resp.getSessionId());
+		logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
+		logInstance.info("Response :: [{}]",resp.print());
 
 		assertNotEquals(resp.jsonPath().get("access_token"), null);
 		assertNotEquals(resp.jsonPath().get("refresh_token"), null);

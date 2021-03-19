@@ -4,6 +4,7 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertThat;
 
 import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
@@ -56,7 +57,15 @@ public class Accounts implements Schemas, ConstantsRef {
 						.assertThat().body(JsonSchemaValidator.matchesJsonSchema(ConsentResponseSchema))
 						.extract().response();
 		
+		logInstance.info("Headers :: [{}]",resp.getHeaders());
+		logInstance.info("Cookies :: [{}]",resp.getCookies());
+		logInstance.info("Status Code :: [{}]",resp.getStatusCode());
+		logInstance.info("Status Line :: [{}]",resp.getStatusLine());
+		logInstance.info("Session ID :: [{}]",resp.getSessionId());
+		logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
+		logInstance.info("Response :: [{}]",resp.print());
 		logInstance.info("Found consent web URL [{}]",resp.jsonPath().getString("links.href[0]"));
+		
 		return resp.jsonPath().getString("links.href[0]");
 	}
 
@@ -95,6 +104,14 @@ public class Accounts implements Schemas, ConstantsRef {
 						.then()
 						.extract().response();
 		
+		logInstance.info("Headers :: [{}]",resp.getHeaders());
+		logInstance.info("Cookies :: [{}]",resp.getCookies());
+		logInstance.info("Status Code :: [{}]",resp.getStatusCode());
+		logInstance.info("Status Line :: [{}]",resp.getStatusLine());
+		logInstance.info("Session ID :: [{}]",resp.getSessionId());
+		logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
+		logInstance.info("Response :: [{}]",resp.print());
+		
 		// Handling consent required
 		if (resp.jsonPath().getString("errorCode").contains(String.valueOf(1426))
 				&& resp.jsonPath().get("type").equals("CONSENT")) {
@@ -115,17 +132,27 @@ public class Accounts implements Schemas, ConstantsRef {
 	 */
 	public AccountDataPOJO[] getAccountsFromBank(HashMap<String, String> headData){
 		
-		logInstance.info("Retrieving list of accounts with session ID provided as [{}]", headData.get(X_SESSION_ID));
 		AccountDataPOJO[] accountDetails = null;
-		Response resp = RestAssured.given()
-						.header("Accept", ContentType.JSON)
-						.headers(headData)
-						.when()
-						.get(Endpoints.GET_ACCOUNTS)
-						.then()
-						.extract().response();
-
 		try {
+			
+			logInstance.info("Retrieving list of accounts with session ID provided as [{}]", headData.get(X_SESSION_ID));
+			
+			Response resp = RestAssured.given()
+							.header("Accept", ContentType.JSON)
+							.headers(headData)
+							.when()
+							.get(Endpoints.GET_ACCOUNTS)
+							.then()
+							.extract().response();
+
+			logInstance.info("Headers :: [{}]",resp.getHeaders());
+			logInstance.info("Cookies :: [{}]",resp.getCookies());
+			logInstance.info("Status Code :: [{}]",resp.getStatusCode());
+			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
+			logInstance.info("Session ID :: [{}]",resp.getSessionId());
+			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
+			logInstance.info("Response :: [{}]",resp.print());
+			
 			accountDetails = objMap.readValue(resp.asString(), AccountDataPOJO[].class);
 		} catch (Exception e) {
 			logInstance.error(e.getMessage());

@@ -1,6 +1,7 @@
 package com.neonomics.corelibraries;
 
 import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
@@ -45,8 +46,15 @@ public class Session extends Authorization {
 						.assertThat().statusCode(HttpStatus.SC_CREATED)
 						.assertThat().body(JsonSchemaValidator.matchesJsonSchema(SessionIdSchema))
 						.extract().response();
-
-		logInstance.info("Response recieved for getting session ID ::" + resp.asString());
+		
+		logInstance.info("Headers :: [{}]",resp.getHeaders());
+		logInstance.info("Cookies :: [{}]",resp.getCookies());
+		logInstance.info("Status Code :: [{}]",resp.getStatusCode());
+		logInstance.info("Status Line :: [{}]",resp.getStatusLine());
+		logInstance.info("Session ID :: [{}]",resp.getSessionId());
+		logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
+		logInstance.info("Response ::" + resp.print());
+		
 		return resp.jsonPath().get("sessionId");
 
 	}
@@ -71,8 +79,13 @@ public class Session extends Authorization {
 				.assertThat().statusCode(HttpStatus.SC_OK)
 				.assertThat().body(JsonSchemaValidator.matchesJsonSchema(SessionStatusSchema))
 				.extract().response();
-
-		logInstance.info("Response recieved for getting current session status ::" + resp.asString());
+		
+		logInstance.info("Headers :: [{}]",resp.getHeaders());
+		logInstance.info("Cookies :: [{}]",resp.getCookies());
+		logInstance.info("Status Code :: [{}]",resp.getStatusCode());
+		logInstance.info("Status Line :: [{}]",resp.getStatusLine());
+		logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
+		logInstance.info("Response ::" + resp.print());
 		bankInfo.put(BANK_NAME, resp.jsonPath().get(BANK_NAME));
 		bankInfo.put(BANK_ID, resp.jsonPath().get(BANK_ID));
 
