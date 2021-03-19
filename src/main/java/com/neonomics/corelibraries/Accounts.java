@@ -49,10 +49,9 @@ public class Accounts implements Schemas, ConstantsRef {
 	private String getConsentWebURL(String consentURI, HashMap<String, String> headData) {
 		
 		String URL=null;
-		Response resp;
 		
 		try {
-			resp = RestAssured.given()
+			Response resp = RestAssured.given()
 							.contentType(ContentType.JSON)
 							.headers(headData)
 							.when()
