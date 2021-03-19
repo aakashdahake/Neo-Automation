@@ -44,31 +44,42 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 	@Given("user sets base URI and sets endpoint path as {string}")
 	public void user_sets_base_uri_and_sets_endpoint_path_as(String path) {
 
-		request.baseUri(BASE_URL);
-		request.basePath(path);
-
-		logInstance.info("Base URL [{}]", BASE_URL);
-		logInstance.info("Endpoint path [{}]", path);
+		try {
+			request.baseUri(BASE_URL);
+			request.basePath(path);
+			logInstance.info("Base URL [{}]", BASE_URL);
+			logInstance.info("Endpoint path [{}]", path);
+		} catch (Exception e) {
+			logInstance.error(e.getMessage());
+		}
 	}
 
 	@Then("user sets {string} as {string} as header")
 	public void user_sets_as_as_header(String key, String value) {
 
-		logInstance.info("Setting Header = [{}] and Value = [{}]", key, value);
-		if (key.contains(AUTHORIZATION) && value.equals(BEARER_TOKEN)) {
-			accessToken = auth.getAuthToken().get(ACCESS_TOKEN);
-			value = "Bearer " + accessToken;
-			logInstance.info("Bearer token :: [{}]", value);
+		try {
+			logInstance.info("Setting Header = [{}] and Value = [{}]", key, value);
+			if (key.contains(AUTHORIZATION) && value.equals(BEARER_TOKEN)) {
+				accessToken = auth.getAuthToken().get(ACCESS_TOKEN);
+				value = "Bearer " + accessToken;
+				logInstance.info("Bearer token :: [{}]", value);
+			}
+			logInstance.info("Added :: Header = [{}] and Value = [{}]", key, value);
+			requestHeaders.putIfAbsent(key, value);
+		} catch (Exception e) {
+			logInstance.error(e.getMessage());
 		}
-		logInstance.info("Added :: Header = [{}] and Value = [{}]", key, value);
-		requestHeaders.putIfAbsent(key, value);
 
 	}
 
 	@Then("user sets body params for {string} as {string}")
 	public void user_sets_body_params_for_as(String key, String value) {
-		logInstance.info("Setting request paramter as Key = [{}] and Value = [{}]", key, value);
-		requestParams.put(key, value);
+		try {
+			logInstance.info("Setting request paramter as Key = [{}] and Value = [{}]", key, value);
+			requestParams.put(key, value);
+		} catch (Exception e) {
+			logInstance.error(e.getMessage());
+		}
 	}
 
 	@When("user makes {string} request to endpoint")
