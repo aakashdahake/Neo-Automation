@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.io.File;
 import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -40,11 +41,11 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 
 	private Logger logInstance = LogManager.getLogger();
 
-	private HashMap<String, String> token;
-	private HashMap<String, String> sessionIDS = new HashMap<String, String>();
-	private HashMap<String, String> bankIDS = new HashMap<String, String>();
-	private HashMap<String, String> header = new HashMap<String, String>();
-	private HashMap<String, String> paymentResponseData = new HashMap<String, String>();
+	private Map<String, String> token;
+	private Map<String, String> sessionIDS = new HashMap<String, String>();
+	private Map<String, String> bankIDS = new HashMap<String, String>();
+	private Map<String, String> header = new HashMap<String, String>();
+	private Map<String, String> paymentResponseData = new HashMap<String, String>();
 	Scenario scenario;
 
 	@Before
@@ -128,7 +129,7 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 			
 			logInstance.info("Getting details for [{}] bank", bankName);
 
-			HashMap<String, String> bankDetails = session.getSessionStatus(sessionIDS.get(bankName), header);
+			Map<String, String> bankDetails = session.getSessionStatus(sessionIDS.get(bankName), header);
 			logInstance.info("Got bank details to validate current session [{}]", bankDetails);
 
 			assertEquals(bankDetails.get(BANK_NAME), bankName);

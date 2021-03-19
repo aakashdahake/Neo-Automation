@@ -3,14 +3,10 @@ package stepDefinition;
 import static org.junit.Assert.assertNotEquals;
 import static org.testng.Assert.assertEquals;
 
-import java.io.PrintStream;
-import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.output.WriterOutputStream;
-import org.apache.http.impl.conn.LoggingSessionInputBuffer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,17 +16,14 @@ import com.neonomics.corelibraries.Session;
 import com.neonomics.model.responseschema.Schemas;
 import com.neonomics.utils.ConfigManager;
 
-import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.messages.internal.com.google.gson.Gson;
 import io.restassured.RestAssured;
-import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import junit.framework.AssertionFailedError;
 
 public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 

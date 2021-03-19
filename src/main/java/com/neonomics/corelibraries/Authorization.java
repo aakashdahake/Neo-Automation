@@ -3,6 +3,7 @@ package com.neonomics.corelibraries;
 import static org.junit.Assert.assertNotEquals;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
@@ -39,9 +40,9 @@ public class Authorization implements Schemas, ConstantsRef {
 	 *
 	 * @return the auth token
 	 */
-	public HashMap<String, String> getAuthToken() {
+	public Map<String, String> getAuthToken() {
 
-		HashMap<String, String> keySet = new HashMap<>();
+		Map<String, String> keySet = new HashMap<>();
 		
 		try {
 			

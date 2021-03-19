@@ -3,7 +3,7 @@ package com.neonomics.corelibraries;
 import static org.junit.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
 
-import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
@@ -38,7 +38,7 @@ public class Banks extends Authorization implements Schemas {
 	 * @return the all banks
 	 * @throws Exception the exception
 	 */
-	public BankDataPOJO[] getAllBanks(HashMap<String, String> headData) throws Exception {
+	public BankDataPOJO[] getAllBanks(Map<String, String> headData) throws Exception {
 		
 		BankDataPOJO[] BankDB = null;
 		try {	
@@ -85,14 +85,14 @@ public class Banks extends Authorization implements Schemas {
 	 * @return the bank details
 	 * @throws Exception the exception
 	 */
-	public BankDataPOJO getBankDetails(String bankName, HashMap<String, String> header) throws Exception {
+	public BankDataPOJO getBankDetails(String bankName, Map<String, String> header) throws Exception {
 		
 		try {
 			logInstance.info("Getting information about bank [{}]", bankName);
 			BankDataPOJO[] allBanks = getAllBanks(header);
 			for (BankDataPOJO eachBank : allBanks) {
 				if (eachBank.getBankDisplayName().equalsIgnoreCase(bankName)) {
-					logInstance.info("Found bank [{}] from all bank collection", eachBank.toString());
+					logInstance.info("Found bank [{}] from all bank collection", eachBank);
 					return eachBank;
 				}
 			}
@@ -114,7 +114,7 @@ public class Banks extends Authorization implements Schemas {
 	 * @return the bank ID
 	 * @throws Exception the exception
 	 */
-	public String getBankID(String bankName, HashMap<String, String> headData) throws Exception {
+	public String getBankID(String bankName, Map<String, String> headData) throws Exception {
 
 		String bankId = null;
 
@@ -141,7 +141,7 @@ public class Banks extends Authorization implements Schemas {
 	 * @param paymentType the payment type
 	 * @return the boolean
 	 */
-	public Boolean validateSupportedPaymentTypeForBank(String bankName, HashMap<String, String> headData, String paymentType) {
+	public Boolean validateSupportedPaymentTypeForBank(String bankName, Map<String, String> headData, String paymentType) {
 		Boolean isSupported = false;
 
 		try {

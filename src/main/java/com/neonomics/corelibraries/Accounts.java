@@ -3,7 +3,7 @@ package com.neonomics.corelibraries;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertThat;
 
-import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
@@ -22,10 +22,7 @@ import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
-/**
- * @author Aakash
- *
- */
+
 public class Accounts implements Schemas, ConstantsRef {
 
 	private static final String BASE_URL = ConfigManager.getInstance().getString("base_url");
@@ -46,7 +43,7 @@ public class Accounts implements Schemas, ConstantsRef {
 	 * @param headData the head data
 	 * @return the consent web URL
 	 */
-	private String getConsentWebURL(String consentURI, HashMap<String, String> headData) {
+	private String getConsentWebURL(String consentURI, Map<String, String> headData) {
 		
 		String URL=null;
 		
@@ -86,7 +83,7 @@ public class Accounts implements Schemas, ConstantsRef {
 	 * @param headData the head data
 	 * @param action the action
 	 */
-	private void handleConsent(String consentURL, HashMap<String, String> headData, String action) {
+	private void handleConsent(String consentURL, Map<String, String> headData, String action) {
 
 		HandleConsentUI handleUI = new HandleConsentUI();
 
@@ -104,7 +101,7 @@ public class Accounts implements Schemas, ConstantsRef {
 	 * @param headData the head data
 	 * @param action the action
 	 */
-	public void handleBankConsent(HashMap<String, String> headData, String action) {
+	public void handleBankConsent(Map<String, String> headData, String action) {
 
 		try {
 			Response resp = RestAssured.given()
@@ -146,7 +143,7 @@ public class Accounts implements Schemas, ConstantsRef {
 	 * @param headData the head data
 	 * @return the accounts from bank
 	 */
-	public AccountDataPOJO[] getAccountsFromBank(HashMap<String, String> headData){
+	public AccountDataPOJO[] getAccountsFromBank(Map<String, String> headData){
 		
 		AccountDataPOJO[] accountDetails = null;
 		try {
@@ -186,7 +183,7 @@ public class Accounts implements Schemas, ConstantsRef {
 	 * @param accNumber the acc number
 	 * @return the boolean
 	 */
-	public Boolean validateAccountBelongToBank(HashMap<String, String> headData, String accNoType,
+	public Boolean validateAccountBelongToBank(Map<String, String> headData, String accNoType,
 			String accNumber) {
 
 		Boolean isAccHosted = false;
@@ -195,19 +192,10 @@ public class Accounts implements Schemas, ConstantsRef {
 		logInstance.info("Validating that account belong to bank with session ID [{}]", headData.get(X_SESSION_ID));
 		for (AccountDataPOJO account : accData) {
 
-			if (accNoType.contains(IBAN)) {
-
-				if (account.getIban().equals(accNumber)) {
+			if ((accNoType.contains(IBAN) && account.getIban().equals(accNumber)) || (accNoType.contains(BBAN) && account.getBban().equals(accNumber))) {
 					logInstance.info("Account number [{}] found as [{}]", accNumber, accNoType);
 					isAccHosted = true;
-				}
-
-			} else if (accNoType.contains(BBAN)) {
-				if (account.getBban().equals(accNumber)) {
-					logInstance.info("Account number [{}] found as [{}]", accNumber, accNoType);
-					isAccHosted = true;
-				}
-			}
+			} 
 
 		}
 

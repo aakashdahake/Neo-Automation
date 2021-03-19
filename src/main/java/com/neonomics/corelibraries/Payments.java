@@ -31,9 +31,9 @@ public class Payments implements Schemas{
 	 * @param headData the header data
 	 * @return the hash map of status and payment Id
 	 */
-	public HashMap<String, String> initiateSEPAPayment(PaymentRequestPOJO payData, Map<String, String> headData) {
+	public Map<String, String> initiateSEPAPayment(PaymentRequestPOJO payData, Map<String, String> headData) {
 
-		HashMap<String, String> paymentStatus = new HashMap<String, String>();
+		Map<String, String> paymentStatus = new HashMap<>();
 		
 		try {
 			Response resp =  RestAssured.given()
@@ -50,7 +50,7 @@ public class Payments implements Schemas{
 			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
 			logInstance.info("Session ID :: [{}]",resp.getSessionId());
 			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
-			logInstance.info("Response for SEPA payyment initiation :: "+ resp.print());
+			logInstance.info("Response for SEPA payyment initiation :: [{}]", resp.print());
 			
 			assertNotEquals(resp.jsonPath().get("paymentId"), null);
 			assertNotEquals(resp.jsonPath().get("status"), null);

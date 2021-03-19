@@ -1,6 +1,7 @@
 package com.neonomics.corelibraries;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
@@ -31,9 +32,9 @@ public class Session extends Authorization {
 	 * @param headData the head data
 	 * @return the session ID
 	 */
-	public String getSessionID(String bankID, HashMap<String, String> headData) {
+	public String getSessionID(String bankID, Map<String, String> headData) {
 
-		HashMap<String, String> payload = new HashMap<String, String>();
+		Map<String, String> payload = new HashMap<>();
 		payload.put("bankId", bankID);
 
 		String sessID = null;
@@ -55,7 +56,7 @@ public class Session extends Authorization {
 			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
 			logInstance.info("Session ID :: [{}]",resp.getSessionId());
 			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
-			logInstance.info("Response ::" + resp.print());
+			logInstance.info("Response :: [{}]", resp.print());
 			sessID = resp.jsonPath().get("sessionId");
 		} catch (Exception e) {
 			logInstance.error(e.getLocalizedMessage());
@@ -74,9 +75,9 @@ public class Session extends Authorization {
 	 * @param headData the head data
 	 * @return the session status
 	 */
-	public HashMap<String, String> getSessionStatus(String sessionID, HashMap<String, String> headData) {
+	public Map<String, String> getSessionStatus(String sessionID, Map<String, String> headData) {
 
-		HashMap<String, String> bankInfo = new HashMap<String, String>();
+		Map<String, String> bankInfo = new HashMap<>();
 		
 		try {
 			Response resp = RestAssured.given()
@@ -94,7 +95,7 @@ public class Session extends Authorization {
 			logInstance.info("Status Code :: [{}]",resp.getStatusCode());
 			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
 			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
-			logInstance.info("Response ::" + resp.print());
+			logInstance.info("Response :: [{}]",resp.print());
 			bankInfo.put(BANK_NAME, resp.jsonPath().get(BANK_NAME));
 			bankInfo.put(BANK_ID, resp.jsonPath().get(BANK_ID));
 		} catch (AssertionError e) {
@@ -112,7 +113,7 @@ public class Session extends Authorization {
 	 * @param sessionID the session ID
 	 * @param headData the head data
 	 */
-	public void terminateSession(String sessionID, HashMap<String, String> headData) {
+	public void terminateSession(String sessionID, Map<String, String> headData) {
 
 		logInstance.info("Terminating session for session ID [{}]", sessionID);
 		
