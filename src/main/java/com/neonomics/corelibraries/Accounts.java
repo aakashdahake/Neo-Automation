@@ -47,26 +47,37 @@ public class Accounts implements Schemas, ConstantsRef {
 	 * @return the consent web URL
 	 */
 	private String getConsentWebURL(String consentURI, HashMap<String, String> headData) {
-		Response resp = RestAssured.given()
-						.contentType(ContentType.JSON)
-						.headers(headData)
-						.when()
-						.get(consentURI)
-						.then()
-						.assertThat().statusCode(HttpStatus.SC_OK)
-						.assertThat().body(JsonSchemaValidator.matchesJsonSchema(ConsentResponseSchema))
-						.extract().response();
 		
-		logInstance.info("Headers :: [{}]",resp.getHeaders());
-		logInstance.info("Cookies :: [{}]",resp.getCookies());
-		logInstance.info("Status Code :: [{}]",resp.getStatusCode());
-		logInstance.info("Status Line :: [{}]",resp.getStatusLine());
-		logInstance.info("Session ID :: [{}]",resp.getSessionId());
-		logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
-		logInstance.info("Response :: [{}]",resp.print());
-		logInstance.info("Found consent web URL [{}]",resp.jsonPath().getString("links.href[0]"));
+		String URL=null;
+		Response resp;
 		
-		return resp.jsonPath().getString("links.href[0]");
+		try {
+			resp = RestAssured.given()
+							.contentType(ContentType.JSON)
+							.headers(headData)
+							.when()
+							.get(consentURI)
+							.then()
+							.assertThat().statusCode(HttpStatus.SC_OK)
+							.assertThat().body(JsonSchemaValidator.matchesJsonSchema(ConsentResponseSchema))
+							.extract().response();
+			
+			logInstance.info("Headers :: [{}]",resp.getHeaders());
+			logInstance.info("Cookies :: [{}]",resp.getCookies());
+			logInstance.info("Status Code :: [{}]",resp.getStatusCode());
+			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
+			logInstance.info("Session ID :: [{}]",resp.getSessionId());
+			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
+			logInstance.info("Response :: [{}]",resp.print());
+			logInstance.info("Found consent web URL [{}]",resp.jsonPath().getString("links.href[0]"));
+			
+			URL = resp.jsonPath().getString("links.href[0]");
+		} catch (AssertionError e) {
+			e.printStackTrace();
+			logInstance.error(e.getMessage());
+		}
+		
+		return URL;
 	}
 
 	/**
