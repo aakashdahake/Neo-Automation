@@ -96,7 +96,8 @@ public class Accounts implements Schemas, ConstantsRef {
 	 */
 	public void handleBankConsent(HashMap<String, String> headData, String action) {
 
-		Response resp = RestAssured.given()
+		try {
+			Response resp = RestAssured.given()
 						.header("Accept", ContentType.JSON)
 						.headers(headData)
 						.when()
@@ -104,23 +105,28 @@ public class Accounts implements Schemas, ConstantsRef {
 						.then()
 						.extract().response();
 		
-		logInstance.info("Headers :: [{}]",resp.getHeaders());
-		logInstance.info("Cookies :: [{}]",resp.getCookies());
-		logInstance.info("Status Code :: [{}]",resp.getStatusCode());
-		logInstance.info("Status Line :: [{}]",resp.getStatusLine());
-		logInstance.info("Session ID :: [{}]",resp.getSessionId());
-		logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
-		logInstance.info("Response :: [{}]",resp.print());
+			logInstance.info("Headers :: [{}]",resp.getHeaders());
+			logInstance.info("Cookies :: [{}]",resp.getCookies());
+			logInstance.info("Status Code :: [{}]",resp.getStatusCode());
+			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
+			logInstance.info("Session ID :: [{}]",resp.getSessionId());
+			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
+			logInstance.info("Response :: [{}]",resp.print());
 		
-		// Handling consent required
-		if (resp.jsonPath().getString("errorCode").contains(String.valueOf(1426))
+			// Handling consent required
+			if (resp.jsonPath().getString("errorCode").contains(String.valueOf(1426))
 				&& resp.jsonPath().get("type").equals("CONSENT")) {
 			
-			logInstance.info("Response to check whether consent is needed = [{}]", resp.asString());
-			logInstance.info("Bank consent is needed, therefore invoking consent handling mechanism using Web URL");
+				logInstance.info("Response to check whether consent is needed = [{}]", resp.asString());
+				logInstance.info("Bank consent is needed, therefore invoking consent handling mechanism using Web URL");
 			
-			assertThat(resp.body().asString(), JsonSchemaValidator.matchesJsonSchema(ConsentRequiredSchema));
-			handleConsent(resp.jsonPath().getString("links.href[0]"), headData, action);
+				assertThat(resp.body().asString(), JsonSchemaValidator.matchesJsonSchema(ConsentRequiredSchema));
+				handleConsent(resp.jsonPath().getString("links.href[0]"), headData, action);
+			}
+		
+		} catch (AssertionError e) {
+			e.printStackTrace();
+			logInstance.error(e.getMessage());
 		}
 	}
 
@@ -153,7 +159,9 @@ public class Accounts implements Schemas, ConstantsRef {
 			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
 			logInstance.info("Response :: [{}]",resp.print());
 			
+			
 			accountDetails = objMap.readValue(resp.asString(), AccountDataPOJO[].class);
+		
 		} catch (Exception e) {
 			logInstance.error(e.getMessage());
 		} 

@@ -25,7 +25,6 @@ import io.restassured.response.Response;
 public class Banks extends Authorization implements Schemas {
 
 	private static final String BASE_URL = ConfigManager.getInstance().getString("base_url");
-	private BankDataPOJO[] BankDB = null;
 	private Logger logInstance = LogManager.getLogger();
 
 	public Banks() {
@@ -40,9 +39,10 @@ public class Banks extends Authorization implements Schemas {
 	 * @throws Exception the exception
 	 */
 	public BankDataPOJO[] getAllBanks(HashMap<String, String> headData) throws Exception {
-
-		ObjectMapper objMap = new ObjectMapper();
 		
+		BankDataPOJO[] BankDB = null;
+		try {	
+			ObjectMapper objMap = new ObjectMapper();
 		
 			Response resp = RestAssured.given()
 							.accept(ContentType.JSON)
@@ -62,13 +62,20 @@ public class Banks extends Authorization implements Schemas {
 			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
 			logInstance.info("Response :: [{}]",resp.print());
 		
-		try {
+		
 			BankDB = objMap.readValue(resp.asString(), BankDataPOJO[].class);
 		} catch (JsonMappingException e) {
 			logInstance.error(e.getMessage());
+		} catch (AssertionError ea ) {
+			ea.printStackTrace();
+			logInstance.error(ea.getMessage());
 		}
+		
 		return BankDB;
 	}
+
+	
+	
 
 	/**
 	 * Gets the bank details.
@@ -79,7 +86,7 @@ public class Banks extends Authorization implements Schemas {
 	 * @throws Exception the exception
 	 */
 	public BankDataPOJO getBankDetails(String bankName, HashMap<String, String> header) throws Exception {
-
+		
 		try {
 			logInstance.info("Getting information about bank [{}]", bankName);
 			BankDataPOJO[] allBanks = getAllBanks(header);
@@ -96,6 +103,9 @@ public class Banks extends Authorization implements Schemas {
 		return null;
 	}
 
+	
+	
+	
 	/**
 	 * Gets the bank ID.
 	 *
@@ -120,6 +130,8 @@ public class Banks extends Authorization implements Schemas {
 		return bankId;
 
 	}
+	
+	
 
 	/**
 	 * Validate supported payment type for bank.

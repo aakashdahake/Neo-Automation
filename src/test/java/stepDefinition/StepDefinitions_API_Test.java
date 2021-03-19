@@ -3,10 +3,13 @@ package stepDefinition;
 import static org.junit.Assert.assertNotEquals;
 import static org.testng.Assert.assertEquals;
 
+import java.io.PrintStream;
+import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.output.WriterOutputStream;
 import org.apache.http.impl.conn.LoggingSessionInputBuffer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,9 +26,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.messages.internal.com.google.gson.Gson;
 import io.restassured.RestAssured;
+import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import junit.framework.AssertionFailedError;
 
 public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 
@@ -42,6 +47,7 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 
 	RequestSpecification request = RestAssured.given();
 
+	
 	@Given("user sets base URI and sets endpoint path as {string}")
 	public void user_sets_base_uri_and_sets_endpoint_path_as(String path) {
 
@@ -85,7 +91,7 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 
 	@When("user makes {string} request to endpoint")
 	public void user_makes_request_to_endpoint(String requestType) {
-
+		
 		try {
 
 			if (isBody) {
@@ -122,7 +128,12 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 	@Then("user validates status code as {int}")
 	public void user_validates_status_code_as(int code) {
 		logInstance.info("Validating response code as [{}]", code);
-		assertEquals(response.getStatusCode(), code);
+		try {
+			assertEquals(response.getStatusCode(), code);
+		} catch (AssertionError e) {
+			logInstance.error(e.getMessage());
+		}
+
 	}
 
 	@Then("user validates that API should work for {string} as {string}")
