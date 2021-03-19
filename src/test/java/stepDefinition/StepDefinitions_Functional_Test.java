@@ -51,6 +51,7 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
     public void before(Scenario scenario) {
         this.scenario = scenario;
         logInstance.info("********************************************************************************************************");
+        logInstance.info("********************************************************************************************************");
 		logInstance.info("--- Execution Started :::: {}",scenario.getName());
 		logInstance.info("********************************************************************************************************");
 

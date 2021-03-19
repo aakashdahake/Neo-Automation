@@ -6,6 +6,7 @@ import static org.testng.Assert.assertEquals;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.http.impl.conn.LoggingSessionInputBuffer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -35,7 +36,6 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 	private Map<String, Object> jsonAsMap = new HashMap<>();
 	private String accessToken;
 	private Logger logInstance = LogManager.getLogger();
-	Scenario scenario;
 	Authorization auth = new Authorization();
 	Session session = new Session();
 
@@ -75,7 +75,7 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 	@Then("user sets body params for {string} as {string}")
 	public void user_sets_body_params_for_as(String key, String value) {
 		try {
-			logInstance.info("Setting request paramter as Key = [{}] and Value = [{}]", key, value);
+			logInstance.info("Setting request parameter as Key = [{}] and Value = [{}]", key, value);
 			requestParams.put(key, value);
 		} catch (Exception e) {
 			logInstance.error(e.getMessage());
@@ -103,6 +103,13 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 
 			logInstance.info("Making [{}] request", requestType);
 			response = request.request(requestType);
+			
+			logInstance.info("Headers ::[{}]",response.getHeaders());
+			logInstance.info("Cookies ::[{}]",response.getCookies());
+			logInstance.info("Status Code :: [{}]",response.getStatusCode());
+			logInstance.info("Status Line ::[{}]",response.getStatusLine());
+			logInstance.info("Session ID ::[{}]",response.getSessionId());
+			logInstance.info("Headers ::[{}]",response.prettyPrint());
 
 		} catch (Exception e) {
 			logInstance.error(e.getMessage());
