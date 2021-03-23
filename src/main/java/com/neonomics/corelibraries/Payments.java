@@ -41,9 +41,10 @@ public class Payments implements Schemas{
 							.contentType(ContentType.JSON)
 							.headers(headData)
 							.body(payData)
-							.post(Endpoints.SEPA_CREDIT_PAYMENT).then()
+							.post(Endpoints.SEPA_CREDIT_PAYMENT.getConstant()).then()
 							.assertThat().statusCode(HttpStatus.SC_CREATED)
 							.assertThat().body(JsonSchemaValidator.matchesJsonSchema(PaymentInitiatedResponseSchema)).extract().response();
+			
 			logInstance.info("Headers :: [{}]",resp.getHeaders());
 			logInstance.info("Cookies :: [{}]",resp.getCookies());
 			logInstance.info("Status Code :: [{}]",resp.getStatusCode());

@@ -23,7 +23,7 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
 
-public class Accounts implements Schemas, ConstantsRef {
+public class Accounts implements Schemas {
 
 	private static final String BASE_URL = ConfigManager.getInstance().getString("base_url");
 	private ObjectMapper objMap = new ObjectMapper();
@@ -108,7 +108,7 @@ public class Accounts implements Schemas, ConstantsRef {
 						.header("Accept", ContentType.JSON)
 						.headers(headData)
 						.when()
-						.get(Endpoints.GET_ACCOUNTS)
+						.get(Endpoints.GET_ACCOUNTS.getConstant())
 						.then()
 						.extract().response();
 		
@@ -148,13 +148,13 @@ public class Accounts implements Schemas, ConstantsRef {
 		AccountDataPOJO[] accountDetails = null;
 		try {
 			
-			logInstance.info("Retrieving list of accounts with session ID provided as [{}]", headData.get(X_SESSION_ID));
+			logInstance.info("Retrieving list of accounts with session ID provided as [{}]", headData.get(ConstantsRef.X_DEVICE_ID.getConstant()));
 			
 			Response resp = RestAssured.given()
 							.header("Accept", ContentType.JSON)
 							.headers(headData)
 							.when()
-							.get(Endpoints.GET_ACCOUNTS)
+							.get(Endpoints.GET_ACCOUNTS.getConstant())
 							.then()
 							.extract().response();
 
@@ -183,20 +183,17 @@ public class Accounts implements Schemas, ConstantsRef {
 	 * @param accNumber the acc number
 	 * @return the boolean
 	 */
-	public Boolean validateAccountBelongToBank(Map<String, String> headData, String accNoType,
-			String accNumber) {
+	public Boolean validateAccountBelongToBank(Map<String, String> headData, String accNoType,String accNumber) {
 
 		Boolean isAccHosted = false;
 		AccountDataPOJO[] accData = getAccountsFromBank(headData);
 		
-		logInstance.info("Validating that account belong to bank with session ID [{}]", headData.get(X_SESSION_ID));
+		logInstance.info("Validating that account belong to bank with session ID [{}]", headData.get(ConstantsRef.X_SESSION_ID.getConstant()));
 		for (AccountDataPOJO account : accData) {
-
-			if ((accNoType.contains(IBAN) && account.getIban().equals(accNumber)) || (accNoType.contains(BBAN) && account.getBban().equals(accNumber))) {
-					logInstance.info("Account number [{}] found as [{}]", accNumber, accNoType);
-					isAccHosted = true;
+			if ((accNoType.equalsIgnoreCase(ConstantsRef.IBAN.getConstant()) && account.getIban().equals(accNumber)) || (accNoType.equalsIgnoreCase(ConstantsRef.BBAN.getConstant()) && account.getBban().equals(accNumber))) {	
+				logInstance.info("Account number [{}] found as [{}]", accNumber, accNoType);
+				isAccHosted = true;
 			} 
-
 		}
 
 		return isAccHosted;

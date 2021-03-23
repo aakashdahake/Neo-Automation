@@ -11,7 +11,7 @@ import com.neonomics.uicontrol.PageData;
 import com.neonomics.uicontrol.WebDriverManager;
 import com.neonomics.utils.ConfigManager;
 
-public class HandleConsentUI extends WebDriverManager implements ConstantsRef {
+public class HandleConsentUI extends WebDriverManager {
 	
 	private Logger logInstance = LogManager.getLogger();
 	private static final String username = ConfigManager.getInstance( ).getString("username");
@@ -34,7 +34,7 @@ public class HandleConsentUI extends WebDriverManager implements ConstantsRef {
 		//Access Consent Webpage
 		logInstance.info("Opening link in browser::[{}]", consentURL);
 		driver.get(consentURL);
-		assertEquals(driver.getTitle().contains(LOGINPAGETITLE), true);
+		assertEquals(driver.getTitle().contains(ConstantsRef.LOGINPAGETITLE.getConstant()), true);
 		
 		//Enter Username
 		logInstance.info("Entering username in consent page as [{}]",username);
@@ -49,10 +49,10 @@ public class HandleConsentUI extends WebDriverManager implements ConstantsRef {
 		pageHandle.clickLoginBtn();
 		
 		//Accept consent or decline consent
-		if(driver.getTitle().equals(CONFIRMATIONPAGETITLE) && action.equals(ACTION_ACCEPT)) {
+		if(driver.getTitle().equals(ConstantsRef.CONFIRMATIONPAGETITLE.getConstant()) && action.equals(ConstantsRef.ACTION_ACCEPT.getConstant())) {
 			logInstance.info("Accepting consent from bank webpage");
 			pageHandle.clickConsentAcceptBtn();
-		}else if(driver.getTitle().equals(CONFIRMATIONPAGETITLE) && action.equals(ACTION_DECLINE)) {
+		}else if(driver.getTitle().equals(ConstantsRef.CONFIRMATIONPAGETITLE.getConstant()) && action.equals(ConstantsRef.ACTION_DECLINE.getConstant())) {
 			logInstance.info("Declining consent from bank webpage");
 			pageHandle.clickConsentDeclineBtn();
 		}

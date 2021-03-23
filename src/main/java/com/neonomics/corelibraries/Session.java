@@ -8,6 +8,7 @@ import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.neonomics.constants.ConstantsRef;
 import com.neonomics.constants.Endpoints;
 import com.neonomics.utils.ConfigManager;
 
@@ -44,7 +45,7 @@ public class Session extends Authorization {
 							.headers(headData)
 							.body(payload)
 							.when()
-							.post(Endpoints.CREATE_SESSION_ID)
+							.post(Endpoints.CREATE_SESSION_ID.getConstant())
 							.then()
 							.assertThat().statusCode(HttpStatus.SC_CREATED)
 							.assertThat().body(JsonSchemaValidator.matchesJsonSchema(SessionIdSchema))
@@ -84,7 +85,7 @@ public class Session extends Authorization {
 					.accept(ContentType.JSON)
 					.pathParam("sessionId", sessionID)
 					.headers(headData)
-					.get(Endpoints.SESSION_STATUS)
+					.get(Endpoints.SESSION_STATUS.getConstant())
 					.then()
 					.assertThat().statusCode(HttpStatus.SC_OK)
 					.assertThat().body(JsonSchemaValidator.matchesJsonSchema(SessionStatusSchema))
@@ -96,8 +97,8 @@ public class Session extends Authorization {
 			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
 			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
 			logInstance.info("Response :: [{}]",resp.print());
-			bankInfo.put(BANK_NAME, resp.jsonPath().get(BANK_NAME));
-			bankInfo.put(BANK_ID, resp.jsonPath().get(BANK_ID));
+			bankInfo.put(ConstantsRef.BANK_NAME.getConstant(), resp.jsonPath().get(ConstantsRef.BANK_NAME.getConstant()));
+			bankInfo.put(ConstantsRef.BANK_ID.getConstant(), resp.jsonPath().get(ConstantsRef.BANK_ID.getConstant()));
 		} catch (AssertionError e) {
 			logInstance.error(e.getLocalizedMessage());
 			e.printStackTrace();
@@ -122,7 +123,7 @@ public class Session extends Authorization {
 				.accept(ContentType.JSON)
 				.headers(headData)
 				.pathParam("sessionId", sessionID)
-				.delete(Endpoints.SESSION_STATUS)
+				.delete(Endpoints.SESSION_STATUS.getConstant())
 				.then()
 				.assertThat().statusCode(HttpStatus.SC_NO_CONTENT);
 			

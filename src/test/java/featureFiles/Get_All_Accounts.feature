@@ -1,5 +1,6 @@
 Feature: Functional testing
 	
+	@test1
   Scenario: User retrieves accounts from Justo Bank
     Given user gets authentication token for Neonomics platform
     Then user retrieves bank ID for "Justo Bank"
@@ -9,6 +10,7 @@ Feature: Functional testing
     And user fetches all accounts from "Justo Bank"
     Then user "delete" session for "Justo Bank"
 
+	@test2
   Scenario: User initiates payment and transfer money to another user in another bank
     Given user gets authentication token for Neonomics platform
     Then user retrieves bank ID for "Justo Bank"

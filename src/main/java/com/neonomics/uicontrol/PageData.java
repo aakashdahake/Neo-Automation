@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.neonomics.constants.ConstantsRef;
 import com.neonomics.utils.ConfigManager;
 
-public class PageData implements ConstantsRef {
+public class PageData {
 	
 	private static final String username = ConfigManager.getInstance( ).getString("username");
 	private static final String password = ConfigManager.getInstance( ).getString("password");
@@ -58,7 +58,7 @@ public class PageData implements ConstantsRef {
 	}
 	
 	public void confirmConsentGranted() {
-		assertEquals(confirmText.getText().contains(CONFIRMCONSENTTEXT), true);
+		assertEquals(confirmText.getText().contains(ConstantsRef.CONFIRMCONSENTTEXT.getConstant()), true);
 	}
 
 }

@@ -20,7 +20,7 @@ import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
-public class Authorization implements Schemas, ConstantsRef {
+public class Authorization implements Schemas {
 
 	private static final String BASE_URL = ConfigManager.getInstance().getString("base_url");
 	private static final String CLIENT_ID = ConfigManager.getInstance().getString("client_id");
@@ -49,10 +49,10 @@ public class Authorization implements Schemas, ConstantsRef {
 		
 			Response resp = RestAssured.given()
 							.contentType(ContentType.URLENC.withCharset("UTF-8"))
-							.formParam("grant_type", CLIENT_CREDENTIALS)
+							.formParam("grant_type", ConstantsRef.CLIENT_CREDENTIALS.getConstant())
 							.formParam("client_id", CLIENT_ID)
 							.formParam("client_secret", CLIENT_SECRET).when()
-							.post(Endpoints.GET_TOKEN)
+							.post(Endpoints.GET_TOKEN.getConstant())
 							.then()
 							.assertThat().body(JsonSchemaValidator.matchesJsonSchema(AuthSchema))
 							.assertThat().statusCode(HttpStatus.SC_OK)
@@ -70,8 +70,8 @@ public class Authorization implements Schemas, ConstantsRef {
 			assertNotEquals(resp.jsonPath().get("access_token"), null);
 			assertNotEquals(resp.jsonPath().get("refresh_token"), null);
 
-			keySet.put(ACCESS_TOKEN, resp.jsonPath().get("access_token"));
-			keySet.put(REFRESH_TOKEN, resp.jsonPath().get("refresh_token"));
+			keySet.put(ConstantsRef.ACCESS_TOKEN.getConstant(), resp.jsonPath().get("access_token"));
+			keySet.put(ConstantsRef.REFRESH_TOKEN.getConstant(), resp.jsonPath().get("refresh_token"));
 		
 		} catch (AssertionError e) {
 			e.printStackTrace();

@@ -48,7 +48,7 @@ public class Banks extends Authorization implements Schemas {
 							.accept(ContentType.JSON)
 							.headers(headData)
 							.when()
-							.get(Endpoints.GET_BANKS)
+							.get(Endpoints.GET_BANKS.getConstant())
 							.then()
 							.assertThat().statusCode(HttpStatus.SC_OK)
 							.assertThat().body(JsonSchemaValidator.matchesJsonSchema(BanksSchema))

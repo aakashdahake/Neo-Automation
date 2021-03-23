@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="23.071">
-    <testcase classname="Functional testing" name="User retrieves accounts from Justo Bank" time="11.32">
-        <system-out><![CDATA[Given user gets authentication token for Neonomics platform.................passed
-Then user retrieves bank ID for "Justo Bank"................................passed
-Then user "create" session for "Justo Bank".................................passed
-And user validates session status for "Justo Bank"..........................passed
-Then user checks for "Justo Bank" consent and "Accept" if required provided redirect URL as "".passed
-And user fetches all accounts from "Justo Bank".............................passed
-Then user "delete" session for "Justo Bank".................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Functional testing" name="User initiates payment and transfer money to another user in another bank" time="11.575">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.03">
+    <testcase classname="Functional testing" name="User initiates payment and transfer money to another user in another bank" time="14.868">
         <system-out><![CDATA[Given user gets authentication token for Neonomics platform.................passed
 Then user retrieves bank ID for "Justo Bank"................................passed
 Then user "create" session for "Justo Bank".................................passed

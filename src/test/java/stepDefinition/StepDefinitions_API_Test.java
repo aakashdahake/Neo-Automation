@@ -25,9 +25,13 @@ import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
+public class StepDefinitions_API_Test implements Schemas {
 
 	private static final String BASE_URL = ConfigManager.getInstance().getString("base_url");
+	private static final String AUTHORIZATION = "Authorization";
+	private static final String BANKS = "Banks";
+	private static final String SESSION = "Session";
+	private static final String SESSION_STATUS = "SessionStatus";
 	private Response response;
 	private Boolean isBody = false;
 	private Map<String, String> requestHeaders = new HashMap<String, String>();
@@ -59,8 +63,8 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 
 		try {
 			logInstance.info("Setting Header = [{}] and Value = [{}]", key, value);
-			if (key.contains(AUTHORIZATION) && value.equals(BEARER_TOKEN)) {
-				accessToken = auth.getAuthToken().get(ACCESS_TOKEN);
+			if (key.contains(ConstantsRef.AUTHORIZATION.getConstant()) && value.equals(ConstantsRef.BEARER_TOKEN.getConstant())) {
+				accessToken = auth.getAuthToken().get(ConstantsRef.ACCESS_TOKEN.getConstant());
 				value = "Bearer " + accessToken;
 				logInstance.info("Bearer token :: [{}]", value);
 			}
@@ -177,8 +181,8 @@ public class StepDefinitions_API_Test implements ConstantsRef, Schemas {
 	public void user_creates_session_id_with_device_id_as_and_bank_id_as_and_puts_it_in_endpoint_uri(String xDeviceId, String bankId) {
 		try {
 			HashMap<String, String> header = new HashMap<>();
-			header.put(AUTHORIZATION, accessToken);
-			header.put(X_DEVICE_ID, xDeviceId);
+			header.put(ConstantsRef.AUTHORIZATION.getConstant(), accessToken);
+			header.put(ConstantsRef.X_DEVICE_ID.getConstant(), xDeviceId);
 
 			logInstance.info("Creating session ID for bank ID [{}] and Device ID [{}] for further API testing", bankId, xDeviceId);
 			String sessID = session.getSessionID(bankId, header);

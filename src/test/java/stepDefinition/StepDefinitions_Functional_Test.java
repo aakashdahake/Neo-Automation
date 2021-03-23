@@ -1,5 +1,6 @@
 package stepDefinition;
 
+import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
 
 import java.io.File;
@@ -28,12 +29,14 @@ import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class StepDefinitions_Functional_Test implements ConstantsRef {
+public class StepDefinitions_Functional_Test {
 
-	private static final String XDEVICEID = ConfigManager.getInstance().getString(X_DEVICE_ID);
-	private static final String XPSUID = ConfigManager.getInstance().getString(X_PSU_ID);
+	private static final String XDEVICEID = ConfigManager.getInstance().getString(ConstantsRef.X_DEVICE_ID.getConstant());
+	private static final String XPSUID = ConfigManager.getInstance().getString(ConstantsRef.X_PSU_ID.getConstant());
+	private static final String SESSION_CREATE = "create";
+	private static final String SESSION_DELETE = "delete";
 
-	Authorization auth = new Authorization();
+	Authorization  auth = new Authorization();
 	Banks bank = new Banks();
 	Accounts account = new Accounts();
 	Session session = new Session();
@@ -55,7 +58,7 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
         logInstance.info("********************************************************************************************************");
 		logInstance.info("--- Execution Started :::: {}",scenario.getName());
 		logInstance.info("********************************************************************************************************");
-
+		logInstance.info("********************************************************************************************************");
     }
 	
 	@Given("user gets authentication token for Neonomics platform")
@@ -75,8 +78,8 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 
 		try {
 			header.clear();
-			header.put(AUTHORIZATION, "Bearer " + token.get(ACCESS_TOKEN));
-			header.put(X_DEVICE_ID, XDEVICEID);
+			header.put(ConstantsRef.AUTHORIZATION.getConstant(), "Bearer " + token.get(ConstantsRef.ACCESS_TOKEN.getConstant()));
+			header.put(ConstantsRef.X_DEVICE_ID.getConstant(), XDEVICEID);
 
 			String bankId = bank.getBankID(bankName, header);
 			logInstance.info("Received Bank ID [{}] for bank [{}] with provided device ID [{}].", bankId, bankName, XDEVICEID);
@@ -92,12 +95,12 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 		try {
 			
 			header.clear();
-			header.put(AUTHORIZATION, "Bearer " + token.get(ACCESS_TOKEN));
-			header.put(X_DEVICE_ID, XDEVICEID);
+			header.put(ConstantsRef.AUTHORIZATION.getConstant(), "Bearer " + token.get(ConstantsRef.ACCESS_TOKEN.getConstant()));
+			header.put(ConstantsRef.X_DEVICE_ID.getConstant(), XDEVICEID);
 			
 			switch (action) {
 			case SESSION_CREATE:
-				logInstance.info("Creating session ID for bank [{}] when Device ID [{}] with token [{}]", bankName, XDEVICEID, token.get(ACCESS_TOKEN));
+				logInstance.info("Creating session ID for bank [{}] when Device ID [{}] with token [{}]", bankName, XDEVICEID, token.get(ConstantsRef.ACCESS_TOKEN.getConstant()));
 				String sessId = session.getSessionID(bankIDS.get(bankName), header);
 				logInstance.info("Recieved session ID as [{}]", sessId);
 				sessionIDS.put(bankName, sessId);
@@ -124,16 +127,16 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 	public void user_validates_session_status_for(String bankName) {
 		try {
 			header.clear();
-			header.put(AUTHORIZATION, "Bearer " + token.get(ACCESS_TOKEN));
-			header.put(X_DEVICE_ID, XDEVICEID);
+			header.put(ConstantsRef.AUTHORIZATION.getConstant(), "Bearer " + token.get(ConstantsRef.ACCESS_TOKEN.getConstant()));
+			header.put(ConstantsRef.X_DEVICE_ID.getConstant(), XDEVICEID);
 			
 			logInstance.info("Getting details for [{}] bank", bankName);
 
 			Map<String, String> bankDetails = session.getSessionStatus(sessionIDS.get(bankName), header);
 			logInstance.info("Got bank details to validate current session [{}]", bankDetails);
 
-			assertEquals(bankDetails.get(BANK_NAME), bankName);
-			assertEquals(bankDetails.get(BANK_ID), bankIDS.get(bankName));
+			assertEquals(bankDetails.get(ConstantsRef.BANK_NAME.getConstant()), bankName);
+			assertEquals(bankDetails.get(ConstantsRef.BANK_ID.getConstant()), bankIDS.get(bankName));
 
 		} catch (Exception e) {
 			logInstance.error(e.getMessage());
@@ -146,8 +149,8 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 
 			String psuID = "";
 			header.clear();
-			header.put(AUTHORIZATION, "Bearer " + token.get(ACCESS_TOKEN));
-			header.put(X_DEVICE_ID, XDEVICEID);
+			header.put(ConstantsRef.AUTHORIZATION.getConstant(), "Bearer " + token.get(ConstantsRef.ACCESS_TOKEN.getConstant()));
+			header.put(ConstantsRef.X_DEVICE_ID.getConstant(), XDEVICEID);
 
 			logInstance.info("Getting [{}] bank details to seek consent, where user [{}] consent provided Device ID [{}] and redirect URL [{}]", bankName, action, XDEVICEID, redirectURL);
 			BankDataPOJO bankPOJO = bank.getBankDetails(bankName, header);
@@ -162,11 +165,11 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 			}
 			
 			header.clear();
-			header.put(AUTHORIZATION, "Bearer " + token.get(ACCESS_TOKEN));
-			header.put(X_DEVICE_ID, XDEVICEID);
-			header.put(X_REDIRECT_URL, redirectURL);
-			header.put(X_SESSION_ID, sessionIDS.get(bankName));
-			header.put(X_PSU_ID, psuID);
+			header.put(ConstantsRef.AUTHORIZATION.getConstant(), "Bearer " + token.get(ConstantsRef.ACCESS_TOKEN.getConstant()));
+			header.put(ConstantsRef.X_DEVICE_ID.getConstant(), XDEVICEID);
+			header.put(ConstantsRef.X_REDIRECT_URL.getConstant(), redirectURL);
+			header.put(ConstantsRef.X_SESSION_ID.getConstant(), sessionIDS.get(bankName));
+			header.put(ConstantsRef.X_PSU_ID.getConstant(), psuID);
 			
 			logInstance.info("Handling bank consent");
 			account.handleBankConsent(header, action);
@@ -181,9 +184,9 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 		try {
 
 			header.clear();
-			header.put(AUTHORIZATION, "Bearer " + token.get(ACCESS_TOKEN));
-			header.put(X_DEVICE_ID, XDEVICEID);
-			header.put(X_SESSION_ID, sessionIDS.get(bankName));
+			header.put(ConstantsRef.AUTHORIZATION.getConstant(), "Bearer " + token.get(ConstantsRef.ACCESS_TOKEN.getConstant()));
+			header.put(ConstantsRef.X_DEVICE_ID.getConstant(), XDEVICEID);
+			header.put(ConstantsRef.X_SESSION_ID.getConstant(), sessionIDS.get(bankName));
 
 			AccountDataPOJO[] accData = account.getAccountsFromBank(header);
 
@@ -212,37 +215,40 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 			// Verify that sender bank and receiver bank have account with provided iban and
 			// supports payment method
 			header.clear();
-			header.put(AUTHORIZATION, "Bearer " + token.get(ACCESS_TOKEN));
-			header.put(X_DEVICE_ID, XDEVICEID);
+			header.put(ConstantsRef.AUTHORIZATION.getConstant(), "Bearer " + token.get(ConstantsRef.ACCESS_TOKEN.getConstant()));
+			header.put(ConstantsRef.X_DEVICE_ID.getConstant(), XDEVICEID);
 			Boolean sendBnkSupport = bank.validateSupportedPaymentTypeForBank(senderBnk, header, payMthd);
 			logInstance.info("Sender bank [{}] have support for payment type [{}]::[{}]", senderBnk, payMthd, sendBnkSupport);
 
 			// Verify that sender bank and receiver bank have account with provided iban and
 			// supports payment method
 			header.clear();
-			header.put(AUTHORIZATION, "Bearer " + token.get(ACCESS_TOKEN));
-			header.put(X_DEVICE_ID, XDEVICEID);
+			header.put(ConstantsRef.AUTHORIZATION.getConstant(), "Bearer " + token.get(ConstantsRef.ACCESS_TOKEN.getConstant()));
+			header.put(ConstantsRef.X_DEVICE_ID.getConstant(), XDEVICEID);
 			Boolean recBnkSupport = bank.validateSupportedPaymentTypeForBank(tgtBnk, header, payMthd);
 			logInstance.info("Sender bank [{}] have support for payment type [{}]::[{}]", tgtBnk, payMthd, recBnkSupport);
 
 			// Validating that respective bank hosts respective account
 			// Setting headers
-			header.put(AUTHORIZATION, "Bearer " + token.get(ACCESS_TOKEN));
-			header.put(X_DEVICE_ID, XDEVICEID);
-			header.put(X_SESSION_ID, sessionIDS.get(senderBnk));
+			header.put(ConstantsRef.AUTHORIZATION.getConstant(), "Bearer " + token.get(ConstantsRef.ACCESS_TOKEN.getConstant()));
+			header.put(ConstantsRef.X_DEVICE_ID.getConstant(), XDEVICEID);
+			header.put(ConstantsRef.X_SESSION_ID.getConstant(), sessionIDS.get(senderBnk));
 
 			logInstance.info("Validating that provided account number is present on sender's bank [{}] with session ID [{}]", senderBnk, sessionIDS.get(senderBnk));
 			Boolean isSenderAccHosted = account.validateAccountBelongToBank(header, accNoType, senderbanNo);
 
 			// Setting headers for next request
 			header.clear();
-			header.put(AUTHORIZATION, "Bearer " + token.get(ACCESS_TOKEN));
-			header.put(X_DEVICE_ID, XDEVICEID);
-			header.put(X_SESSION_ID, sessionIDS.get(tgtBnk));
+			header.put(ConstantsRef.AUTHORIZATION.getConstant(), "Bearer " + token.get(ConstantsRef.ACCESS_TOKEN.getConstant()));
+			header.put(ConstantsRef.X_DEVICE_ID.getConstant(), XDEVICEID);
+			header.put(ConstantsRef.X_SESSION_ID.getConstant(), sessionIDS.get(tgtBnk));
 
 			logInstance.info("Validating that provided account number is present on receiver's bank [{}] with session ID [{}]", tgtBnk, sessionIDS.get(tgtBnk));
 			Boolean isReceiverAccHosted = account.validateAccountBelongToBank(header, accNoType, tgtbanNo);
-
+			
+			logInstance.info("Sender Bank support SEPA [{}], Receiver bank support SEPA [{}], Does sender bank account exists [{}], Does Receiver bank account exists [{}]",sendBnkSupport, recBnkSupport, isSenderAccHosted, isReceiverAccHosted );
+			assertTrue((sendBnkSupport && recBnkSupport && isSenderAccHosted && isReceiverAccHosted));
+			
 			if (sendBnkSupport && recBnkSupport && isSenderAccHosted && isReceiverAccHosted) {
 
 				File file = new File("test-data-files/paymentInitiateData.json");
@@ -250,10 +256,10 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 
 				// Set Header
 				header.clear();
-				header.put(AUTHORIZATION, "Bearer " + token.get(ACCESS_TOKEN));
-				header.put(X_DEVICE_ID, XDEVICEID);
-				header.put(X_SESSION_ID, sessionIDS.get(senderBnk));
-				header.put(X_PSU_ID, XPSUID);
+				header.put(ConstantsRef.AUTHORIZATION.getConstant(), "Bearer " + token.get(ConstantsRef.ACCESS_TOKEN.getConstant()));
+				header.put(ConstantsRef.X_DEVICE_ID.getConstant(), XDEVICEID);
+				header.put(ConstantsRef.X_SESSION_ID.getConstant(), sessionIDS.get(senderBnk));
+				header.put(ConstantsRef.X_PSU_ID.getConstant(), XPSUID);
 
 				// Set Body
 				debAccData.setIban(senderbanNo);
@@ -268,8 +274,7 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 				paymentResponseData = payment.initiateSEPAPayment(payReqBody, header);
 				logInstance.info("Payment initiation Response data [{}]", paymentResponseData);
 				
-			}
-
+			} 
 		} catch (Exception e) {
 			logInstance.error(e.getMessage());
 		}
@@ -280,14 +285,16 @@ public class StepDefinitions_Functional_Test implements ConstantsRef {
 	public void user_validates_payment_request_is_initiated() {
 		// To be implemented
 	}
-
+	
 	@Then("user authorizes the the payment and obtains authorization URL")
 	public void user_authorizes_the_the_payment_and_obtains_authorization_url() {
-		// To be implemented
+	 
 	}
-
+	
 	@Then("user authorizes process using authorization URL")
 	public void user_authorizes_process_using_authorization_url() {
-		// To be implemented
+	    
 	}
+
+
 }

@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-19T09:33:43.784Z",
+        "start_timestamp": "2021-03-23T13:19:09.677Z",
         "before": [
           {
             "result": {
-              "duration": 707134900,
+              "duration": 693155900,
               "status": "passed"
             },
             "match": {
@@ -15,164 +15,7 @@
             }
           }
         ],
-        "line": 3,
-        "name": "User retrieves accounts from Justo Bank",
-        "description": "",
-        "id": "functional-testing;user-retrieves-accounts-from-justo-bank",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 2148726400,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "user gets authentication token for Neonomics platform",
-            "match": {
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_gets_authetication_token_for_neonomics_platform()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 1288735600,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user retrieves bank ID for \"Justo Bank\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Justo Bank\"",
-                  "offset": 27
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_retrieves_bank_id_for(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 324058600,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "user \"create\" session for \"Justo Bank\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"create\"",
-                  "offset": 5
-                },
-                {
-                  "val": "\"Justo Bank\"",
-                  "offset": 26
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_session_for(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 196191700,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "user validates session status for \"Justo Bank\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Justo Bank\"",
-                  "offset": 34
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_validates_session_status_for(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 6082770000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "user checks for \"Justo Bank\" consent and \"Accept\" if required provided redirect URL as \"\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Justo Bank\"",
-                  "offset": 16
-                },
-                {
-                  "val": "\"Accept\"",
-                  "offset": 41
-                },
-                {
-                  "val": "\"\"",
-                  "offset": 87
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_checks_for_consent_and_if_required_provided_redirect_url_as(java.lang.String,java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 351014100,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "user fetches all accounts from \"Justo Bank\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Justo Bank\"",
-                  "offset": 31
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_fetches_all_accounts_from(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 170295100,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "user \"delete\" session for \"Justo Bank\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"delete\"",
-                  "offset": 5
-                },
-                {
-                  "val": "\"Justo Bank\"",
-                  "offset": 26
-                }
-              ],
-              "location": "stepDefinition.StepDefinitions_Functional_Test.user_session_for(java.lang.String,java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-03-19T09:33:55.116Z",
-        "before": [
-          {
-            "result": {
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepDefinition.StepDefinitions_Functional_Test.before(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "line": 12,
+        "line": 13,
         "name": "User initiates payment and transfer money to another user in another bank",
         "description": "",
         "id": "functional-testing;user-initiates-payment-and-transfer-money-to-another-user-in-another-bank",
@@ -181,10 +24,10 @@
         "steps": [
           {
             "result": {
-              "duration": 457217300,
+              "duration": 1616384500,
               "status": "passed"
             },
-            "line": 13,
+            "line": 14,
             "name": "user gets authentication token for Neonomics platform",
             "match": {
               "location": "stepDefinition.StepDefinitions_Functional_Test.user_gets_authetication_token_for_neonomics_platform()"
@@ -193,10 +36,10 @@
           },
           {
             "result": {
-              "duration": 225922800,
+              "duration": 341002300,
               "status": "passed"
             },
-            "line": 14,
+            "line": 15,
             "name": "user retrieves bank ID for \"Justo Bank\"",
             "match": {
               "arguments": [
@@ -211,10 +54,10 @@
           },
           {
             "result": {
-              "duration": 185463800,
+              "duration": 287468600,
               "status": "passed"
             },
-            "line": 15,
+            "line": 16,
             "name": "user \"create\" session for \"Justo Bank\"",
             "match": {
               "arguments": [
@@ -233,10 +76,10 @@
           },
           {
             "result": {
-              "duration": 209921100,
+              "duration": 239683200,
               "status": "passed"
             },
-            "line": 16,
+            "line": 17,
             "name": "user validates session status for \"Justo Bank\"",
             "match": {
               "arguments": [
@@ -251,10 +94,10 @@
           },
           {
             "result": {
-              "duration": 215659600,
+              "duration": 221458300,
               "status": "passed"
             },
-            "line": 17,
+            "line": 18,
             "name": "user retrieves bank ID for \"Hizonti Bank\"",
             "match": {
               "arguments": [
@@ -269,10 +112,10 @@
           },
           {
             "result": {
-              "duration": 195330300,
+              "duration": 206030700,
               "status": "passed"
             },
-            "line": 18,
+            "line": 19,
             "name": "user \"create\" session for \"Hizonti Bank\"",
             "match": {
               "arguments": [
@@ -291,10 +134,10 @@
           },
           {
             "result": {
-              "duration": 191044700,
+              "duration": 200359000,
               "status": "passed"
             },
-            "line": 19,
+            "line": 20,
             "name": "user validates session status for \"Hizonti Bank\"",
             "match": {
               "arguments": [
@@ -309,10 +152,10 @@
           },
           {
             "result": {
-              "duration": 4358216000,
+              "duration": 4937955100,
               "status": "passed"
             },
-            "line": 20,
+            "line": 21,
             "name": "user checks for \"Justo Bank\" consent and \"Accept\" if required provided redirect URL as \"\"",
             "match": {
               "arguments": [
@@ -335,10 +178,10 @@
           },
           {
             "result": {
-              "duration": 4294884900,
+              "duration": 4377018000,
               "status": "passed"
             },
-            "line": 21,
+            "line": 22,
             "name": "user checks for \"Hizonti Bank\" consent and \"Accept\" if required provided redirect URL as \"\"",
             "match": {
               "arguments": [
@@ -361,10 +204,10 @@
           },
           {
             "result": {
-              "duration": 903816900,
+              "duration": 1341151000,
               "status": "passed"
             },
-            "line": 22,
+            "line": 23,
             "name": "user transfer amount of \"5\" \"EUR\" from \"Justo Bank\" bank account \"IBAN\" \"NO6404948998640\" to \"Hizonti Bank\" bank account \"NO4313081115656\" with \"sepa-credit\" payment method",
             "match": {
               "arguments": [
@@ -409,7 +252,7 @@
             "result": {
               "status": "passed"
             },
-            "line": 23,
+            "line": 24,
             "name": "user validates payment request is initiated",
             "match": {
               "location": "stepDefinition.StepDefinitions_Functional_Test.user_validates_payment_request_is_initiated()"
@@ -420,7 +263,7 @@
             "result": {
               "status": "passed"
             },
-            "line": 24,
+            "line": 25,
             "name": "user authorizes the the payment and obtains authorization URL",
             "match": {
               "location": "stepDefinition.StepDefinitions_Functional_Test.user_authorizes_the_the_payment_and_obtains_authorization_url()"
@@ -431,7 +274,7 @@
             "result": {
               "status": "passed"
             },
-            "line": 25,
+            "line": 26,
             "name": "user authorizes process using authorization URL",
             "match": {
               "location": "stepDefinition.StepDefinitions_Functional_Test.user_authorizes_process_using_authorization_url()"
@@ -440,10 +283,10 @@
           },
           {
             "result": {
-              "duration": 163047300,
+              "duration": 176723100,
               "status": "passed"
             },
-            "line": 26,
+            "line": 27,
             "name": "user \"delete\" session for \"Justo Bank\"",
             "match": {
               "arguments": [
@@ -462,10 +305,10 @@
           },
           {
             "result": {
-              "duration": 165889000,
+              "duration": 177879200,
               "status": "passed"
             },
-            "line": 27,
+            "line": 28,
             "name": "user \"delete\" session for \"Hizonti Bank\"",
             "match": {
               "arguments": [
@@ -481,6 +324,11 @@
               "location": "stepDefinition.StepDefinitions_Functional_Test.user_session_for(java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test"
           }
         ]
       }
