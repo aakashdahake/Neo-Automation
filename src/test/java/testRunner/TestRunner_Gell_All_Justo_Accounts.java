@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
 		plugin = { "pretty", "json:test-output/cucumber.json","junit:test-output/cucumber.xml", "html:test-output/Accounts.html" }, 
 		publish = true, 
 		monochrome = true, 
-		dryRun = false,
+		dryRun = false
 		//tags = "@test"
 		)
 
