@@ -27,3 +27,7 @@ Feature: Functional testing
     Then user authorizes process using authorization URL
     Then user "delete" session for "Justo Bank"
     Then user "delete" session for "Hizonti Bank"
+    
+   
+   	
+   	

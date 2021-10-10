@@ -2,7 +2,6 @@ package com.neonomics.corelibraries;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
@@ -11,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 import com.neonomics.constants.ConstantsRef;
 import com.neonomics.constants.Endpoints;
 import com.neonomics.utils.ConfigManager;
+import com.neonomics.utils.Print;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -21,7 +21,7 @@ public class Session extends Authorization {
 
 	private static final String BASE_URL = ConfigManager.getInstance().getString("base_url");
 	private Logger logInstance = LogManager.getLogger();
-
+	
 	public Session() {
 		RestAssured.baseURI = BASE_URL;
 	}
@@ -51,13 +51,7 @@ public class Session extends Authorization {
 							.assertThat().body(JsonSchemaValidator.matchesJsonSchema(SessionIdSchema))
 							.extract().response();
 			
-			logInstance.info("Headers :: [{}]",resp.getHeaders());
-			logInstance.info("Cookies :: [{}]",resp.getCookies());
-			logInstance.info("Status Code :: [{}]",resp.getStatusCode());
-			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
-			logInstance.info("Session ID :: [{}]",resp.getSessionId());
-			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
-			logInstance.info("Response :: [{}]", resp.print());
+			Print.printResponse(resp);
 			sessID = resp.jsonPath().get("sessionId");
 		} catch (Exception e) {
 			logInstance.error(e.getLocalizedMessage());
@@ -91,12 +85,7 @@ public class Session extends Authorization {
 					.assertThat().body(JsonSchemaValidator.matchesJsonSchema(SessionStatusSchema))
 					.extract().response();
 			
-			logInstance.info("Headers :: [{}]",resp.getHeaders());
-			logInstance.info("Cookies :: [{}]",resp.getCookies());
-			logInstance.info("Status Code :: [{}]",resp.getStatusCode());
-			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
-			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
-			logInstance.info("Response :: [{}]",resp.print());
+			Print.printResponse(resp);
 			bankInfo.put(ConstantsRef.BANK_NAME.getConstant(), resp.jsonPath().get(ConstantsRef.BANK_NAME.getConstant()));
 			bankInfo.put(ConstantsRef.BANK_ID.getConstant(), resp.jsonPath().get(ConstantsRef.BANK_ID.getConstant()));
 		} catch (AssertionError e) {

@@ -74,3 +74,4 @@ Feature: API testing
       | /ics/v3/session/{sessionId} | application/json                  |              |                           |                510 | false      |
       | /ics/v3/session/{sessionId} | application/x-www-form-urlencoded | Bearer Token | anything-different        |                406 | false      |
       | /ics/v3/session/{sessionId} |                                   |              |                           |                510 | false      |
+

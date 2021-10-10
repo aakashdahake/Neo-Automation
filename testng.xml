@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Regression" >
+   <test name="Neonomics" >
+       <classes> 
+          <class name="testRunner.TestRunner_Gell_All_Justo_Accounts" />
+       </classes>
+   </test>
+ </suite>

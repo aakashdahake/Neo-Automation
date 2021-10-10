@@ -1,0 +1,672 @@
+2021-07-24 15:40:25.378 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-07-24 15:40:25.379 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-07-24 15:40:25.380 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: User retrieves accounts from Justo Bank
+2021-07-24 15:40:25.380 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-07-24 15:40:25.380 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-07-24 15:40:29.187 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-frame-options=SAMEORIGIN
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=be4913ee-a9d0-4896-a0e9-146385ba360f
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Sat, 24 Jul 2021 10:10:28 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:28 GMT
+Content-Length=1215
+Connection=keep-alive
+Set-Cookie=KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/sandbox/; Secure; HttpOnly
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=700
+Server-Timing=origin; dur=395
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:29.188 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{KC_RESTART=}]
+2021-07-24 15:40:29.189 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:29.189 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:29.190 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:29.192 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [3006] milliseconds
+2021-07-24 15:40:29.195 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"refresh_expires_in":2592000,"expires_in":86400,"session_state":"a57f7a49-e1bf-49c0-9b6b-ae06baac3fcd","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MjcyMDc4MjgsImlhdCI6MTYyNzEyMTQyOCwianRpIjoiZGI3MjNlYWItMjY4NS00MDllLTk0NDYtZDc3NzIxMjcwMThiIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6ImE1N2Y3YTQ5LWUxYmYtNDljMC05YjZiLWFlMDZiYWFjM2ZjZCIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIyMjMuMTc3Ljg0Ljg1IiwiY2tpZCI6ImJmNjRiMzU5LTlhYWQtNDI3MS1iYzYyLTUxYzQyNjRkMmZkNyIsImNsaWVudEFkZHJlc3MiOiIyMjMuMTc3Ljg0Ljg1In0.WcaHzeuxGw-_IljgZ7DvFZ6srpll3oCGqQMo8tCKBVPTjZHyODB1aMDCzlU2xmDtcDRlS_5zysYWJxb6r8C504rSODgHTjO6mKIK3xJ1bV8yhXQxmFhLqxE0hwzWf1YjowXOGZS7zE05HfHtbDYky8G29yi4mt2ltKqJK8x-SLMRQPOYEnm_MfAQKU9ybwfw5CrgHsI9jECVIKiNhzv4iyBz0aqiBjlGo9IMd-E6SwndJMI01d88eeDhwWY9iF-Sb2MV6pMG9F7EgMDZswnFDsR4Pbl-tAQVt0ZHQTgyWscRTnMhs3bc4iWFw_n13xYPIjuQWVHrg_xCWZPC9b0GQQ","scope":"banqbridge_client","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2Mjk3MTM0MjgsImlhdCI6MTYyNzEyMTQyOCwianRpIjoiOWQwZWQ0YTMtMjcxYS00N2M3LTlmMjUtZjliYzYyODM3YjM2IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiJhNTdmN2E0OS1lMWJmLTQ5YzAtOWI2Yi1hZTA2YmFhYzNmY2QiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.iclSJ1_tvlDJVLPPbZ3Oc5VfsiMR0U9gDVJ4LaaKWUU"}]
+2021-07-24 15:40:29.837 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Getting authentication token set
+2021-07-24 15:40:29.837 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Access token and Refresh token::{access_token=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MjcyMDc4MjgsImlhdCI6MTYyNzEyMTQyOCwianRpIjoiZGI3MjNlYWItMjY4NS00MDllLTk0NDYtZDc3NzIxMjcwMThiIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6ImE1N2Y3YTQ5LWUxYmYtNDljMC05YjZiLWFlMDZiYWFjM2ZjZCIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIyMjMuMTc3Ljg0Ljg1IiwiY2tpZCI6ImJmNjRiMzU5LTlhYWQtNDI3MS1iYzYyLTUxYzQyNjRkMmZkNyIsImNsaWVudEFkZHJlc3MiOiIyMjMuMTc3Ljg0Ljg1In0.WcaHzeuxGw-_IljgZ7DvFZ6srpll3oCGqQMo8tCKBVPTjZHyODB1aMDCzlU2xmDtcDRlS_5zysYWJxb6r8C504rSODgHTjO6mKIK3xJ1bV8yhXQxmFhLqxE0hwzWf1YjowXOGZS7zE05HfHtbDYky8G29yi4mt2ltKqJK8x-SLMRQPOYEnm_MfAQKU9ybwfw5CrgHsI9jECVIKiNhzv4iyBz0aqiBjlGo9IMd-E6SwndJMI01d88eeDhwWY9iF-Sb2MV6pMG9F7EgMDZswnFDsR4Pbl-tAQVt0ZHQTgyWscRTnMhs3bc4iWFw_n13xYPIjuQWVHrg_xCWZPC9b0GQQ, refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2Mjk3MTM0MjgsImlhdCI6MTYyNzEyMTQyOCwianRpIjoiOWQwZWQ0YTMtMjcxYS00N2M3LTlmMjUtZjliYzYyODM3YjM2IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiJhNTdmN2E0OS1lMWJmLTQ5YzAtOWI2Yi1hZTA2YmFhYzNmY2QiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.iclSJ1_tvlDJVLPPbZ3Oc5VfsiMR0U9gDVJ4LaaKWUU}
+2021-07-24 15:40:29.839 [main] INFO  com.neonomics.corelibraries.Banks                 : Getting bank ID for bank [Justo Bank]
+2021-07-24 15:40:29.839 [main] INFO  com.neonomics.corelibraries.Banks                 : Getting information about bank [Justo Bank]
+2021-07-24 15:40:30.747 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=24375239-a0df-492b-8aad-f36a503922a3
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Sat, 24 Jul 2021 10:10:30 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:30 GMT
+Content-Length=730
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=494
+Server-Timing=origin; dur=123
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:30.752 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:30.753 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:30.753 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:30.753 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:30.753 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [874] milliseconds
+2021-07-24 15:40:30.753 [main] INFO  com.neonomics.utils.Print                         : Response :: [[{"countryCode":"NO","bankingGroupName":"DNB Group","personalIdentificationRequired":true,"id":"RG5iLm5vLnYxRE5CQU5PS0s=","bankDisplayName":"DNB","supportedServices":["accounts","domestic-transfer"],"bic":"DNBANOKK","bankOfficialName":"DNB ASA","status":"AVAILABLE"},{"countryCode":"DK","bankingGroupName":"Sydbank A/S","personalIdentificationRequired":false,"id":"U1lEQkFOSy52MVNZQktESzIy","bankDisplayName":"Sydbank","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"SYBKDK22","bankOfficialName":"Sydbank","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Sbanken","personalIdentificationRequired":false,"id":"U2Jhbmtlbi52MVNCQUtOT0JC","bankDisplayName":"Sbanken","supportedServices":["sepa-credit","domestic-transfer","accounts"],"bic":"SBAKNOBB","bankOfficialName":"Sbanken ASA","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"Ålandsbanken","personalIdentificationRequired":false,"id":"YWxhbmRzYmFua2VuLmZpLnYxQUFCQUZJMjI=","bankDisplayName":"Ålandsbanken","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"AABAFI22","bankOfficialName":"Ålandsbanken","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"aGl6b250aWJhbmsudjFISVpPTk9LSw==","bankDisplayName":"Hizonti Bank","supportedServices":["accounts","sepa-credit"],"bic":"HIZONOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"anVzdG9iYW5rLnYxSlVTVE5PS0s=","bankDisplayName":"Justo Bank","supportedServices":["accounts","sepa-credit"],"bic":"JUSTNOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"SEB Group","personalIdentificationRequired":false,"id":"c2ViLnN3ZWRlbi52MUVTU0VTRVNT","bankDisplayName":"SEB","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"ESSESESS","bankOfficialName":"Skandinaviska Enskilda Banken AB","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"S-Bank Ltd","personalIdentificationRequired":false,"id":"c3BhbmtraS52MVNCQU5GSUhI","bankDisplayName":"S-Pankki","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"SBANFIHH","bankOfficialName":"S-Banken Ab","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Storebrand Group","personalIdentificationRequired":true,"id":"c3RvcmVicmFuZC52MVNURkJOT0tL","bankDisplayName":"Storebrand","supportedServices":["accounts","domestic-transfer"],"bic":"STFBNOKK","bankOfficialName":"Storebrand Bank ASA","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"Swedbank Group","personalIdentificationRequired":false,"id":"c3dlZGJhbmsudjFTQU5EU0VTUw==","bankDisplayName":"Swedbank","supportedServices":["domestic-transfer","domestic-scheduled-transfer","sepa-credit","sepa-scheduled-credit"],"bic":"SANDSESS","bankOfficialName":"Swedbank AB","status":"AVAILABLE"}]]
+2021-07-24 15:40:30.811 [main] INFO  com.neonomics.corelibraries.Banks                 : Found bank [BankData [countryCode=NO, bankingGroupName=, personalIdentificationRequired=false, id=anVzdG9iYW5rLnYxSlVTVE5PS0s=, bankDisplayName=Justo Bank, supportedServices=[accounts, sepa-credit], bic=JUSTNOKK, bankOfficialName=, status=AVAILABLE]] from all bank collection
+2021-07-24 15:40:30.811 [main] INFO  com.neonomics.corelibraries.Banks                 : Found bank ID as [anVzdG9iYW5rLnYxSlVTVE5PS0s=]for bank [Justo Bank]
+2021-07-24 15:40:30.813 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Received Bank ID [anVzdG9iYW5rLnYxSlVTVE5PS0s=] for bank [Justo Bank] with provided device ID [example_id_for_quickstart].
+2021-07-24 15:40:30.813 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Creating session ID for bank [Justo Bank] when Device ID [example_id_for_quickstart] with token [eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MjcyMDc4MjgsImlhdCI6MTYyNzEyMTQyOCwianRpIjoiZGI3MjNlYWItMjY4NS00MDllLTk0NDYtZDc3NzIxMjcwMThiIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6ImE1N2Y3YTQ5LWUxYmYtNDljMC05YjZiLWFlMDZiYWFjM2ZjZCIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIyMjMuMTc3Ljg0Ljg1IiwiY2tpZCI6ImJmNjRiMzU5LTlhYWQtNDI3MS1iYzYyLTUxYzQyNjRkMmZkNyIsImNsaWVudEFkZHJlc3MiOiIyMjMuMTc3Ljg0Ljg1In0.WcaHzeuxGw-_IljgZ7DvFZ6srpll3oCGqQMo8tCKBVPTjZHyODB1aMDCzlU2xmDtcDRlS_5zysYWJxb6r8C504rSODgHTjO6mKIK3xJ1bV8yhXQxmFhLqxE0hwzWf1YjowXOGZS7zE05HfHtbDYky8G29yi4mt2ltKqJK8x-SLMRQPOYEnm_MfAQKU9ybwfw5CrgHsI9jECVIKiNhzv4iyBz0aqiBjlGo9IMd-E6SwndJMI01d88eeDhwWY9iF-Sb2MV6pMG9F7EgMDZswnFDsR4Pbl-tAQVt0ZHQTgyWscRTnMhs3bc4iWFw_n13xYPIjuQWVHrg_xCWZPC9b0GQQ]
+2021-07-24 15:40:31.375 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=19a50ef3-b2ee-4df7-96d6-7b215ea692ee
+X-XSS-Protection=1; mode=block
+Content-Length=52
+Expires=Sat, 24 Jul 2021 10:10:31 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:31 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=150
+Server-Timing=origin; dur=89
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:31.375 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:31.375 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [201]
+2021-07-24 15:40:31.375 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 201 Created]
+2021-07-24 15:40:31.375 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:31.376 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [411] milliseconds
+2021-07-24 15:40:31.376 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"sessionId":"49c25516-6784-45c6-813e-d33b1285db90"}]
+2021-07-24 15:40:31.385 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Recieved session ID as [49c25516-6784-45c6-813e-d33b1285db90]
+2021-07-24 15:40:31.385 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Getting details for [Justo Bank] bank
+2021-07-24 15:40:31.791 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=b69dc656-4b9d-4ea2-8189-803215e3f52e
+X-XSS-Protection=1; mode=block
+Content-Length=136
+Expires=Sat, 24 Jul 2021 10:10:31 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:31 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=150
+Server-Timing=origin; dur=67
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:31.791 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:31.791 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:31.791 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:31.791 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:31.792 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [395] milliseconds
+2021-07-24 15:40:31.792 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"providerId":"justobank.v1","bankId":"anVzdG9iYW5rLnYxSlVTVE5PS0s=","bankName":"Justo Bank","createdAt":"Sat Jul 24 10:10:30 UTC 2021"}]
+2021-07-24 15:40:31.808 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Got bank details to validate current session [{bankId=anVzdG9iYW5rLnYxSlVTVE5PS0s=, bankName=Justo Bank}]
+2021-07-24 15:40:31.809 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Getting [Justo Bank] bank details to seek consent, where user [Accept] consent provided Device ID [example_id_for_quickstart] and redirect URL []
+2021-07-24 15:40:31.809 [main] INFO  com.neonomics.corelibraries.Banks                 : Getting information about bank [Justo Bank]
+2021-07-24 15:40:32.215 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=b72c1b9e-31ca-4613-bcc1-1a8a148577ff
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Sat, 24 Jul 2021 10:10:31 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:31 GMT
+Content-Length=730
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=153
+Server-Timing=origin; dur=47
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:32.216 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:32.216 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:32.216 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:32.216 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:32.216 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [384] milliseconds
+2021-07-24 15:40:32.216 [main] INFO  com.neonomics.utils.Print                         : Response :: [[{"countryCode":"NO","bankingGroupName":"DNB Group","personalIdentificationRequired":true,"id":"RG5iLm5vLnYxRE5CQU5PS0s=","bankDisplayName":"DNB","supportedServices":["accounts","domestic-transfer"],"bic":"DNBANOKK","bankOfficialName":"DNB ASA","status":"AVAILABLE"},{"countryCode":"DK","bankingGroupName":"Sydbank A/S","personalIdentificationRequired":false,"id":"U1lEQkFOSy52MVNZQktESzIy","bankDisplayName":"Sydbank","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"SYBKDK22","bankOfficialName":"Sydbank","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Sbanken","personalIdentificationRequired":false,"id":"U2Jhbmtlbi52MVNCQUtOT0JC","bankDisplayName":"Sbanken","supportedServices":["sepa-credit","domestic-transfer","accounts"],"bic":"SBAKNOBB","bankOfficialName":"Sbanken ASA","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"Ålandsbanken","personalIdentificationRequired":false,"id":"YWxhbmRzYmFua2VuLmZpLnYxQUFCQUZJMjI=","bankDisplayName":"Ålandsbanken","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"AABAFI22","bankOfficialName":"Ålandsbanken","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"aGl6b250aWJhbmsudjFISVpPTk9LSw==","bankDisplayName":"Hizonti Bank","supportedServices":["accounts","sepa-credit"],"bic":"HIZONOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"anVzdG9iYW5rLnYxSlVTVE5PS0s=","bankDisplayName":"Justo Bank","supportedServices":["accounts","sepa-credit"],"bic":"JUSTNOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"SEB Group","personalIdentificationRequired":false,"id":"c2ViLnN3ZWRlbi52MUVTU0VTRVNT","bankDisplayName":"SEB","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"ESSESESS","bankOfficialName":"Skandinaviska Enskilda Banken AB","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"S-Bank Ltd","personalIdentificationRequired":false,"id":"c3BhbmtraS52MVNCQU5GSUhI","bankDisplayName":"S-Pankki","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"SBANFIHH","bankOfficialName":"S-Banken Ab","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Storebrand Group","personalIdentificationRequired":true,"id":"c3RvcmVicmFuZC52MVNURkJOT0tL","bankDisplayName":"Storebrand","supportedServices":["accounts","domestic-transfer"],"bic":"STFBNOKK","bankOfficialName":"Storebrand Bank ASA","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"Swedbank Group","personalIdentificationRequired":false,"id":"c3dlZGJhbmsudjFTQU5EU0VTUw==","bankDisplayName":"Swedbank","supportedServices":["domestic-transfer","domestic-scheduled-transfer","sepa-credit","sepa-scheduled-credit"],"bic":"SANDSESS","bankOfficialName":"Swedbank AB","status":"AVAILABLE"}]]
+2021-07-24 15:40:32.220 [main] INFO  com.neonomics.corelibraries.Banks                 : Found bank [BankData [countryCode=NO, bankingGroupName=, personalIdentificationRequired=false, id=anVzdG9iYW5rLnYxSlVTVE5PS0s=, bankDisplayName=Justo Bank, supportedServices=[accounts, sepa-credit], bic=JUSTNOKK, bankOfficialName=, status=AVAILABLE]] from all bank collection
+2021-07-24 15:40:32.220 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Received bank details for bank [Justo Bank] as [BankData [countryCode=NO, bankingGroupName=, personalIdentificationRequired=false, id=anVzdG9iYW5rLnYxSlVTVE5PS0s=, bankDisplayName=Justo Bank, supportedServices=[accounts, sepa-credit], bic=JUSTNOKK, bankOfficialName=, status=AVAILABLE]]
+2021-07-24 15:40:32.220 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Checking whether PSU ID is required for bank [Justo Bank]
+2021-07-24 15:40:32.220 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Handling bank consent
+2021-07-24 15:40:32.551 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Content-Length=525
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=d44e2b15-67dc-444f-b0e1-e4cf9373eb21
+Expires=Sat, 24 Jul 2021 10:10:32 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:32 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=147
+Server-Timing=origin; dur=30
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:32.552 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:32.552 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [510]
+2021-07-24 15:40:32.552 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 510 Unknown]
+2021-07-24 15:40:32.552 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:32.552 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [327] milliseconds
+2021-07-24 15:40:32.552 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"id":"d44e2b15-67dc-444f-b0e1-e4cf9373eb21","errorCode":"1426","message":"This resource needs to initialise consent. Please use the URL provided to continue. The consent Url will provide the bank authentication url. You can consume this resource after authenticating.","source":"C","type":"CONSENT","timestamp":1627121432180,"links":[{"type":"GET","rel":"consent","href":"https://sandbox.neonomics.io/ics/v3/consent/49c25516-6784-45c6-813e-d33b1285db90?scope=accounts","meta":{"id":"49c25516-6784-45c6-813e-d33b1285db90"}}]}]
+2021-07-24 15:40:32.572 [main] INFO  com.neonomics.corelibraries.Accounts              : Response to check whether consent is needed = [{"id":"d44e2b15-67dc-444f-b0e1-e4cf9373eb21","errorCode":"1426","message":"This resource needs to initialise consent. Please use the URL provided to continue. The consent Url will provide the bank authentication url. You can consume this resource after authenticating.","source":"C","type":"CONSENT","timestamp":1627121432180,"links":[{"type":"GET","rel":"consent","href":"https://sandbox.neonomics.io/ics/v3/consent/49c25516-6784-45c6-813e-d33b1285db90?scope=accounts","meta":{"id":"49c25516-6784-45c6-813e-d33b1285db90"}}]}]
+2021-07-24 15:40:32.572 [main] INFO  com.neonomics.corelibraries.Accounts              : Bank consent is needed, therefore invoking consent handling mechanism using Web URL
+2021-07-24 15:40:33.042 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Content-Length=348
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=c0b91506-f634-490f-8629-60c3c0a2575f
+X-XSS-Protection=1; mode=block
+Expires=Sat, 24 Jul 2021 10:10:32 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:32 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=161
+Server-Timing=origin; dur=61
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:33.042 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:33.042 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:33.042 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:33.042 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:33.042 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [391] milliseconds
+2021-07-24 15:40:33.043 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"message":"Please consent with the bank authentication URL provided to continue.","links":[{"type":"GET","rel":"consent","href":"https://sandbox.neonomics.io/auth/realms/justo/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.neonomics.io%2Fcallback&client_id=bankbridge-auth-code&state=AEnCVRZnhEXGgT7TOxKF25A"}]}]
+2021-07-24 15:40:33.051 [main] INFO  com.neonomics.corelibraries.Accounts              : Found consent web URL [https://sandbox.neonomics.io/auth/realms/justo/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.neonomics.io%2Fcallback&client_id=bankbridge-auth-code&state=AEnCVRZnhEXGgT7TOxKF25A]
+2021-07-24 15:40:33.059 [main] INFO  com.neonomics.corelibraries.Accounts              : Consent Web URL [https://sandbox.neonomics.io/auth/realms/justo/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.neonomics.io%2Fcallback&client_id=bankbridge-auth-code&state=AEnCVRZnhEXGgT7TOxKF25A] and user action [Accept]
+2021-07-24 15:40:33.059 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Getting consent via Web page
+2021-07-24 15:40:33.059 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Creating selenium webdriver instance
+2021-07-24 15:40:35.189 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Opening link in browser::[https://sandbox.neonomics.io/auth/realms/justo/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.neonomics.io%2Fcallback&client_id=bankbridge-auth-code&state=AEnCVRZnhEXGgT7TOxKF25A]
+2021-07-24 15:40:39.785 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Entering username in consent page as [aakashdahake@gmail.com]
+2021-07-24 15:40:39.837 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Entering password in consent page as [Neonomics#1]
+2021-07-24 15:40:39.896 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Clicking submit button on Web page
+2021-07-24 15:40:41.152 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Confirming that user have consent
+2021-07-24 15:40:41.173 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Closing browser
+2021-07-24 15:40:42.012 [main] INFO  com.neonomics.corelibraries.Accounts              : Retrieving list of accounts with session ID provided as [example_id_for_quickstart]
+2021-07-24 15:40:43.116 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Content-Length=229
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=f564d883-44c7-452c-8cbf-01eae72d0449
+X-XSS-Protection=1; mode=block
+Expires=Sat, 24 Jul 2021 10:10:42 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:42 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=147
+Server-Timing=origin; dur=771
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:43.116 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:43.116 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:43.116 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:43.116 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:43.116 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [1101] milliseconds
+2021-07-24 15:40:43.116 [main] INFO  com.neonomics.utils.Print                         : Response :: [[{"id":"ZmJkM2QzMDEtZjNkYS00ZmYzLWI3YjgtMjY3YzVjZGJiYTBh","iban":"NO6404948998640","bban":"04948998640","accountName":"aakashdahake@gmail.com","accountType":"SVGS","balances":[{"amount":"4775.0","currency":"EUR","type":"CRRT"}]}]]
+2021-07-24 15:40:43.119 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Account details from [Justo Bank] are = [[id=ZmJkM2QzMDEtZjNkYS00ZmYzLWI3YjgtMjY3YzVjZGJiYTBh, iban=NO6404948998640, bban=04948998640, accountName=aakashdahake@gmail.com, accountType=SVGS, balances=[[amount=4775.0, currency=EUR, type=CRRT]]]]
+2021-07-24 15:40:43.119 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Deleting session for bank [Justo Bank]
+2021-07-24 15:40:43.119 [main] INFO  com.neonomics.corelibraries.Session               : Terminating session for session ID [49c25516-6784-45c6-813e-d33b1285db90]
+2021-07-24 15:40:43.510 [main] INFO  com.neonomics.corelibraries.Session               : Terminated session for session ID [49c25516-6784-45c6-813e-d33b1285db90]
+2021-07-24 15:40:43.510 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Deleted session ID as [49c25516-6784-45c6-813e-d33b1285db90]
+2021-07-24 15:40:43.518 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-07-24 15:40:43.518 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-07-24 15:40:43.518 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: User initiates payment and transfer money to another user in another bank
+2021-07-24 15:40:43.518 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-07-24 15:40:43.518 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-07-24 15:40:43.877 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-frame-options=SAMEORIGIN
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=43618973-2ad5-4f1c-8975-cdf235da0a89
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Sat, 24 Jul 2021 10:10:43 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:43 GMT
+Content-Length=1213
+Connection=keep-alive
+Set-Cookie=KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/sandbox/; Secure; HttpOnly
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=153
+Server-Timing=origin; dur=33
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:43.877 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{KC_RESTART=}]
+2021-07-24 15:40:43.877 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:43.877 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:43.877 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:43.878 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [350] milliseconds
+2021-07-24 15:40:43.878 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"refresh_expires_in":2592000,"expires_in":86400,"session_state":"2a3f0c8f-862b-4ef2-97c8-e8e9ebc4c8a0","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MjcyMDc4NDMsImlhdCI6MTYyNzEyMTQ0MywianRpIjoiNTUwYmU4ZTUtZWM5OS00OTgyLTk4OTItZmNhNWM5MTQxZDRhIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjJhM2YwYzhmLTg2MmItNGVmMi05N2M4LWU4ZTllYmM0YzhhMCIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIyMjMuMTc3Ljg0Ljg1IiwiY2tpZCI6ImJmNjRiMzU5LTlhYWQtNDI3MS1iYzYyLTUxYzQyNjRkMmZkNyIsImNsaWVudEFkZHJlc3MiOiIyMjMuMTc3Ljg0Ljg1In0.T8uOfMtE2OSPjII9ZsgHu-PFPfPK6ndQhi9FraGWIT93SA3hBTiXXxPFOAYR1nSM_qqO03pXN9S6rr2CpblaCrUFiZFX3Z4FcU_SZI-3Vh5GuZUqsqUvFy89b0t8Fa8dkX1fOUlZgcZY40oHvrprSskqfTM9y0Gg7fGa7WngGc8uj_Wi5ehWKfIcqfRzCJZ6IsPn7KtsjTzf15Dqt_-qx_0VyoeF-nWLStvKo5ipSydWM5Br9qtHRpSOM-G9T7YxfufUU5I71ghYSDJFd4ZyuNzSlOsZfhlkdCUJ1i2imrcJIP1Xpt0XH8VjaF3E8nfxadbVkBTpLXsld8HqEVR1BA","scope":"banqbridge_client","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2Mjk3MTM0NDMsImlhdCI6MTYyNzEyMTQ0MywianRpIjoiMjA5M2U5NjQtMmU5Ny00YzMxLTgzN2YtN2ZmYmFlNjE1N2U3IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiIyYTNmMGM4Zi04NjJiLTRlZjItOTdjOC1lOGU5ZWJjNGM4YTAiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.JVNLskqWvIojqC8fc5GNVTrnLSLpDZ-AcEkWEUckHU4"}]
+2021-07-24 15:40:43.913 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Getting authentication token set
+2021-07-24 15:40:43.914 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Access token and Refresh token::{access_token=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MjcyMDc4NDMsImlhdCI6MTYyNzEyMTQ0MywianRpIjoiNTUwYmU4ZTUtZWM5OS00OTgyLTk4OTItZmNhNWM5MTQxZDRhIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjJhM2YwYzhmLTg2MmItNGVmMi05N2M4LWU4ZTllYmM0YzhhMCIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIyMjMuMTc3Ljg0Ljg1IiwiY2tpZCI6ImJmNjRiMzU5LTlhYWQtNDI3MS1iYzYyLTUxYzQyNjRkMmZkNyIsImNsaWVudEFkZHJlc3MiOiIyMjMuMTc3Ljg0Ljg1In0.T8uOfMtE2OSPjII9ZsgHu-PFPfPK6ndQhi9FraGWIT93SA3hBTiXXxPFOAYR1nSM_qqO03pXN9S6rr2CpblaCrUFiZFX3Z4FcU_SZI-3Vh5GuZUqsqUvFy89b0t8Fa8dkX1fOUlZgcZY40oHvrprSskqfTM9y0Gg7fGa7WngGc8uj_Wi5ehWKfIcqfRzCJZ6IsPn7KtsjTzf15Dqt_-qx_0VyoeF-nWLStvKo5ipSydWM5Br9qtHRpSOM-G9T7YxfufUU5I71ghYSDJFd4ZyuNzSlOsZfhlkdCUJ1i2imrcJIP1Xpt0XH8VjaF3E8nfxadbVkBTpLXsld8HqEVR1BA, refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2Mjk3MTM0NDMsImlhdCI6MTYyNzEyMTQ0MywianRpIjoiMjA5M2U5NjQtMmU5Ny00YzMxLTgzN2YtN2ZmYmFlNjE1N2U3IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiIyYTNmMGM4Zi04NjJiLTRlZjItOTdjOC1lOGU5ZWJjNGM4YTAiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.JVNLskqWvIojqC8fc5GNVTrnLSLpDZ-AcEkWEUckHU4}
+2021-07-24 15:40:43.914 [main] INFO  com.neonomics.corelibraries.Banks                 : Getting bank ID for bank [Justo Bank]
+2021-07-24 15:40:43.914 [main] INFO  com.neonomics.corelibraries.Banks                 : Getting information about bank [Justo Bank]
+2021-07-24 15:40:44.295 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=1ab2250f-1628-4001-8859-de9ebdc29cf0
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Sat, 24 Jul 2021 10:10:43 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:43 GMT
+Content-Length=730
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=152
+Server-Timing=origin; dur=38
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:44.295 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:44.295 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:44.295 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:44.295 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:44.295 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [367] milliseconds
+2021-07-24 15:40:44.295 [main] INFO  com.neonomics.utils.Print                         : Response :: [[{"countryCode":"NO","bankingGroupName":"DNB Group","personalIdentificationRequired":true,"id":"RG5iLm5vLnYxRE5CQU5PS0s=","bankDisplayName":"DNB","supportedServices":["accounts","domestic-transfer"],"bic":"DNBANOKK","bankOfficialName":"DNB ASA","status":"AVAILABLE"},{"countryCode":"DK","bankingGroupName":"Sydbank A/S","personalIdentificationRequired":false,"id":"U1lEQkFOSy52MVNZQktESzIy","bankDisplayName":"Sydbank","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"SYBKDK22","bankOfficialName":"Sydbank","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Sbanken","personalIdentificationRequired":false,"id":"U2Jhbmtlbi52MVNCQUtOT0JC","bankDisplayName":"Sbanken","supportedServices":["sepa-credit","domestic-transfer","accounts"],"bic":"SBAKNOBB","bankOfficialName":"Sbanken ASA","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"Ålandsbanken","personalIdentificationRequired":false,"id":"YWxhbmRzYmFua2VuLmZpLnYxQUFCQUZJMjI=","bankDisplayName":"Ålandsbanken","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"AABAFI22","bankOfficialName":"Ålandsbanken","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"aGl6b250aWJhbmsudjFISVpPTk9LSw==","bankDisplayName":"Hizonti Bank","supportedServices":["accounts","sepa-credit"],"bic":"HIZONOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"anVzdG9iYW5rLnYxSlVTVE5PS0s=","bankDisplayName":"Justo Bank","supportedServices":["accounts","sepa-credit"],"bic":"JUSTNOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"SEB Group","personalIdentificationRequired":false,"id":"c2ViLnN3ZWRlbi52MUVTU0VTRVNT","bankDisplayName":"SEB","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"ESSESESS","bankOfficialName":"Skandinaviska Enskilda Banken AB","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"S-Bank Ltd","personalIdentificationRequired":false,"id":"c3BhbmtraS52MVNCQU5GSUhI","bankDisplayName":"S-Pankki","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"SBANFIHH","bankOfficialName":"S-Banken Ab","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Storebrand Group","personalIdentificationRequired":true,"id":"c3RvcmVicmFuZC52MVNURkJOT0tL","bankDisplayName":"Storebrand","supportedServices":["accounts","domestic-transfer"],"bic":"STFBNOKK","bankOfficialName":"Storebrand Bank ASA","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"Swedbank Group","personalIdentificationRequired":false,"id":"c3dlZGJhbmsudjFTQU5EU0VTUw==","bankDisplayName":"Swedbank","supportedServices":["domestic-transfer","domestic-scheduled-transfer","sepa-credit","sepa-scheduled-credit"],"bic":"SANDSESS","bankOfficialName":"Swedbank AB","status":"AVAILABLE"}]]
+2021-07-24 15:40:44.299 [main] INFO  com.neonomics.corelibraries.Banks                 : Found bank [BankData [countryCode=NO, bankingGroupName=, personalIdentificationRequired=false, id=anVzdG9iYW5rLnYxSlVTVE5PS0s=, bankDisplayName=Justo Bank, supportedServices=[accounts, sepa-credit], bic=JUSTNOKK, bankOfficialName=, status=AVAILABLE]] from all bank collection
+2021-07-24 15:40:44.299 [main] INFO  com.neonomics.corelibraries.Banks                 : Found bank ID as [anVzdG9iYW5rLnYxSlVTVE5PS0s=]for bank [Justo Bank]
+2021-07-24 15:40:44.299 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Received Bank ID [anVzdG9iYW5rLnYxSlVTVE5PS0s=] for bank [Justo Bank] with provided device ID [example_id_for_quickstart].
+2021-07-24 15:40:44.300 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Creating session ID for bank [Justo Bank] when Device ID [example_id_for_quickstart] with token [eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MjcyMDc4NDMsImlhdCI6MTYyNzEyMTQ0MywianRpIjoiNTUwYmU4ZTUtZWM5OS00OTgyLTk4OTItZmNhNWM5MTQxZDRhIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjJhM2YwYzhmLTg2MmItNGVmMi05N2M4LWU4ZTllYmM0YzhhMCIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIyMjMuMTc3Ljg0Ljg1IiwiY2tpZCI6ImJmNjRiMzU5LTlhYWQtNDI3MS1iYzYyLTUxYzQyNjRkMmZkNyIsImNsaWVudEFkZHJlc3MiOiIyMjMuMTc3Ljg0Ljg1In0.T8uOfMtE2OSPjII9ZsgHu-PFPfPK6ndQhi9FraGWIT93SA3hBTiXXxPFOAYR1nSM_qqO03pXN9S6rr2CpblaCrUFiZFX3Z4FcU_SZI-3Vh5GuZUqsqUvFy89b0t8Fa8dkX1fOUlZgcZY40oHvrprSskqfTM9y0Gg7fGa7WngGc8uj_Wi5ehWKfIcqfRzCJZ6IsPn7KtsjTzf15Dqt_-qx_0VyoeF-nWLStvKo5ipSydWM5Br9qtHRpSOM-G9T7YxfufUU5I71ghYSDJFd4ZyuNzSlOsZfhlkdCUJ1i2imrcJIP1Xpt0XH8VjaF3E8nfxadbVkBTpLXsld8HqEVR1BA]
+2021-07-24 15:40:44.691 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=6f12d93f-16c9-4dd1-be8a-f0a86e8ed1b2
+X-XSS-Protection=1; mode=block
+Content-Length=52
+Expires=Sat, 24 Jul 2021 10:10:44 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:44 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=149
+Server-Timing=origin; dur=19
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:44.692 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:44.692 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [201]
+2021-07-24 15:40:44.692 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 201 Created]
+2021-07-24 15:40:44.692 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:44.692 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [383] milliseconds
+2021-07-24 15:40:44.692 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"sessionId":"c19dd805-da17-4193-ae67-9f971bd9bf27"}]
+2021-07-24 15:40:44.700 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Recieved session ID as [c19dd805-da17-4193-ae67-9f971bd9bf27]
+2021-07-24 15:40:44.701 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Getting details for [Justo Bank] bank
+2021-07-24 15:40:45.051 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=feec1152-4b53-41ec-acbb-5913c67bc7be
+X-XSS-Protection=1; mode=block
+Content-Length=136
+Expires=Sat, 24 Jul 2021 10:10:44 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:44 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=148
+Server-Timing=origin; dur=19
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:45.052 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:45.052 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:45.052 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:45.052 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:45.052 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [344] milliseconds
+2021-07-24 15:40:45.052 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"providerId":"justobank.v1","bankId":"anVzdG9iYW5rLnYxSlVTVE5PS0s=","bankName":"Justo Bank","createdAt":"Sat Jul 24 10:10:44 UTC 2021"}]
+2021-07-24 15:40:45.067 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Got bank details to validate current session [{bankId=anVzdG9iYW5rLnYxSlVTVE5PS0s=, bankName=Justo Bank}]
+2021-07-24 15:40:45.068 [main] INFO  com.neonomics.corelibraries.Banks                 : Getting bank ID for bank [Hizonti Bank]
+2021-07-24 15:40:45.068 [main] INFO  com.neonomics.corelibraries.Banks                 : Getting information about bank [Hizonti Bank]
+2021-07-24 15:40:45.431 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=1b31fd2d-b0d4-4774-a6ea-d18ec6cb3cd7
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Sat, 24 Jul 2021 10:10:45 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:45 GMT
+Content-Length=730
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=151
+Server-Timing=origin; dur=33
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:45.432 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:45.432 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:45.432 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:45.432 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:45.432 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [351] milliseconds
+2021-07-24 15:40:45.432 [main] INFO  com.neonomics.utils.Print                         : Response :: [[{"countryCode":"NO","bankingGroupName":"DNB Group","personalIdentificationRequired":true,"id":"RG5iLm5vLnYxRE5CQU5PS0s=","bankDisplayName":"DNB","supportedServices":["accounts","domestic-transfer"],"bic":"DNBANOKK","bankOfficialName":"DNB ASA","status":"AVAILABLE"},{"countryCode":"DK","bankingGroupName":"Sydbank A/S","personalIdentificationRequired":false,"id":"U1lEQkFOSy52MVNZQktESzIy","bankDisplayName":"Sydbank","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"SYBKDK22","bankOfficialName":"Sydbank","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Sbanken","personalIdentificationRequired":false,"id":"U2Jhbmtlbi52MVNCQUtOT0JC","bankDisplayName":"Sbanken","supportedServices":["sepa-credit","domestic-transfer","accounts"],"bic":"SBAKNOBB","bankOfficialName":"Sbanken ASA","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"Ålandsbanken","personalIdentificationRequired":false,"id":"YWxhbmRzYmFua2VuLmZpLnYxQUFCQUZJMjI=","bankDisplayName":"Ålandsbanken","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"AABAFI22","bankOfficialName":"Ålandsbanken","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"aGl6b250aWJhbmsudjFISVpPTk9LSw==","bankDisplayName":"Hizonti Bank","supportedServices":["accounts","sepa-credit"],"bic":"HIZONOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"anVzdG9iYW5rLnYxSlVTVE5PS0s=","bankDisplayName":"Justo Bank","supportedServices":["accounts","sepa-credit"],"bic":"JUSTNOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"SEB Group","personalIdentificationRequired":false,"id":"c2ViLnN3ZWRlbi52MUVTU0VTRVNT","bankDisplayName":"SEB","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"ESSESESS","bankOfficialName":"Skandinaviska Enskilda Banken AB","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"S-Bank Ltd","personalIdentificationRequired":false,"id":"c3BhbmtraS52MVNCQU5GSUhI","bankDisplayName":"S-Pankki","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"SBANFIHH","bankOfficialName":"S-Banken Ab","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Storebrand Group","personalIdentificationRequired":true,"id":"c3RvcmVicmFuZC52MVNURkJOT0tL","bankDisplayName":"Storebrand","supportedServices":["accounts","domestic-transfer"],"bic":"STFBNOKK","bankOfficialName":"Storebrand Bank ASA","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"Swedbank Group","personalIdentificationRequired":false,"id":"c3dlZGJhbmsudjFTQU5EU0VTUw==","bankDisplayName":"Swedbank","supportedServices":["domestic-transfer","domestic-scheduled-transfer","sepa-credit","sepa-scheduled-credit"],"bic":"SANDSESS","bankOfficialName":"Swedbank AB","status":"AVAILABLE"}]]
+2021-07-24 15:40:45.443 [main] INFO  com.neonomics.corelibraries.Banks                 : Found bank [BankData [countryCode=NO, bankingGroupName=, personalIdentificationRequired=false, id=aGl6b250aWJhbmsudjFISVpPTk9LSw==, bankDisplayName=Hizonti Bank, supportedServices=[accounts, sepa-credit], bic=HIZONOKK, bankOfficialName=, status=AVAILABLE]] from all bank collection
+2021-07-24 15:40:45.443 [main] INFO  com.neonomics.corelibraries.Banks                 : Found bank ID as [aGl6b250aWJhbmsudjFISVpPTk9LSw==]for bank [Hizonti Bank]
+2021-07-24 15:40:45.443 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Received Bank ID [aGl6b250aWJhbmsudjFISVpPTk9LSw==] for bank [Hizonti Bank] with provided device ID [example_id_for_quickstart].
+2021-07-24 15:40:45.443 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Creating session ID for bank [Hizonti Bank] when Device ID [example_id_for_quickstart] with token [eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MjcyMDc4NDMsImlhdCI6MTYyNzEyMTQ0MywianRpIjoiNTUwYmU4ZTUtZWM5OS00OTgyLTk4OTItZmNhNWM5MTQxZDRhIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjJhM2YwYzhmLTg2MmItNGVmMi05N2M4LWU4ZTllYmM0YzhhMCIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIyMjMuMTc3Ljg0Ljg1IiwiY2tpZCI6ImJmNjRiMzU5LTlhYWQtNDI3MS1iYzYyLTUxYzQyNjRkMmZkNyIsImNsaWVudEFkZHJlc3MiOiIyMjMuMTc3Ljg0Ljg1In0.T8uOfMtE2OSPjII9ZsgHu-PFPfPK6ndQhi9FraGWIT93SA3hBTiXXxPFOAYR1nSM_qqO03pXN9S6rr2CpblaCrUFiZFX3Z4FcU_SZI-3Vh5GuZUqsqUvFy89b0t8Fa8dkX1fOUlZgcZY40oHvrprSskqfTM9y0Gg7fGa7WngGc8uj_Wi5ehWKfIcqfRzCJZ6IsPn7KtsjTzf15Dqt_-qx_0VyoeF-nWLStvKo5ipSydWM5Br9qtHRpSOM-G9T7YxfufUU5I71ghYSDJFd4ZyuNzSlOsZfhlkdCUJ1i2imrcJIP1Xpt0XH8VjaF3E8nfxadbVkBTpLXsld8HqEVR1BA]
+2021-07-24 15:40:45.818 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=8bdcfb9c-b4a9-4eb1-871a-a0ed901a07e3
+X-XSS-Protection=1; mode=block
+Content-Length=52
+Expires=Sat, 24 Jul 2021 10:10:45 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:45 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=152
+Server-Timing=origin; dur=32
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:45.818 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:45.818 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [201]
+2021-07-24 15:40:45.818 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 201 Created]
+2021-07-24 15:40:45.818 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:45.818 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [366] milliseconds
+2021-07-24 15:40:45.819 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"sessionId":"bd24a0ac-146d-44e0-8810-3a0571f75121"}]
+2021-07-24 15:40:45.826 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Recieved session ID as [bd24a0ac-146d-44e0-8810-3a0571f75121]
+2021-07-24 15:40:45.827 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Getting details for [Hizonti Bank] bank
+2021-07-24 15:40:46.187 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=3bac2f01-4bef-445d-9200-3fbbe0ae2557
+X-XSS-Protection=1; mode=block
+Content-Length=144
+Expires=Sat, 24 Jul 2021 10:10:45 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:45 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=146
+Server-Timing=origin; dur=19
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:46.187 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:46.187 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:46.187 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:46.187 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:46.187 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [351] milliseconds
+2021-07-24 15:40:46.187 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"providerId":"hizontibank.v1","bankId":"aGl6b250aWJhbmsudjFISVpPTk9LSw==","bankName":"Hizonti Bank","createdAt":"Sat Jul 24 10:10:45 UTC 2021"}]
+2021-07-24 15:40:46.200 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Got bank details to validate current session [{bankId=aGl6b250aWJhbmsudjFISVpPTk9LSw==, bankName=Hizonti Bank}]
+2021-07-24 15:40:46.201 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Getting [Justo Bank] bank details to seek consent, where user [Accept] consent provided Device ID [example_id_for_quickstart] and redirect URL []
+2021-07-24 15:40:46.201 [main] INFO  com.neonomics.corelibraries.Banks                 : Getting information about bank [Justo Bank]
+2021-07-24 15:40:46.597 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=a60ab4d7-dadd-4e64-a609-155d9ef8416d
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Sat, 24 Jul 2021 10:10:46 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:46 GMT
+Content-Length=730
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=153
+Server-Timing=origin; dur=32
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:46.598 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:46.598 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:46.598 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:46.598 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:46.598 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [384] milliseconds
+2021-07-24 15:40:46.598 [main] INFO  com.neonomics.utils.Print                         : Response :: [[{"countryCode":"NO","bankingGroupName":"DNB Group","personalIdentificationRequired":true,"id":"RG5iLm5vLnYxRE5CQU5PS0s=","bankDisplayName":"DNB","supportedServices":["accounts","domestic-transfer"],"bic":"DNBANOKK","bankOfficialName":"DNB ASA","status":"AVAILABLE"},{"countryCode":"DK","bankingGroupName":"Sydbank A/S","personalIdentificationRequired":false,"id":"U1lEQkFOSy52MVNZQktESzIy","bankDisplayName":"Sydbank","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"SYBKDK22","bankOfficialName":"Sydbank","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Sbanken","personalIdentificationRequired":false,"id":"U2Jhbmtlbi52MVNCQUtOT0JC","bankDisplayName":"Sbanken","supportedServices":["sepa-credit","domestic-transfer","accounts"],"bic":"SBAKNOBB","bankOfficialName":"Sbanken ASA","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"Ålandsbanken","personalIdentificationRequired":false,"id":"YWxhbmRzYmFua2VuLmZpLnYxQUFCQUZJMjI=","bankDisplayName":"Ålandsbanken","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"AABAFI22","bankOfficialName":"Ålandsbanken","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"aGl6b250aWJhbmsudjFISVpPTk9LSw==","bankDisplayName":"Hizonti Bank","supportedServices":["accounts","sepa-credit"],"bic":"HIZONOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"anVzdG9iYW5rLnYxSlVTVE5PS0s=","bankDisplayName":"Justo Bank","supportedServices":["accounts","sepa-credit"],"bic":"JUSTNOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"SEB Group","personalIdentificationRequired":false,"id":"c2ViLnN3ZWRlbi52MUVTU0VTRVNT","bankDisplayName":"SEB","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"ESSESESS","bankOfficialName":"Skandinaviska Enskilda Banken AB","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"S-Bank Ltd","personalIdentificationRequired":false,"id":"c3BhbmtraS52MVNCQU5GSUhI","bankDisplayName":"S-Pankki","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"SBANFIHH","bankOfficialName":"S-Banken Ab","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Storebrand Group","personalIdentificationRequired":true,"id":"c3RvcmVicmFuZC52MVNURkJOT0tL","bankDisplayName":"Storebrand","supportedServices":["accounts","domestic-transfer"],"bic":"STFBNOKK","bankOfficialName":"Storebrand Bank ASA","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"Swedbank Group","personalIdentificationRequired":false,"id":"c3dlZGJhbmsudjFTQU5EU0VTUw==","bankDisplayName":"Swedbank","supportedServices":["domestic-transfer","domestic-scheduled-transfer","sepa-credit","sepa-scheduled-credit"],"bic":"SANDSESS","bankOfficialName":"Swedbank AB","status":"AVAILABLE"}]]
+2021-07-24 15:40:46.603 [main] INFO  com.neonomics.corelibraries.Banks                 : Found bank [BankData [countryCode=NO, bankingGroupName=, personalIdentificationRequired=false, id=anVzdG9iYW5rLnYxSlVTVE5PS0s=, bankDisplayName=Justo Bank, supportedServices=[accounts, sepa-credit], bic=JUSTNOKK, bankOfficialName=, status=AVAILABLE]] from all bank collection
+2021-07-24 15:40:46.603 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Received bank details for bank [Justo Bank] as [BankData [countryCode=NO, bankingGroupName=, personalIdentificationRequired=false, id=anVzdG9iYW5rLnYxSlVTVE5PS0s=, bankDisplayName=Justo Bank, supportedServices=[accounts, sepa-credit], bic=JUSTNOKK, bankOfficialName=, status=AVAILABLE]]
+2021-07-24 15:40:46.603 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Checking whether PSU ID is required for bank [Justo Bank]
+2021-07-24 15:40:46.603 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Handling bank consent
+2021-07-24 15:40:46.916 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Content-Length=525
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=6859fa05-e1a6-499b-826e-3914e9881372
+Expires=Sat, 24 Jul 2021 10:10:46 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:46 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=147
+Server-Timing=origin; dur=35
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:46.916 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:46.916 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [510]
+2021-07-24 15:40:46.916 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 510 Unknown]
+2021-07-24 15:40:46.916 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:46.916 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [310] milliseconds
+2021-07-24 15:40:46.917 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"id":"6859fa05-e1a6-499b-826e-3914e9881372","errorCode":"1426","message":"This resource needs to initialise consent. Please use the URL provided to continue. The consent Url will provide the bank authentication url. You can consume this resource after authenticating.","source":"C","type":"CONSENT","timestamp":1627121446540,"links":[{"type":"GET","rel":"consent","href":"https://sandbox.neonomics.io/ics/v3/consent/c19dd805-da17-4193-ae67-9f971bd9bf27?scope=accounts","meta":{"id":"c19dd805-da17-4193-ae67-9f971bd9bf27"}}]}]
+2021-07-24 15:40:46.931 [main] INFO  com.neonomics.corelibraries.Accounts              : Response to check whether consent is needed = [{"id":"6859fa05-e1a6-499b-826e-3914e9881372","errorCode":"1426","message":"This resource needs to initialise consent. Please use the URL provided to continue. The consent Url will provide the bank authentication url. You can consume this resource after authenticating.","source":"C","type":"CONSENT","timestamp":1627121446540,"links":[{"type":"GET","rel":"consent","href":"https://sandbox.neonomics.io/ics/v3/consent/c19dd805-da17-4193-ae67-9f971bd9bf27?scope=accounts","meta":{"id":"c19dd805-da17-4193-ae67-9f971bd9bf27"}}]}]
+2021-07-24 15:40:46.931 [main] INFO  com.neonomics.corelibraries.Accounts              : Bank consent is needed, therefore invoking consent handling mechanism using Web URL
+2021-07-24 15:40:47.270 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Content-Length=348
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=940451dd-cdf1-4d26-9782-4718aee84cb9
+X-XSS-Protection=1; mode=block
+Expires=Sat, 24 Jul 2021 10:10:46 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:46 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=148
+Server-Timing=origin; dur=30
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:47.270 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:47.271 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:47.271 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:47.271 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:47.271 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [317] milliseconds
+2021-07-24 15:40:47.271 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"message":"Please consent with the bank authentication URL provided to continue.","links":[{"type":"GET","rel":"consent","href":"https://sandbox.neonomics.io/auth/realms/justo/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.neonomics.io%2Fcallback&client_id=bankbridge-auth-code&state=AMGd2AXaF0GTrmeflxvZvyc"}]}]
+2021-07-24 15:40:47.280 [main] INFO  com.neonomics.corelibraries.Accounts              : Found consent web URL [https://sandbox.neonomics.io/auth/realms/justo/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.neonomics.io%2Fcallback&client_id=bankbridge-auth-code&state=AMGd2AXaF0GTrmeflxvZvyc]
+2021-07-24 15:40:47.287 [main] INFO  com.neonomics.corelibraries.Accounts              : Consent Web URL [https://sandbox.neonomics.io/auth/realms/justo/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.neonomics.io%2Fcallback&client_id=bankbridge-auth-code&state=AMGd2AXaF0GTrmeflxvZvyc] and user action [Accept]
+2021-07-24 15:40:47.287 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Getting consent via Web page
+2021-07-24 15:40:47.287 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Creating selenium webdriver instance
+2021-07-24 15:40:48.463 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Opening link in browser::[https://sandbox.neonomics.io/auth/realms/justo/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.neonomics.io%2Fcallback&client_id=bankbridge-auth-code&state=AMGd2AXaF0GTrmeflxvZvyc]
+2021-07-24 15:40:50.607 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Entering username in consent page as [aakashdahake@gmail.com]
+2021-07-24 15:40:50.655 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Entering password in consent page as [Neonomics#1]
+2021-07-24 15:40:50.715 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Clicking submit button on Web page
+2021-07-24 15:40:51.433 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Confirming that user have consent
+2021-07-24 15:40:51.454 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Closing browser
+2021-07-24 15:40:52.287 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Getting [Hizonti Bank] bank details to seek consent, where user [Accept] consent provided Device ID [example_id_for_quickstart] and redirect URL []
+2021-07-24 15:40:52.287 [main] INFO  com.neonomics.corelibraries.Banks                 : Getting information about bank [Hizonti Bank]
+2021-07-24 15:40:52.637 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=f5292711-875e-4c05-b2d6-c76c0aea1d25
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Sat, 24 Jul 2021 10:10:52 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:52 GMT
+Content-Length=730
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=157
+Server-Timing=origin; dur=39
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:52.637 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:52.638 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:52.638 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:52.638 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:52.638 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [338] milliseconds
+2021-07-24 15:40:52.638 [main] INFO  com.neonomics.utils.Print                         : Response :: [[{"countryCode":"NO","bankingGroupName":"DNB Group","personalIdentificationRequired":true,"id":"RG5iLm5vLnYxRE5CQU5PS0s=","bankDisplayName":"DNB","supportedServices":["accounts","domestic-transfer"],"bic":"DNBANOKK","bankOfficialName":"DNB ASA","status":"AVAILABLE"},{"countryCode":"DK","bankingGroupName":"Sydbank A/S","personalIdentificationRequired":false,"id":"U1lEQkFOSy52MVNZQktESzIy","bankDisplayName":"Sydbank","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"SYBKDK22","bankOfficialName":"Sydbank","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Sbanken","personalIdentificationRequired":false,"id":"U2Jhbmtlbi52MVNCQUtOT0JC","bankDisplayName":"Sbanken","supportedServices":["sepa-credit","domestic-transfer","accounts"],"bic":"SBAKNOBB","bankOfficialName":"Sbanken ASA","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"Ålandsbanken","personalIdentificationRequired":false,"id":"YWxhbmRzYmFua2VuLmZpLnYxQUFCQUZJMjI=","bankDisplayName":"Ålandsbanken","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"AABAFI22","bankOfficialName":"Ålandsbanken","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"aGl6b250aWJhbmsudjFISVpPTk9LSw==","bankDisplayName":"Hizonti Bank","supportedServices":["accounts","sepa-credit"],"bic":"HIZONOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"anVzdG9iYW5rLnYxSlVTVE5PS0s=","bankDisplayName":"Justo Bank","supportedServices":["accounts","sepa-credit"],"bic":"JUSTNOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"SEB Group","personalIdentificationRequired":false,"id":"c2ViLnN3ZWRlbi52MUVTU0VTRVNT","bankDisplayName":"SEB","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"ESSESESS","bankOfficialName":"Skandinaviska Enskilda Banken AB","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"S-Bank Ltd","personalIdentificationRequired":false,"id":"c3BhbmtraS52MVNCQU5GSUhI","bankDisplayName":"S-Pankki","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"SBANFIHH","bankOfficialName":"S-Banken Ab","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Storebrand Group","personalIdentificationRequired":true,"id":"c3RvcmVicmFuZC52MVNURkJOT0tL","bankDisplayName":"Storebrand","supportedServices":["accounts","domestic-transfer"],"bic":"STFBNOKK","bankOfficialName":"Storebrand Bank ASA","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"Swedbank Group","personalIdentificationRequired":false,"id":"c3dlZGJhbmsudjFTQU5EU0VTUw==","bankDisplayName":"Swedbank","supportedServices":["domestic-transfer","domestic-scheduled-transfer","sepa-credit","sepa-scheduled-credit"],"bic":"SANDSESS","bankOfficialName":"Swedbank AB","status":"AVAILABLE"}]]
+2021-07-24 15:40:52.641 [main] INFO  com.neonomics.corelibraries.Banks                 : Found bank [BankData [countryCode=NO, bankingGroupName=, personalIdentificationRequired=false, id=aGl6b250aWJhbmsudjFISVpPTk9LSw==, bankDisplayName=Hizonti Bank, supportedServices=[accounts, sepa-credit], bic=HIZONOKK, bankOfficialName=, status=AVAILABLE]] from all bank collection
+2021-07-24 15:40:52.641 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Received bank details for bank [Hizonti Bank] as [BankData [countryCode=NO, bankingGroupName=, personalIdentificationRequired=false, id=aGl6b250aWJhbmsudjFISVpPTk9LSw==, bankDisplayName=Hizonti Bank, supportedServices=[accounts, sepa-credit], bic=HIZONOKK, bankOfficialName=, status=AVAILABLE]]
+2021-07-24 15:40:52.641 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Checking whether PSU ID is required for bank [Hizonti Bank]
+2021-07-24 15:40:52.641 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Handling bank consent
+2021-07-24 15:40:53.025 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Content-Length=525
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=c5ca1aa4-9a9b-41c9-b3f3-78c601d6da31
+Expires=Sat, 24 Jul 2021 10:10:52 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:52 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=149
+Server-Timing=origin; dur=35
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:53.025 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:53.025 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [510]
+2021-07-24 15:40:53.026 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 510 Unknown]
+2021-07-24 15:40:53.026 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:53.026 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [382] milliseconds
+2021-07-24 15:40:53.026 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"id":"c5ca1aa4-9a9b-41c9-b3f3-78c601d6da31","errorCode":"1426","message":"This resource needs to initialise consent. Please use the URL provided to continue. The consent Url will provide the bank authentication url. You can consume this resource after authenticating.","source":"C","type":"CONSENT","timestamp":1627121452637,"links":[{"type":"GET","rel":"consent","href":"https://sandbox.neonomics.io/ics/v3/consent/bd24a0ac-146d-44e0-8810-3a0571f75121?scope=accounts","meta":{"id":"bd24a0ac-146d-44e0-8810-3a0571f75121"}}]}]
+2021-07-24 15:40:53.039 [main] INFO  com.neonomics.corelibraries.Accounts              : Response to check whether consent is needed = [{"id":"c5ca1aa4-9a9b-41c9-b3f3-78c601d6da31","errorCode":"1426","message":"This resource needs to initialise consent. Please use the URL provided to continue. The consent Url will provide the bank authentication url. You can consume this resource after authenticating.","source":"C","type":"CONSENT","timestamp":1627121452637,"links":[{"type":"GET","rel":"consent","href":"https://sandbox.neonomics.io/ics/v3/consent/bd24a0ac-146d-44e0-8810-3a0571f75121?scope=accounts","meta":{"id":"bd24a0ac-146d-44e0-8810-3a0571f75121"}}]}]
+2021-07-24 15:40:53.040 [main] INFO  com.neonomics.corelibraries.Accounts              : Bank consent is needed, therefore invoking consent handling mechanism using Web URL
+2021-07-24 15:40:53.375 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Content-Length=350
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=8cdde34f-db92-4302-8d8b-d7b3a724c3c8
+X-XSS-Protection=1; mode=block
+Expires=Sat, 24 Jul 2021 10:10:53 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:53 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=147
+Server-Timing=origin; dur=32
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:53.375 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:53.375 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:53.375 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:53.376 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:53.376 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [313] milliseconds
+2021-07-24 15:40:53.376 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"message":"Please consent with the bank authentication URL provided to continue.","links":[{"type":"GET","rel":"consent","href":"https://sandbox.neonomics.io/auth/realms/hizonti/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.neonomics.io%2Fcallback&client_id=bankbridge-auth-code&state=AL0koKwUbUTgiBA6BXH3USE"}]}]
+2021-07-24 15:40:53.383 [main] INFO  com.neonomics.corelibraries.Accounts              : Found consent web URL [https://sandbox.neonomics.io/auth/realms/hizonti/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.neonomics.io%2Fcallback&client_id=bankbridge-auth-code&state=AL0koKwUbUTgiBA6BXH3USE]
+2021-07-24 15:40:53.391 [main] INFO  com.neonomics.corelibraries.Accounts              : Consent Web URL [https://sandbox.neonomics.io/auth/realms/hizonti/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.neonomics.io%2Fcallback&client_id=bankbridge-auth-code&state=AL0koKwUbUTgiBA6BXH3USE] and user action [Accept]
+2021-07-24 15:40:53.391 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Getting consent via Web page
+2021-07-24 15:40:53.391 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Creating selenium webdriver instance
+2021-07-24 15:40:54.538 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Opening link in browser::[https://sandbox.neonomics.io/auth/realms/hizonti/protocol/openid-connect/auth?response_type=code&redirect_uri=https%3A%2F%2Fsandbox.neonomics.io%2Fcallback&client_id=bankbridge-auth-code&state=AL0koKwUbUTgiBA6BXH3USE]
+2021-07-24 15:40:57.107 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Entering username in consent page as [aakashdahake@gmail.com]
+2021-07-24 15:40:57.157 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Entering password in consent page as [Neonomics#1]
+2021-07-24 15:40:57.216 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Clicking submit button on Web page
+2021-07-24 15:40:57.950 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Confirming that user have consent
+2021-07-24 15:40:57.970 [main] INFO  com.neonomics.corelibraries.HandleConsentUI       : Closing browser
+2021-07-24 15:40:58.800 [main] INFO  com.neonomics.corelibraries.Banks                 : Verifying that bank [Justo Bank] supports [sepa-credit] payment type
+2021-07-24 15:40:58.800 [main] INFO  com.neonomics.corelibraries.Banks                 : Getting information about bank [Justo Bank]
+2021-07-24 15:40:59.172 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=a2d64c9e-56a7-4aa0-8015-da2f2970e2dd
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Sat, 24 Jul 2021 10:10:58 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:58 GMT
+Content-Length=730
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=160
+Server-Timing=origin; dur=33
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:59.172 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:59.172 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:59.172 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:59.172 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:59.173 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [364] milliseconds
+2021-07-24 15:40:59.173 [main] INFO  com.neonomics.utils.Print                         : Response :: [[{"countryCode":"NO","bankingGroupName":"DNB Group","personalIdentificationRequired":true,"id":"RG5iLm5vLnYxRE5CQU5PS0s=","bankDisplayName":"DNB","supportedServices":["accounts","domestic-transfer"],"bic":"DNBANOKK","bankOfficialName":"DNB ASA","status":"AVAILABLE"},{"countryCode":"DK","bankingGroupName":"Sydbank A/S","personalIdentificationRequired":false,"id":"U1lEQkFOSy52MVNZQktESzIy","bankDisplayName":"Sydbank","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"SYBKDK22","bankOfficialName":"Sydbank","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Sbanken","personalIdentificationRequired":false,"id":"U2Jhbmtlbi52MVNCQUtOT0JC","bankDisplayName":"Sbanken","supportedServices":["sepa-credit","domestic-transfer","accounts"],"bic":"SBAKNOBB","bankOfficialName":"Sbanken ASA","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"Ålandsbanken","personalIdentificationRequired":false,"id":"YWxhbmRzYmFua2VuLmZpLnYxQUFCQUZJMjI=","bankDisplayName":"Ålandsbanken","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"AABAFI22","bankOfficialName":"Ålandsbanken","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"aGl6b250aWJhbmsudjFISVpPTk9LSw==","bankDisplayName":"Hizonti Bank","supportedServices":["accounts","sepa-credit"],"bic":"HIZONOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"anVzdG9iYW5rLnYxSlVTVE5PS0s=","bankDisplayName":"Justo Bank","supportedServices":["accounts","sepa-credit"],"bic":"JUSTNOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"SEB Group","personalIdentificationRequired":false,"id":"c2ViLnN3ZWRlbi52MUVTU0VTRVNT","bankDisplayName":"SEB","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"ESSESESS","bankOfficialName":"Skandinaviska Enskilda Banken AB","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"S-Bank Ltd","personalIdentificationRequired":false,"id":"c3BhbmtraS52MVNCQU5GSUhI","bankDisplayName":"S-Pankki","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"SBANFIHH","bankOfficialName":"S-Banken Ab","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Storebrand Group","personalIdentificationRequired":true,"id":"c3RvcmVicmFuZC52MVNURkJOT0tL","bankDisplayName":"Storebrand","supportedServices":["accounts","domestic-transfer"],"bic":"STFBNOKK","bankOfficialName":"Storebrand Bank ASA","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"Swedbank Group","personalIdentificationRequired":false,"id":"c3dlZGJhbmsudjFTQU5EU0VTUw==","bankDisplayName":"Swedbank","supportedServices":["domestic-transfer","domestic-scheduled-transfer","sepa-credit","sepa-scheduled-credit"],"bic":"SANDSESS","bankOfficialName":"Swedbank AB","status":"AVAILABLE"}]]
+2021-07-24 15:40:59.175 [main] INFO  com.neonomics.corelibraries.Banks                 : Found bank [BankData [countryCode=NO, bankingGroupName=, personalIdentificationRequired=false, id=anVzdG9iYW5rLnYxSlVTVE5PS0s=, bankDisplayName=Justo Bank, supportedServices=[accounts, sepa-credit], bic=JUSTNOKK, bankOfficialName=, status=AVAILABLE]] from all bank collection
+2021-07-24 15:40:59.175 [main] INFO  com.neonomics.corelibraries.Banks                 : Payment method [sepa-credit] is supported by bank [Justo Bank]
+2021-07-24 15:40:59.175 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Sender bank [Justo Bank] have support for payment type [sepa-credit]::[true]
+2021-07-24 15:40:59.175 [main] INFO  com.neonomics.corelibraries.Banks                 : Verifying that bank [Hizonti Bank] supports [sepa-credit] payment type
+2021-07-24 15:40:59.175 [main] INFO  com.neonomics.corelibraries.Banks                 : Getting information about bank [Hizonti Bank]
+2021-07-24 15:40:59.537 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=5e1b795a-f976-48c0-975c-8ac0ba4df87c
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Sat, 24 Jul 2021 10:10:59 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:59 GMT
+Content-Length=730
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=158
+Server-Timing=origin; dur=31
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:59.537 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:59.537 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:59.538 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:59.538 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:59.538 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [352] milliseconds
+2021-07-24 15:40:59.538 [main] INFO  com.neonomics.utils.Print                         : Response :: [[{"countryCode":"NO","bankingGroupName":"DNB Group","personalIdentificationRequired":true,"id":"RG5iLm5vLnYxRE5CQU5PS0s=","bankDisplayName":"DNB","supportedServices":["accounts","domestic-transfer"],"bic":"DNBANOKK","bankOfficialName":"DNB ASA","status":"AVAILABLE"},{"countryCode":"DK","bankingGroupName":"Sydbank A/S","personalIdentificationRequired":false,"id":"U1lEQkFOSy52MVNZQktESzIy","bankDisplayName":"Sydbank","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"SYBKDK22","bankOfficialName":"Sydbank","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Sbanken","personalIdentificationRequired":false,"id":"U2Jhbmtlbi52MVNCQUtOT0JC","bankDisplayName":"Sbanken","supportedServices":["sepa-credit","domestic-transfer","accounts"],"bic":"SBAKNOBB","bankOfficialName":"Sbanken ASA","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"Ålandsbanken","personalIdentificationRequired":false,"id":"YWxhbmRzYmFua2VuLmZpLnYxQUFCQUZJMjI=","bankDisplayName":"Ålandsbanken","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"AABAFI22","bankOfficialName":"Ålandsbanken","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"aGl6b250aWJhbmsudjFISVpPTk9LSw==","bankDisplayName":"Hizonti Bank","supportedServices":["accounts","sepa-credit"],"bic":"HIZONOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"anVzdG9iYW5rLnYxSlVTVE5PS0s=","bankDisplayName":"Justo Bank","supportedServices":["accounts","sepa-credit"],"bic":"JUSTNOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"SEB Group","personalIdentificationRequired":false,"id":"c2ViLnN3ZWRlbi52MUVTU0VTRVNT","bankDisplayName":"SEB","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"ESSESESS","bankOfficialName":"Skandinaviska Enskilda Banken AB","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"S-Bank Ltd","personalIdentificationRequired":false,"id":"c3BhbmtraS52MVNCQU5GSUhI","bankDisplayName":"S-Pankki","supportedServices":["accounts","sepa-credit","sepa-scheduled-credit"],"bic":"SBANFIHH","bankOfficialName":"S-Banken Ab","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Storebrand Group","personalIdentificationRequired":true,"id":"c3RvcmVicmFuZC52MVNURkJOT0tL","bankDisplayName":"Storebrand","supportedServices":["accounts","domestic-transfer"],"bic":"STFBNOKK","bankOfficialName":"Storebrand Bank ASA","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"Swedbank Group","personalIdentificationRequired":false,"id":"c3dlZGJhbmsudjFTQU5EU0VTUw==","bankDisplayName":"Swedbank","supportedServices":["domestic-transfer","domestic-scheduled-transfer","sepa-credit","sepa-scheduled-credit"],"bic":"SANDSESS","bankOfficialName":"Swedbank AB","status":"AVAILABLE"}]]
+2021-07-24 15:40:59.540 [main] INFO  com.neonomics.corelibraries.Banks                 : Found bank [BankData [countryCode=NO, bankingGroupName=, personalIdentificationRequired=false, id=aGl6b250aWJhbmsudjFISVpPTk9LSw==, bankDisplayName=Hizonti Bank, supportedServices=[accounts, sepa-credit], bic=HIZONOKK, bankOfficialName=, status=AVAILABLE]] from all bank collection
+2021-07-24 15:40:59.540 [main] INFO  com.neonomics.corelibraries.Banks                 : Payment method [sepa-credit] is supported by bank [Hizonti Bank]
+2021-07-24 15:40:59.540 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Sender bank [Hizonti Bank] have support for payment type [sepa-credit]::[true]
+2021-07-24 15:40:59.540 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Validating that provided account number is present on sender's bank [Justo Bank] with session ID [c19dd805-da17-4193-ae67-9f971bd9bf27]
+2021-07-24 15:40:59.540 [main] INFO  com.neonomics.corelibraries.Accounts              : Retrieving list of accounts with session ID provided as [example_id_for_quickstart]
+2021-07-24 15:40:59.919 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Content-Length=229
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=b4a98512-655c-4f98-b3a2-e009991fea2e
+X-XSS-Protection=1; mode=block
+Expires=Sat, 24 Jul 2021 10:10:59 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:10:59 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=152
+Server-Timing=origin; dur=88
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:40:59.919 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:40:59.919 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:40:59.919 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:40:59.919 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:40:59.919 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [377] milliseconds
+2021-07-24 15:40:59.920 [main] INFO  com.neonomics.utils.Print                         : Response :: [[{"id":"ZmJkM2QzMDEtZjNkYS00ZmYzLWI3YjgtMjY3YzVjZGJiYTBh","iban":"NO6404948998640","bban":"04948998640","accountName":"aakashdahake@gmail.com","accountType":"SVGS","balances":[{"amount":"4775.0","currency":"EUR","type":"CRRT"}]}]]
+2021-07-24 15:40:59.921 [main] INFO  com.neonomics.corelibraries.Accounts              : Validating that account belong to bank with session ID [c19dd805-da17-4193-ae67-9f971bd9bf27]
+2021-07-24 15:40:59.921 [main] INFO  com.neonomics.corelibraries.Accounts              : Account number [NO6404948998640] found as [IBAN]
+2021-07-24 15:40:59.921 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Validating that provided account number is present on receiver's bank [Hizonti Bank] with session ID [bd24a0ac-146d-44e0-8810-3a0571f75121]
+2021-07-24 15:40:59.921 [main] INFO  com.neonomics.corelibraries.Accounts              : Retrieving list of accounts with session ID provided as [example_id_for_quickstart]
+2021-07-24 15:41:01.298 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Content-Length=208
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=82fc50a1-8c4e-4296-a53c-10f36426209b
+X-XSS-Protection=1; mode=block
+Expires=Sat, 24 Jul 2021 10:11:01 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:11:01 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=152
+Server-Timing=origin; dur=1048
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:41:01.298 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:41:01.298 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [200]
+2021-07-24 15:41:01.298 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 200 OK]
+2021-07-24 15:41:01.298 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:41:01.298 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [1374] milliseconds
+2021-07-24 15:41:01.298 [main] INFO  com.neonomics.utils.Print                         : Response :: [[{"id":"M2NlOTQ4NTctZTBkYy00MzQzLTgwNmItZTAyNjUzZjEwZjEw","iban":"NO4313081115656","accountName":"aakashdahake@gmail.com","accountType":"SVGS","balances":[{"amount":"5225.0","currency":"EUR","type":"CRRT"}]}]]
+2021-07-24 15:41:01.298 [main] INFO  com.neonomics.corelibraries.Accounts              : Validating that account belong to bank with session ID [bd24a0ac-146d-44e0-8810-3a0571f75121]
+2021-07-24 15:41:01.298 [main] INFO  com.neonomics.corelibraries.Accounts              : Account number [NO4313081115656] found as [IBAN]
+2021-07-24 15:41:01.298 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Sender Bank support SEPA [true], Receiver bank support SEPA [true], Does sender bank account exists [true], Does Receiver bank account exists [true]
+2021-07-24 15:41:02.845 [main] INFO  com.neonomics.utils.Print                         : Headers :: [Content-Type=application/json;charset=UTF-8
+Content-Length=114
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=0a37c248-8fdb-4cb4-bc0d-4c0cc640243f
+X-XSS-Protection=1; mode=block
+Expires=Sat, 24 Jul 2021 10:11:02 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Sat, 24 Jul 2021 10:11:02 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=158
+Server-Timing=origin; dur=1190
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-07-24 15:41:02.845 [main] INFO  com.neonomics.utils.Print                         : Cookies :: [{}]
+2021-07-24 15:41:02.845 [main] INFO  com.neonomics.utils.Print                         : Status Code :: [201]
+2021-07-24 15:41:02.845 [main] INFO  com.neonomics.utils.Print                         : Status Line :: [HTTP/1.1 201 Created]
+2021-07-24 15:41:02.845 [main] INFO  com.neonomics.utils.Print                         : Session ID :: [null]
+2021-07-24 15:41:02.845 [main] INFO  com.neonomics.utils.Print                         : Response Time :: [1504] milliseconds
+2021-07-24 15:41:02.845 [main] INFO  com.neonomics.utils.Print                         : Response :: [{"paymentId":"5bb97def-579f-458f-b802-e6f0b9587615","status":"ACCP","creationDateTime":"2021-07-24T10:11:01.706Z"}]
+2021-07-24 15:41:02.875 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Payment initiation Response data [{paymentId=5bb97def-579f-458f-b802-e6f0b9587615, status=ACCP}]
+2021-07-24 15:41:02.876 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Deleting session for bank [Justo Bank]
+2021-07-24 15:41:02.876 [main] INFO  com.neonomics.corelibraries.Session               : Terminating session for session ID [c19dd805-da17-4193-ae67-9f971bd9bf27]
+2021-07-24 15:41:03.289 [main] INFO  com.neonomics.corelibraries.Session               : Terminated session for session ID [c19dd805-da17-4193-ae67-9f971bd9bf27]
+2021-07-24 15:41:03.289 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Deleted session ID as [c19dd805-da17-4193-ae67-9f971bd9bf27]
+2021-07-24 15:41:03.289 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Deleting session for bank [Hizonti Bank]
+2021-07-24 15:41:03.289 [main] INFO  com.neonomics.corelibraries.Session               : Terminating session for session ID [bd24a0ac-146d-44e0-8810-3a0571f75121]
+2021-07-24 15:41:03.588 [main] INFO  com.neonomics.corelibraries.Session               : Terminated session for session ID [bd24a0ac-146d-44e0-8810-3a0571f75121]
+2021-07-24 15:41:03.588 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : Deleted session ID as [bd24a0ac-146d-44e0-8810-3a0571f75121]

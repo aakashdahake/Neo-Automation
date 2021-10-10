@@ -4,7 +4,6 @@ import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertThat;
 
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
@@ -16,6 +15,7 @@ import com.neonomics.constants.Endpoints;
 import com.neonomics.model.pojos.AccountDataPOJO;
 import com.neonomics.model.responseschema.Schemas;
 import com.neonomics.utils.ConfigManager;
+import com.neonomics.utils.Print;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -25,7 +25,10 @@ import io.restassured.response.Response;
 
 public class Accounts implements Schemas {
 
+
 	private static final String BASE_URL = ConfigManager.getInstance().getString("base_url");
+
+	
 	private ObjectMapper objMap = new ObjectMapper();
 	private Logger logInstance = LogManager.getLogger();
 
@@ -58,13 +61,7 @@ public class Accounts implements Schemas {
 							.assertThat().body(JsonSchemaValidator.matchesJsonSchema(ConsentResponseSchema))
 							.extract().response();
 			
-			logInstance.info("Headers :: [{}]",resp.getHeaders());
-			logInstance.info("Cookies :: [{}]",resp.getCookies());
-			logInstance.info("Status Code :: [{}]",resp.getStatusCode());
-			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
-			logInstance.info("Session ID :: [{}]",resp.getSessionId());
-			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
-			logInstance.info("Response :: [{}]",resp.print());
+			Print.printResponse(resp);
 			logInstance.info("Found consent web URL [{}]",resp.jsonPath().getString("links.href[0]"));
 			
 			URL = resp.jsonPath().getString("links.href[0]");
@@ -112,13 +109,7 @@ public class Accounts implements Schemas {
 						.then()
 						.extract().response();
 		
-			logInstance.info("Headers :: [{}]",resp.getHeaders());
-			logInstance.info("Cookies :: [{}]",resp.getCookies());
-			logInstance.info("Status Code :: [{}]",resp.getStatusCode());
-			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
-			logInstance.info("Session ID :: [{}]",resp.getSessionId());
-			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
-			logInstance.info("Response :: [{}]",resp.print());
+			Print.printResponse(resp);
 		
 			// Handling consent required
 			if (resp.jsonPath().getString("errorCode").contains(String.valueOf(1426))
@@ -158,14 +149,7 @@ public class Accounts implements Schemas {
 							.then()
 							.extract().response();
 
-			logInstance.info("Headers :: [{}]",resp.getHeaders());
-			logInstance.info("Cookies :: [{}]",resp.getCookies());
-			logInstance.info("Status Code :: [{}]",resp.getStatusCode());
-			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
-			logInstance.info("Session ID :: [{}]",resp.getSessionId());
-			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
-			logInstance.info("Response :: [{}]",resp.print());
-			
+			Print.printResponse(resp);
 			
 			accountDetails = objMap.readValue(resp.asString(), AccountDataPOJO[].class);
 		

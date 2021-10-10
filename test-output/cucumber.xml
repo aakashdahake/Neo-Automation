@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.03">
-    <testcase classname="Functional testing" name="User initiates payment and transfer money to another user in another bank" time="14.868">
-        <system-out><![CDATA[Given user gets authentication token for Neonomics platform.................passed
-Then user retrieves bank ID for "Justo Bank"................................passed
-Then user "create" session for "Justo Bank".................................passed
-And user validates session status for "Justo Bank"..........................passed
-Then user retrieves bank ID for "Hizonti Bank"..............................passed
-Then user "create" session for "Hizonti Bank"...............................passed
-And user validates session status for "Hizonti Bank"........................passed
-Then user checks for "Justo Bank" consent and "Accept" if required provided redirect URL as "".passed
-Then user checks for "Hizonti Bank" consent and "Accept" if required provided redirect URL as "".passed
-Then user transfer amount of "5" "EUR" from "Justo Bank" bank account "IBAN" "NO6404948998640" to "Hizonti Bank" bank account "NO4313081115656" with "sepa-credit" payment method.passed
-And user validates payment request is initiated.............................passed
-Then user authorizes the the payment and obtains authorization URL..........passed
-Then user authorizes process using authorization URL........................passed
-Then user "delete" session for "Justo Bank".................................passed
-Then user "delete" session for "Hizonti Bank"...............................passed
-]]></system-out>
-    </testcase>
-</testsuite>
+<testng-results failed="0" passed="2" skipped="0" total="2">
+    <suite duration-ms="33444" name="io.cucumber.core.plugin.TestNGFormatter">
+        <test duration-ms="33444" name="io.cucumber.core.plugin.TestNGFormatter">
+            <class name="Functional testing">
+                <test-method duration-ms="15326" finished-at="2021-07-24T12:14:19.824104400Z" name="User retrieves accounts from Justo Bank" started-at="2021-07-24T12:14:04.480701900Z" status="PASS"/>
+                <test-method duration-ms="17889" finished-at="2021-07-24T12:14:37.738273800Z" name="User initiates payment and transfer money to another user in another bank" started-at="2021-07-24T12:14:19.841103700Z" status="PASS"/>
+            </class>
+        </test>
+    </suite>
+</testng-results>

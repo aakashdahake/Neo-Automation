@@ -4,7 +4,6 @@ import static org.junit.Assert.assertNotEquals;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
@@ -13,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 import com.neonomics.constants.Endpoints;
 import com.neonomics.model.pojos.PaymentRequestPOJO;
 import com.neonomics.model.responseschema.Schemas;
+import com.neonomics.utils.Print;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -45,18 +45,13 @@ public class Payments implements Schemas{
 							.assertThat().statusCode(HttpStatus.SC_CREATED)
 							.assertThat().body(JsonSchemaValidator.matchesJsonSchema(PaymentInitiatedResponseSchema)).extract().response();
 			
-			logInstance.info("Headers :: [{}]",resp.getHeaders());
-			logInstance.info("Cookies :: [{}]",resp.getCookies());
-			logInstance.info("Status Code :: [{}]",resp.getStatusCode());
-			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
-			logInstance.info("Session ID :: [{}]",resp.getSessionId());
-			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
-			logInstance.info("Response for SEPA payyment initiation :: [{}]", resp.print());
+			Print.printResponse(resp);
 			
 			assertNotEquals(resp.jsonPath().get("paymentId"), null);
 			assertNotEquals(resp.jsonPath().get("status"), null);
 			paymentStatus.put("paymentId", resp.jsonPath().getString("paymentId"));
 			paymentStatus.put("status", resp.jsonPath().getString("status"));
+			
 		} catch (AssertionError e) {
 			e.printStackTrace();
 			logInstance.error(e.getMessage());

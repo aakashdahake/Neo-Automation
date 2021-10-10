@@ -20,7 +20,8 @@ public class PageData {
 	}
 	
 	@FindBy(xpath = "//input[@id='username']") 
-	private WebElement userTextBox;
+	private  WebElement userTextBox;
+
 	
 	@FindBy(xpath = "//input[@id='password']") 
 	private WebElement passTextBox;

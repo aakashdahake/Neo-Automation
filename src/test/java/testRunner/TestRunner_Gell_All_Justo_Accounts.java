@@ -1,26 +1,21 @@
 package testRunner;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.junit.runner.RunWith;
+import org.testng.annotations.Test;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-
-@RunWith(Cucumber.class)
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		features = "src/test/java/featureFiles/Get_All_Accounts.feature", 
 		glue = "stepDefinition", 
-		plugin = { "pretty", "json:test-output/cucumber.json","junit:test-output/cucumber.xml", "html:test-output/Accounts.html" }, 
-		publish = true, 
+		plugin = { "pretty", "json:test-output/cucumber.json","testng:test-output/cucumber.xml", "html:test-output/Accounts.html" }, 
+		publish = false, 
 		monochrome = true, 
 		dryRun = false
-		//tags = "@test"
+		//tags = "@test3"
 		)
 
-public class TestRunner_Gell_All_Justo_Accounts {
-
-	public static Logger logInstance = LogManager.getLogger();
+@Test
+public class TestRunner_Gell_All_Justo_Accounts extends AbstractTestNGCucumberTests {
 
 }

@@ -20,7 +20,7 @@ public class HandleConsentUI extends WebDriverManager {
 	/**
 	 * Gets the consent via web.
 	 *
-	 * @param consentURL- the consent URL
+	 * @param consentURL the consent URL
 	 * @param action - Accept/Decline
 	 * @return the consent via web
 	 */

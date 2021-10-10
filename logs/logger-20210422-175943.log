@@ -1,0 +1,890 @@
+2021-04-22 17:59:43.830 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:43.831 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:43.832 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that Auth token API works for various combinations
+2021-04-22 17:59:43.832 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:43.832 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:43.937 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:43.937 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/auth/realms/sandbox/protocol/openid-connect/token]
+2021-04-22 17:59:43.939 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Content-Type] and Value = [application/x-www-form-urlencoded]
+2021-04-22 17:59:43.939 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Content-Type] and Value = [application/x-www-form-urlencoded]
+2021-04-22 17:59:43.940 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [grant_type] and Value = [client_credentials]
+2021-04-22 17:59:43.942 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [client_id] and Value = [valid]
+2021-04-22 17:59:43.943 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [client_secret] and Value = [valid]
+2021-04-22 17:59:44.009 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [POST] request
+2021-04-22 17:59:45.650 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=002298ea-2d20-4278-8d00-4695f4ff07b6
+Content-Length=156
+Expires=Thu, 22 Apr 2021 12:29:46 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:46 GMT
+Connection=close
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=370
+Server-Timing=origin; dur=60
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:45.655 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:45.655 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [510]
+2021-04-22 17:59:45.655 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 510 Unknown]
+2021-04-22 17:59:45.655 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:45.657 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [1453] milliseconds
+2021-04-22 17:59:45.666 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"id":"002298ea-2d20-4278-8d00-4695f4ff07b6","errorCode":"2005","message":"Invalid client id/secret","source":"A","type":"FATAL","timestamp":1619094586027}
+]
+2021-04-22 17:59:45.667 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [200]
+2021-04-22 17:59:45.670 [main] ERROR stepDefinition.StepDefinitions_API_Test           : expected [200] but found [510]
+2021-04-22 17:59:45.920 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:45.920 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:45.920 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that Auth token API works for various combinations
+2021-04-22 17:59:45.920 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:45.920 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:45.921 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:45.921 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/auth/realms/sandbox/protocol/openid-connect/token]
+2021-04-22 17:59:45.922 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Content-Type] and Value = [application/json]
+2021-04-22 17:59:45.922 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Content-Type] and Value = [application/json]
+2021-04-22 17:59:45.923 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [grant_type] and Value = [client_credentials]
+2021-04-22 17:59:45.923 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [client_id] and Value = [valid]
+2021-04-22 17:59:45.924 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [client_secret] and Value = [valid]
+2021-04-22 17:59:45.925 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [POST] request
+2021-04-22 17:59:46.358 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=1b89f733-53dd-4392-addc-0de4f8346b1e
+Content-Length=175
+Expires=Thu, 22 Apr 2021 12:29:46 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:46 GMT
+Connection=close
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=358
+Server-Timing=origin; dur=20
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:46.358 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:46.358 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [510]
+2021-04-22 17:59:46.358 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 510 Unknown]
+2021-04-22 17:59:46.358 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:46.358 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [429] milliseconds
+2021-04-22 17:59:46.359 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"id":"1b89f733-53dd-4392-addc-0de4f8346b1e","errorCode":"2008","message":"grant_type form parameter is missing.","source":"A","type":"BAD_REQUEST","timestamp":1619094586747}
+]
+2021-04-22 17:59:46.360 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [510]
+2021-04-22 17:59:46.371 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:46.371 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:46.371 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that Auth token API works for various combinations
+2021-04-22 17:59:46.371 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:46.371 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:46.372 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:46.372 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/auth/realms/sandbox/protocol/openid-connect/token]
+2021-04-22 17:59:46.373 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Content-Type] and Value = [application/x-www-form-urlencoded]
+2021-04-22 17:59:46.373 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Content-Type] and Value = [application/x-www-form-urlencoded]
+2021-04-22 17:59:46.373 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [grant_type] and Value = [authorization_code]
+2021-04-22 17:59:46.374 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [client_id] and Value = [valid]
+2021-04-22 17:59:46.374 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [client_secret] and Value = [valid]
+2021-04-22 17:59:46.375 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [POST] request
+2021-04-22 17:59:46.802 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=807d7bd7-17c3-4830-afbf-2970c848d5f7
+Content-Length=156
+Expires=Thu, 22 Apr 2021 12:29:47 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:47 GMT
+Connection=close
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=342
+Server-Timing=origin; dur=40
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:46.802 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:46.802 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [510]
+2021-04-22 17:59:46.802 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 510 Unknown]
+2021-04-22 17:59:46.802 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:46.802 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [425] milliseconds
+2021-04-22 17:59:46.803 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"id":"807d7bd7-17c3-4830-afbf-2970c848d5f7","errorCode":"2005","message":"Invalid client id/secret","source":"A","type":"FATAL","timestamp":1619094587207}
+]
+2021-04-22 17:59:46.803 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [510]
+2021-04-22 17:59:46.817 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:46.817 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:46.817 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that Auth token API works for various combinations
+2021-04-22 17:59:46.817 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:46.817 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:46.818 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:46.818 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/auth/realms/sandbox/protocol/openid-connect/token]
+2021-04-22 17:59:46.819 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Content-Type] and Value = [application/x-www-form-urlencoded]
+2021-04-22 17:59:46.819 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Content-Type] and Value = [application/x-www-form-urlencoded]
+2021-04-22 17:59:46.819 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [grant_type] and Value = [client_credentials]
+2021-04-22 17:59:46.820 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [client_id] and Value = [invalid]
+2021-04-22 17:59:46.820 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [client_secret] and Value = [valid]
+2021-04-22 17:59:46.821 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [POST] request
+2021-04-22 17:59:47.252 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=ab6922c5-20a0-4103-ba93-2323856a65d8
+Content-Length=156
+Expires=Thu, 22 Apr 2021 12:29:47 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:47 GMT
+Connection=close
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=338
+Server-Timing=origin; dur=40
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:47.252 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:47.252 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [510]
+2021-04-22 17:59:47.252 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 510 Unknown]
+2021-04-22 17:59:47.252 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:47.252 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [427] milliseconds
+2021-04-22 17:59:47.253 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"id":"ab6922c5-20a0-4103-ba93-2323856a65d8","errorCode":"2005","message":"Invalid client id/secret","source":"A","type":"FATAL","timestamp":1619094587656}
+]
+2021-04-22 17:59:47.254 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [510]
+2021-04-22 17:59:47.264 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:47.264 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:47.264 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that Auth token API works for various combinations
+2021-04-22 17:59:47.264 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:47.264 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:47.265 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:47.266 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/auth/realms/sandbox/protocol/openid-connect/token]
+2021-04-22 17:59:47.267 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Content-Type] and Value = [application/json]
+2021-04-22 17:59:47.267 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Content-Type] and Value = [application/json]
+2021-04-22 17:59:47.268 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [grant_type] and Value = [client_credentials]
+2021-04-22 17:59:47.269 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [client_id] and Value = [valid]
+2021-04-22 17:59:47.270 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting request parameter as Key = [client_secret] and Value = [invalid]
+2021-04-22 17:59:47.272 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [POST] request
+2021-04-22 17:59:47.696 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=a0933d6f-0262-492f-b105-2d5208598d51
+Content-Length=175
+Expires=Thu, 22 Apr 2021 12:29:48 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:48 GMT
+Connection=close
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=348
+Server-Timing=origin; dur=33
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:47.696 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:47.696 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [510]
+2021-04-22 17:59:47.696 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 510 Unknown]
+2021-04-22 17:59:47.696 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:47.696 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [421] milliseconds
+2021-04-22 17:59:47.697 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"id":"a0933d6f-0262-492f-b105-2d5208598d51","errorCode":"2008","message":"grant_type form parameter is missing.","source":"A","type":"BAD_REQUEST","timestamp":1619094588101}
+]
+2021-04-22 17:59:47.697 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [510]
+2021-04-22 17:59:47.707 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:47.708 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:47.708 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that Banks API works for various combinations
+2021-04-22 17:59:47.708 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:47.708 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:47.709 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:47.709 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/banks]
+2021-04-22 17:59:47.709 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Accept] and Value = [application/json]
+2021-04-22 17:59:47.709 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Accept] and Value = [application/json]
+2021-04-22 17:59:47.710 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = [Bearer Token]
+2021-04-22 17:59:48.238 [main] INFO  com.neonomics.corelibraries.Authorization         : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=57474662-300d-4b9e-b339-2a2e89f03665
+X-Content-Type-Options=nosniff
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Thu, 22 Apr 2021 12:29:48 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:48 GMT
+Content-Length=1241
+Connection=keep-alive
+Set-Cookie=KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/sandbox/; Secure; HttpOnly
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=349
+Server-Timing=origin; dur=47
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:48.238 [main] INFO  com.neonomics.corelibraries.Authorization         : Cookies :: [{KC_RESTART=}]
+2021-04-22 17:59:48.238 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Code :: [200]
+2021-04-22 17:59:48.238 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Line :: [HTTP/1.1 200 OK]
+2021-04-22 17:59:48.239 [main] INFO  com.neonomics.corelibraries.Authorization         : Session ID :: [null]
+2021-04-22 17:59:48.239 [main] INFO  com.neonomics.corelibraries.Authorization         : Response Time :: [461] milliseconds
+2021-04-22 17:59:48.239 [main] INFO  com.neonomics.corelibraries.Authorization         : Response :: [{"refresh_expires_in":2592000,"expires_in":86400,"session_state":"3fd2267b-0018-43d1-890d-0d8f27634722","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5ODgsImlhdCI6MTYxOTA5NDU4OCwianRpIjoiNGU1NWI3ZDMtOTJiYS00MGZkLTg0ZDUtYzY0ZDkzNWRhMGYyIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjNmZDIyNjdiLTAwMTgtNDNkMS04OTBkLTBkOGYyNzYzNDcyMiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.SqanA6Ig7JooPw_oClO-oDC9GKhXCtNX22lhlRhDZFBixqmpQVLCyiHAmhTcN11JSAQQBTpGurO3o9qlZj9Jea1RaY_5BL2NVDGRIFo2jbWJsY9rOOCTUr57CV4CudtS1PsmJHxgb8RLV3LQSmMumC7x841iC7zGpTpd73NXYFq-NKplAOdmSZqwuJPOror4uaXGQ-19OCxUXP7RY_6OfLfZ1p12N8RWf4RD-jo8lRR931niUkeRtp2eQfj1f6F7XuSI3thph9O1IjwT1rB8LS9AokTG8fPlSn9yw2s9sBNjivIObfxuRLhw35lAYrQJZxf6gNxmnvS_B9vE6DrRYg","scope":"banqbridge_client","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2MjE2ODY1ODgsImlhdCI6MTYxOTA5NDU4OCwianRpIjoiM2YxZjZiNTYtNjZmZi00ZjJkLTkyYmEtYTNiYmFkZGM5OTdiIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiIzZmQyMjY3Yi0wMDE4LTQzZDEtODkwZC0wZDhmMjc2MzQ3MjIiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.yaLNn-5z4s_6znk6y72nwndPBeFSOPbmWfkcrM5R0LM"}]
+2021-04-22 17:59:48.691 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Bearer token :: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5ODgsImlhdCI6MTYxOTA5NDU4OCwianRpIjoiNGU1NWI3ZDMtOTJiYS00MGZkLTg0ZDUtYzY0ZDkzNWRhMGYyIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjNmZDIyNjdiLTAwMTgtNDNkMS04OTBkLTBkOGYyNzYzNDcyMiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.SqanA6Ig7JooPw_oClO-oDC9GKhXCtNX22lhlRhDZFBixqmpQVLCyiHAmhTcN11JSAQQBTpGurO3o9qlZj9Jea1RaY_5BL2NVDGRIFo2jbWJsY9rOOCTUr57CV4CudtS1PsmJHxgb8RLV3LQSmMumC7x841iC7zGpTpd73NXYFq-NKplAOdmSZqwuJPOror4uaXGQ-19OCxUXP7RY_6OfLfZ1p12N8RWf4RD-jo8lRR931niUkeRtp2eQfj1f6F7XuSI3thph9O1IjwT1rB8LS9AokTG8fPlSn9yw2s9sBNjivIObfxuRLhw35lAYrQJZxf6gNxmnvS_B9vE6DrRYg]
+2021-04-22 17:59:48.691 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5ODgsImlhdCI6MTYxOTA5NDU4OCwianRpIjoiNGU1NWI3ZDMtOTJiYS00MGZkLTg0ZDUtYzY0ZDkzNWRhMGYyIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjNmZDIyNjdiLTAwMTgtNDNkMS04OTBkLTBkOGYyNzYzNDcyMiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.SqanA6Ig7JooPw_oClO-oDC9GKhXCtNX22lhlRhDZFBixqmpQVLCyiHAmhTcN11JSAQQBTpGurO3o9qlZj9Jea1RaY_5BL2NVDGRIFo2jbWJsY9rOOCTUr57CV4CudtS1PsmJHxgb8RLV3LQSmMumC7x841iC7zGpTpd73NXYFq-NKplAOdmSZqwuJPOror4uaXGQ-19OCxUXP7RY_6OfLfZ1p12N8RWf4RD-jo8lRR931niUkeRtp2eQfj1f6F7XuSI3thph9O1IjwT1rB8LS9AokTG8fPlSn9yw2s9sBNjivIObfxuRLhw35lAYrQJZxf6gNxmnvS_B9vE6DrRYg]
+2021-04-22 17:59:48.692 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:48.692 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:48.693 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [GET] request
+2021-04-22 17:59:48.926 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=906caf1c-2acf-42f5-81b8-192a2d696785
+X-Content-Type-Options=nosniff
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Thu, 22 Apr 2021 12:29:49 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:49 GMT
+Content-Length=625
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=116
+Server-Timing=origin; dur=63
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:48.926 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:48.926 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [200]
+2021-04-22 17:59:48.926 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 200 OK]
+2021-04-22 17:59:48.926 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:48.926 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [229] milliseconds
+2021-04-22 17:59:48.926 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [[{"countryCode":"NO","bankingGroupName":"DNB Group","personalIdentificationRequired":true,"id":"RG5iLm5vLnYxRE5CQU5PS0s=","bankDisplayName":"DNB","supportedServices":["accounts","domestic-transfer"],"bic":"DNBANOKK","bankOfficialName":"DNB ASA","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"OP Financial Group","personalIdentificationRequired":false,"id":"T1AuRkkudjFPS09ZRklISA==","bankDisplayName":"OP","supportedServices":["accounts","sepa-credit"],"bic":"OKOYFIHH","bankOfficialName":"OP Andelslag","status":"UNAVAILABLE"},{"countryCode":"NO","bankingGroupName":"Sbanken","personalIdentificationRequired":false,"id":"U2Jhbmtlbi52MVNCQUtOT0JC","bankDisplayName":"Sbanken","supportedServices":["sepa-credit","domestic-transfer","accounts"],"bic":"SBAKNOBB","bankOfficialName":"Sbanken ASA","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"aGl6b250aWJhbmsudjFISVpPTk9LSw==","bankDisplayName":"Hizonti Bank","supportedServices":["accounts","sepa-credit"],"bic":"HIZONOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"","personalIdentificationRequired":false,"id":"anVzdG9iYW5rLnYxSlVTVE5PS0s=","bankDisplayName":"Justo Bank","supportedServices":["accounts","sepa-credit"],"bic":"JUSTNOKK","bankOfficialName":"","status":"AVAILABLE"},{"countryCode":"SE","bankingGroupName":"SEB Group","personalIdentificationRequired":false,"id":"c2ViLnN3ZWRlbi52MUVTU0VTRVNT","bankDisplayName":"SEB","supportedServices":["accounts","sepa-credit","domestic-transfer","domestic-scheduled-transfer"],"bic":"ESSESESS","bankOfficialName":"Skandinaviska Enskilda Banken AB","status":"AVAILABLE"},{"countryCode":"FI","bankingGroupName":"S-Bank Ltd","personalIdentificationRequired":false,"id":"c3BhbmtraS52MVNCQU5GSUhI","bankDisplayName":"S-Pankki","supportedServices":["accounts","sepa-credit"],"bic":"SBANFIHH","bankOfficialName":"S-Banken Ab","status":"AVAILABLE"},{"countryCode":"NO","bankingGroupName":"Storebrand Group","personalIdentificationRequired":false,"id":"c3RvcmVicmFuZC52MVNURkJOT0tL","bankDisplayName":"Storebrand","supportedServices":["accounts","domestic-transfer"],"bic":"STFBNOKK","bankOfficialName":"Storebrand Bank ASA","status":"AVAILABLE"}]]
+2021-04-22 17:59:48.927 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [200]
+2021-04-22 17:59:48.947 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:48.947 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:48.947 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that Banks API works for various combinations
+2021-04-22 17:59:48.947 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:48.947 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:48.947 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:48.947 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/banksss]
+2021-04-22 17:59:48.948 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Accept] and Value = [application/json]
+2021-04-22 17:59:48.948 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Accept] and Value = [application/json]
+2021-04-22 17:59:48.959 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = [Bearer Token]
+2021-04-22 17:59:49.169 [main] INFO  com.neonomics.corelibraries.Authorization         : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=b523253c-5796-4c44-9f1e-4eaaf32a887a
+X-Content-Type-Options=nosniff
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Thu, 22 Apr 2021 12:29:49 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:49 GMT
+Content-Length=1246
+Connection=keep-alive
+Set-Cookie=KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/sandbox/; Secure; HttpOnly
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=123
+Server-Timing=origin; dur=33
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:49.170 [main] INFO  com.neonomics.corelibraries.Authorization         : Cookies :: [{KC_RESTART=}]
+2021-04-22 17:59:49.170 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Code :: [200]
+2021-04-22 17:59:49.170 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Line :: [HTTP/1.1 200 OK]
+2021-04-22 17:59:49.170 [main] INFO  com.neonomics.corelibraries.Authorization         : Session ID :: [null]
+2021-04-22 17:59:49.170 [main] INFO  com.neonomics.corelibraries.Authorization         : Response Time :: [202] milliseconds
+2021-04-22 17:59:49.170 [main] INFO  com.neonomics.corelibraries.Authorization         : Response :: [{"refresh_expires_in":2592000,"expires_in":86400,"session_state":"f3992e4c-ecf8-4552-be32-db2f9b768902","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5ODksImlhdCI6MTYxOTA5NDU4OSwianRpIjoiNGIyNjVkOTctMmZmYy00ODVjLTk1YWMtZWU4NGIxZDI5NDQxIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6ImYzOTkyZTRjLWVjZjgtNDU1Mi1iZTMyLWRiMmY5Yjc2ODkwMiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.aGOgOvugmr0kjeHMW-T6xvutK1UD9cqrVVaR2NUagKqWIBXUuNe3lWsUPnTenxauAKSt2syWGiS5jVbjTdd1CF3FWDaLVrNMI2QixUp4Jz6q504tCfiTO0-neLZFqQwQualvmRGO4grBGz_e4h0mcJqQNj4mfUsQGJprhNbkxk35oK044PWLjykRK7sHvGSkdkJruXl_vblV7W9gfm8j-KkRLud-x4UvNsBkfXsF5qBrXPeYKBFGdEdNC58rjTRKAu_DG9xz5Tkx4pKoSwkf5r6F-2GihsXHMLrWNuifFeyVRqD4JhAPXiAwewbaMDmkHsBaNKherL21-caAdff2Rw","scope":"banqbridge_client","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2MjE2ODY1ODksImlhdCI6MTYxOTA5NDU4OSwianRpIjoiODgzMzg4ODEtNjYyMi00YTM1LTg3NGItYjViYmU2YzMyMWU1IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiJmMzk5MmU0Yy1lY2Y4LTQ1NTItYmUzMi1kYjJmOWI3Njg5MDIiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.0Un9lQ1EchilZUdu8jnNozn783b9KRkC6mATSOzISkQ"}]
+2021-04-22 17:59:49.201 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Bearer token :: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5ODksImlhdCI6MTYxOTA5NDU4OSwianRpIjoiNGIyNjVkOTctMmZmYy00ODVjLTk1YWMtZWU4NGIxZDI5NDQxIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6ImYzOTkyZTRjLWVjZjgtNDU1Mi1iZTMyLWRiMmY5Yjc2ODkwMiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.aGOgOvugmr0kjeHMW-T6xvutK1UD9cqrVVaR2NUagKqWIBXUuNe3lWsUPnTenxauAKSt2syWGiS5jVbjTdd1CF3FWDaLVrNMI2QixUp4Jz6q504tCfiTO0-neLZFqQwQualvmRGO4grBGz_e4h0mcJqQNj4mfUsQGJprhNbkxk35oK044PWLjykRK7sHvGSkdkJruXl_vblV7W9gfm8j-KkRLud-x4UvNsBkfXsF5qBrXPeYKBFGdEdNC58rjTRKAu_DG9xz5Tkx4pKoSwkf5r6F-2GihsXHMLrWNuifFeyVRqD4JhAPXiAwewbaMDmkHsBaNKherL21-caAdff2Rw]
+2021-04-22 17:59:49.201 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5ODksImlhdCI6MTYxOTA5NDU4OSwianRpIjoiNGIyNjVkOTctMmZmYy00ODVjLTk1YWMtZWU4NGIxZDI5NDQxIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6ImYzOTkyZTRjLWVjZjgtNDU1Mi1iZTMyLWRiMmY5Yjc2ODkwMiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.aGOgOvugmr0kjeHMW-T6xvutK1UD9cqrVVaR2NUagKqWIBXUuNe3lWsUPnTenxauAKSt2syWGiS5jVbjTdd1CF3FWDaLVrNMI2QixUp4Jz6q504tCfiTO0-neLZFqQwQualvmRGO4grBGz_e4h0mcJqQNj4mfUsQGJprhNbkxk35oK044PWLjykRK7sHvGSkdkJruXl_vblV7W9gfm8j-KkRLud-x4UvNsBkfXsF5qBrXPeYKBFGdEdNC58rjTRKAu_DG9xz5Tkx4pKoSwkf5r6F-2GihsXHMLrWNuifFeyVRqD4JhAPXiAwewbaMDmkHsBaNKherL21-caAdff2Rw]
+2021-04-22 17:59:49.201 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:49.201 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:49.202 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [GET] request
+2021-04-22 17:59:49.388 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=c226cc6b-b6d4-4012-92f8-24e23426ba2a
+Content-Length=151
+Expires=Thu, 22 Apr 2021 12:29:49 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:49 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=116
+Server-Timing=origin; dur=32
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:49.388 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:49.388 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [510]
+2021-04-22 17:59:49.388 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 510 Unknown]
+2021-04-22 17:59:49.388 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:49.388 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [185] milliseconds
+2021-04-22 17:59:49.388 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"id":"05bda541-cdba-4bdc-b418-18a0905e6ba5","errorCode":"2006","message":"API Not found.","source":"C","type":"BAD_REQUEST","timestamp":1619094589792}]
+2021-04-22 17:59:49.389 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [510]
+2021-04-22 17:59:49.398 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:49.398 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:49.398 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that Banks API works for various combinations
+2021-04-22 17:59:49.398 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:49.398 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:49.398 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:49.398 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/banks]
+2021-04-22 17:59:49.399 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Accept] and Value = [application/json]
+2021-04-22 17:59:49.399 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Accept] and Value = [application/json]
+2021-04-22 17:59:49.399 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = []
+2021-04-22 17:59:49.399 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = []
+2021-04-22 17:59:49.399 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = []
+2021-04-22 17:59:49.399 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = []
+2021-04-22 17:59:49.400 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [GET] request
+2021-04-22 17:59:49.563 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json; charset=utf-8
+Access-Control-Allow-Origin=*
+x-correlation-id=ded3ded2-916f-4320-9480-899b24b808e8
+Content-Length=146
+Expires=Thu, 22 Apr 2021 12:29:50 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:50 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=117
+Server-Timing=origin; dur=7
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:49.563 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:49.563 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [510]
+2021-04-22 17:59:49.563 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 510 Unknown]
+2021-04-22 17:59:49.563 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:49.563 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [162] milliseconds
+2021-04-22 17:59:49.563 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"id":"ded3ded2-916f-4320-9480-899b24b808e8","errorCode":"2003","message":"Not authorised","source":"A","type":"FATAL","timestamp":1619094589968}
+]
+2021-04-22 17:59:49.564 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [510]
+2021-04-22 17:59:49.577 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:49.577 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:49.577 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that Banks API works for various combinations
+2021-04-22 17:59:49.577 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:49.577 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:49.594 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:49.595 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/banks]
+2021-04-22 17:59:49.595 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Accept] and Value = [application/x-www-form-urlencoded]
+2021-04-22 17:59:49.595 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Accept] and Value = [application/x-www-form-urlencoded]
+2021-04-22 17:59:49.595 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = [Bearer Token]
+2021-04-22 17:59:49.793 [main] INFO  com.neonomics.corelibraries.Authorization         : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=e7edb2be-7aa7-44c9-87dd-a7955a41569e
+X-Content-Type-Options=nosniff
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Thu, 22 Apr 2021 12:29:50 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:50 GMT
+Content-Length=1239
+Connection=keep-alive
+Set-Cookie=KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/sandbox/; Secure; HttpOnly
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=122
+Server-Timing=origin; dur=28
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:49.793 [main] INFO  com.neonomics.corelibraries.Authorization         : Cookies :: [{KC_RESTART=}]
+2021-04-22 17:59:49.793 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Code :: [200]
+2021-04-22 17:59:49.793 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Line :: [HTTP/1.1 200 OK]
+2021-04-22 17:59:49.793 [main] INFO  com.neonomics.corelibraries.Authorization         : Session ID :: [null]
+2021-04-22 17:59:49.793 [main] INFO  com.neonomics.corelibraries.Authorization         : Response Time :: [188] milliseconds
+2021-04-22 17:59:49.793 [main] INFO  com.neonomics.corelibraries.Authorization         : Response :: [{"refresh_expires_in":2592000,"expires_in":86400,"session_state":"27c8f61f-7eee-4a1b-9849-461d16a2daa7","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTAsImlhdCI6MTYxOTA5NDU5MCwianRpIjoiMWQ5ZjY3MjgtMmFhYS00NmQ3LWFhMDgtM2JkMDQwMDk0MDQ4IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjI3YzhmNjFmLTdlZWUtNGExYi05ODQ5LTQ2MWQxNmEyZGFhNyIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.bGOEdzuUjYCSSOlME59y9NIkcrxD-hunJbjSq_Qxxlv0ZaTxTqr3YdbC8Hr73VAew4Vwa_cVgPecA1XvmiY-7tpFLe6_2TP3vG2OQqpaLK7MVmRL9osevCzz8usc9HCJikBiirLOEeFeKly6exGs9k2tJrfGSzERRIKfBLpcM01pxIy9OF9F2pLOQnvMsd7hMVfcF8ppDs9QaR8otauJUotWGDADZ3ZN9KiKX4S6IFH-tXSGfQrhiVO55RZKfDz2iQPYHBEnHS1LhKt8u3SY5hNWbfg0CLHmNHgS-vtxJlsMEPiapXUGuu_PaW729tEfaQ5FZ_oNKxVu6k2mCqkh3w","scope":"banqbridge_client","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2MjE2ODY1OTAsImlhdCI6MTYxOTA5NDU5MCwianRpIjoiNjU5YzI2NWYtMGU3NS00MzBiLTkyMDAtMjAxNjczOGZhODM0IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiIyN2M4ZjYxZi03ZWVlLTRhMWItOTg0OS00NjFkMTZhMmRhYTciLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.Iny4TEd1jbzwEF7Jg-J-skWHIK8f5YyinVAJ0_gUMRM"}]
+2021-04-22 17:59:49.823 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Bearer token :: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTAsImlhdCI6MTYxOTA5NDU5MCwianRpIjoiMWQ5ZjY3MjgtMmFhYS00NmQ3LWFhMDgtM2JkMDQwMDk0MDQ4IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjI3YzhmNjFmLTdlZWUtNGExYi05ODQ5LTQ2MWQxNmEyZGFhNyIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.bGOEdzuUjYCSSOlME59y9NIkcrxD-hunJbjSq_Qxxlv0ZaTxTqr3YdbC8Hr73VAew4Vwa_cVgPecA1XvmiY-7tpFLe6_2TP3vG2OQqpaLK7MVmRL9osevCzz8usc9HCJikBiirLOEeFeKly6exGs9k2tJrfGSzERRIKfBLpcM01pxIy9OF9F2pLOQnvMsd7hMVfcF8ppDs9QaR8otauJUotWGDADZ3ZN9KiKX4S6IFH-tXSGfQrhiVO55RZKfDz2iQPYHBEnHS1LhKt8u3SY5hNWbfg0CLHmNHgS-vtxJlsMEPiapXUGuu_PaW729tEfaQ5FZ_oNKxVu6k2mCqkh3w]
+2021-04-22 17:59:49.824 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTAsImlhdCI6MTYxOTA5NDU5MCwianRpIjoiMWQ5ZjY3MjgtMmFhYS00NmQ3LWFhMDgtM2JkMDQwMDk0MDQ4IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjI3YzhmNjFmLTdlZWUtNGExYi05ODQ5LTQ2MWQxNmEyZGFhNyIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.bGOEdzuUjYCSSOlME59y9NIkcrxD-hunJbjSq_Qxxlv0ZaTxTqr3YdbC8Hr73VAew4Vwa_cVgPecA1XvmiY-7tpFLe6_2TP3vG2OQqpaLK7MVmRL9osevCzz8usc9HCJikBiirLOEeFeKly6exGs9k2tJrfGSzERRIKfBLpcM01pxIy9OF9F2pLOQnvMsd7hMVfcF8ppDs9QaR8otauJUotWGDADZ3ZN9KiKX4S6IFH-tXSGfQrhiVO55RZKfDz2iQPYHBEnHS1LhKt8u3SY5hNWbfg0CLHmNHgS-vtxJlsMEPiapXUGuu_PaW729tEfaQ5FZ_oNKxVu6k2mCqkh3w]
+2021-04-22 17:59:49.824 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = [anything-different]
+2021-04-22 17:59:49.824 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = [anything-different]
+2021-04-22 17:59:49.825 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [GET] request
+2021-04-22 17:59:50.068 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Length=0
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=7a3007c1-3af5-4b61-9c1b-4ce6764c54b8
+Expires=Thu, 22 Apr 2021 12:29:50 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:50 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=116
+Server-Timing=origin; dur=82
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:50.068 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:50.068 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [406]
+2021-04-22 17:59:50.068 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 406 Not Acceptable]
+2021-04-22 17:59:50.068 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:50.068 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [241] milliseconds
+2021-04-22 17:59:50.068 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: []
+2021-04-22 17:59:50.069 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [406]
+2021-04-22 17:59:50.075 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:50.075 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:50.075 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that Banks API works for various combinations
+2021-04-22 17:59:50.075 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:50.075 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:50.076 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:50.076 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/banks]
+2021-04-22 17:59:50.076 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Accept] and Value = []
+2021-04-22 17:59:50.076 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Accept] and Value = []
+2021-04-22 17:59:50.077 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = []
+2021-04-22 17:59:50.077 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = []
+2021-04-22 17:59:50.077 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = []
+2021-04-22 17:59:50.077 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = []
+2021-04-22 17:59:50.077 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [GET] request
+2021-04-22 17:59:50.238 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json; charset=utf-8
+Access-Control-Allow-Origin=*
+x-correlation-id=fb44d5f0-6c28-4cbf-9998-fe6bc3f13af2
+Content-Length=146
+Expires=Thu, 22 Apr 2021 12:29:50 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:50 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=117
+Server-Timing=origin; dur=8
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:50.238 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:50.238 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [510]
+2021-04-22 17:59:50.238 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 510 Unknown]
+2021-04-22 17:59:50.238 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:50.238 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [160] milliseconds
+2021-04-22 17:59:50.239 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"id":"fb44d5f0-6c28-4cbf-9998-fe6bc3f13af2","errorCode":"2003","message":"Not authorised","source":"A","type":"FATAL","timestamp":1619094590644}
+]
+2021-04-22 17:59:50.239 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [510]
+2021-04-22 17:59:50.247 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:50.247 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:50.247 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that session API works to create new session for various combinations
+2021-04-22 17:59:50.247 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:50.247 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:50.247 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:50.248 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/session]
+2021-04-22 17:59:50.248 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Content-Type] and Value = [application/json]
+2021-04-22 17:59:50.248 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Content-Type] and Value = [application/json]
+2021-04-22 17:59:50.248 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = [Bearer Token]
+2021-04-22 17:59:50.442 [main] INFO  com.neonomics.corelibraries.Authorization         : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=76298757-f61b-406e-b29e-89adb6cb2086
+X-Content-Type-Options=nosniff
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Thu, 22 Apr 2021 12:29:50 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:50 GMT
+Content-Length=1237
+Connection=keep-alive
+Set-Cookie=KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/sandbox/; Secure; HttpOnly
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=122
+Server-Timing=origin; dur=30
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:50.442 [main] INFO  com.neonomics.corelibraries.Authorization         : Cookies :: [{KC_RESTART=}]
+2021-04-22 17:59:50.442 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Code :: [200]
+2021-04-22 17:59:50.442 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Line :: [HTTP/1.1 200 OK]
+2021-04-22 17:59:50.442 [main] INFO  com.neonomics.corelibraries.Authorization         : Session ID :: [null]
+2021-04-22 17:59:50.442 [main] INFO  com.neonomics.corelibraries.Authorization         : Response Time :: [187] milliseconds
+2021-04-22 17:59:50.442 [main] INFO  com.neonomics.corelibraries.Authorization         : Response :: [{"refresh_expires_in":2592000,"expires_in":86400,"session_state":"7fd7ad37-e8c9-45d5-b88c-c7d5b18a4bea","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTAsImlhdCI6MTYxOTA5NDU5MCwianRpIjoiOWU5YjEwYWEtYTgwMC00MTM3LTk5NWUtMWNiOThkOWJhNDUwIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjdmZDdhZDM3LWU4YzktNDVkNS1iODhjLWM3ZDViMThhNGJlYSIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.F1lr_MRngh7Tmh6nW9_ZVsW1cuGzyfvWP6wfZikPvcpU0FWjSoP_Yu9xSJH8IoDjO4Jj4zq6Ds5PucxARLHZ76FuNQG6zahJZIstcl_uk9U1YzjkLptZt3pMiCRI0TdJdubqWEtrYXpt45qHuePcQ_ftj78gbkISfWwtAwo5kGvvV1p0bEDpN5uyhXnvfr7f68T0QCeccn07yh4WR0oRC0B6VRn1gmdEhDpt8Q3M4sMI9iwVGeHZ6U0QMa_Es8-XBfOvI0bUkgI4dmj3foAPUN4Ac1mYxgh1_jTi5mhkhmyfK1H5VMVhta82_6zrPD4NWYGPP-LdA9xtS2Ta1jTTQw","scope":"banqbridge_client","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2MjE2ODY1OTAsImlhdCI6MTYxOTA5NDU5MCwianRpIjoiNzkyNWVlMTYtMjg4OS00YzVmLWI4NzctNTE2Y2UxMjZjZDU5IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiI3ZmQ3YWQzNy1lOGM5LTQ1ZDUtYjg4Yy1jN2Q1YjE4YTRiZWEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.BIa2SosZM8Z4juojmP4EH2WSQKAhAl1aFE4lPW-VgEE"}]
+2021-04-22 17:59:50.474 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Bearer token :: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTAsImlhdCI6MTYxOTA5NDU5MCwianRpIjoiOWU5YjEwYWEtYTgwMC00MTM3LTk5NWUtMWNiOThkOWJhNDUwIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjdmZDdhZDM3LWU4YzktNDVkNS1iODhjLWM3ZDViMThhNGJlYSIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.F1lr_MRngh7Tmh6nW9_ZVsW1cuGzyfvWP6wfZikPvcpU0FWjSoP_Yu9xSJH8IoDjO4Jj4zq6Ds5PucxARLHZ76FuNQG6zahJZIstcl_uk9U1YzjkLptZt3pMiCRI0TdJdubqWEtrYXpt45qHuePcQ_ftj78gbkISfWwtAwo5kGvvV1p0bEDpN5uyhXnvfr7f68T0QCeccn07yh4WR0oRC0B6VRn1gmdEhDpt8Q3M4sMI9iwVGeHZ6U0QMa_Es8-XBfOvI0bUkgI4dmj3foAPUN4Ac1mYxgh1_jTi5mhkhmyfK1H5VMVhta82_6zrPD4NWYGPP-LdA9xtS2Ta1jTTQw]
+2021-04-22 17:59:50.474 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTAsImlhdCI6MTYxOTA5NDU5MCwianRpIjoiOWU5YjEwYWEtYTgwMC00MTM3LTk5NWUtMWNiOThkOWJhNDUwIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjdmZDdhZDM3LWU4YzktNDVkNS1iODhjLWM3ZDViMThhNGJlYSIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.F1lr_MRngh7Tmh6nW9_ZVsW1cuGzyfvWP6wfZikPvcpU0FWjSoP_Yu9xSJH8IoDjO4Jj4zq6Ds5PucxARLHZ76FuNQG6zahJZIstcl_uk9U1YzjkLptZt3pMiCRI0TdJdubqWEtrYXpt45qHuePcQ_ftj78gbkISfWwtAwo5kGvvV1p0bEDpN5uyhXnvfr7f68T0QCeccn07yh4WR0oRC0B6VRn1gmdEhDpt8Q3M4sMI9iwVGeHZ6U0QMa_Es8-XBfOvI0bUkgI4dmj3foAPUN4Ac1mYxgh1_jTi5mhkhmyfK1H5VMVhta82_6zrPD4NWYGPP-LdA9xtS2Ta1jTTQw]
+2021-04-22 17:59:50.474 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:50.474 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:50.475 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Adding body content for Key = [[bankId, anVzdG9iYW5rLnYxSlVTVE5PS0s=]] and Value = [{]]
+2021-04-22 17:59:50.475 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Raw body needs to be added to request
+2021-04-22 17:59:50.476 [main] INFO  stepDefinition.StepDefinitions_API_Test           : {"bankId":"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d"}
+2021-04-22 17:59:50.476 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [POST] request
+2021-04-22 17:59:50.657 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=ac2cfe30-aa82-459c-8e91-f0b0a1566596
+X-Content-Type-Options=nosniff
+X-XSS-Protection=1; mode=block
+Content-Length=52
+Expires=Thu, 22 Apr 2021 12:29:51 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:51 GMT
+Connection=keep-alive
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=119
+Server-Timing=origin; dur=24
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:50.657 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:50.657 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [201]
+2021-04-22 17:59:50.657 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 201 Created]
+2021-04-22 17:59:50.657 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:50.657 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [180] milliseconds
+2021-04-22 17:59:50.658 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"sessionId":"ec22598d-4026-4664-916e-250f03682390"}]
+2021-04-22 17:59:50.658 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [201]
+2021-04-22 17:59:50.658 [main] ERROR stepDefinition.StepDefinitions_API_Test           : Please provide proper API area type
+2021-04-22 17:59:50.665 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:50.665 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:50.665 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that session API works to create new session for various combinations
+2021-04-22 17:59:50.665 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:50.665 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:50.666 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:50.666 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/sessioned]
+2021-04-22 17:59:50.666 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Content-Type] and Value = [application/json]
+2021-04-22 17:59:50.666 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Content-Type] and Value = [application/json]
+2021-04-22 17:59:50.667 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = [Bearer Token]
+2021-04-22 17:59:50.876 [main] INFO  com.neonomics.corelibraries.Authorization         : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=c70c8f94-dd9c-44a4-8377-975cdde1d768
+X-Content-Type-Options=nosniff
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Thu, 22 Apr 2021 12:29:51 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:51 GMT
+Content-Length=1236
+Connection=keep-alive
+Set-Cookie=KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/sandbox/; Secure; HttpOnly
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=122
+Server-Timing=origin; dur=34
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:50.877 [main] INFO  com.neonomics.corelibraries.Authorization         : Cookies :: [{KC_RESTART=}]
+2021-04-22 17:59:50.877 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Code :: [200]
+2021-04-22 17:59:50.877 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Line :: [HTTP/1.1 200 OK]
+2021-04-22 17:59:50.877 [main] INFO  com.neonomics.corelibraries.Authorization         : Session ID :: [null]
+2021-04-22 17:59:50.877 [main] INFO  com.neonomics.corelibraries.Authorization         : Response Time :: [197] milliseconds
+2021-04-22 17:59:50.878 [main] INFO  com.neonomics.corelibraries.Authorization         : Response :: [{"refresh_expires_in":2592000,"expires_in":86400,"session_state":"75bc7799-a78f-4535-b254-8244f825bcc6","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTEsImlhdCI6MTYxOTA5NDU5MSwianRpIjoiOTU1YTA1Y2YtNzFlMy00MjE1LWFmMzEtMTMyYzA2ZGQyMGZlIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6Ijc1YmM3Nzk5LWE3OGYtNDUzNS1iMjU0LTgyNDRmODI1YmNjNiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.bULjjpBiceXGeEDg4JuJVEL5zOO3oGxD77EW-mMOTD4EzUPbHOnpQMOCiaTUkxMKNG_BZrYnV_fibO6vt-ajKNEvKSJz-mCKQm68jxCyeV2zsjh9MfPY-oOeQvqrmGhDKp2Hl4RZUMW_iZOxBw-cl8_laTofsJmRtXzl1_aJ68F0VQ2nOcBC63xLNWy7PuyYFmmaqXLFjORAigM7cWiReYxKIFJODTXqyDqIcoWZ080GHNCjb5kY_RWpuQlY76wFQN_BavlrSugxoGTGC4MA7IXQAbs7yS-O76UTttmQ1MLHwt5W76vLs4F7xUFNFRJUNPkbubp7xy89dbE7ys02jA","scope":"banqbridge_client","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2MjE2ODY1OTEsImlhdCI6MTYxOTA5NDU5MSwianRpIjoiMzBkNDQ0NjMtZmU0YS00YjY4LTk1ZjctMDBmYzMxNTQ1ZjBiIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiI3NWJjNzc5OS1hNzhmLTQ1MzUtYjI1NC04MjQ0ZjgyNWJjYzYiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.zIBk8-vIJrheYTJLWrxOSK76f1OIXocqRkLwhX1V_og"}]
+2021-04-22 17:59:50.906 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Bearer token :: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTEsImlhdCI6MTYxOTA5NDU5MSwianRpIjoiOTU1YTA1Y2YtNzFlMy00MjE1LWFmMzEtMTMyYzA2ZGQyMGZlIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6Ijc1YmM3Nzk5LWE3OGYtNDUzNS1iMjU0LTgyNDRmODI1YmNjNiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.bULjjpBiceXGeEDg4JuJVEL5zOO3oGxD77EW-mMOTD4EzUPbHOnpQMOCiaTUkxMKNG_BZrYnV_fibO6vt-ajKNEvKSJz-mCKQm68jxCyeV2zsjh9MfPY-oOeQvqrmGhDKp2Hl4RZUMW_iZOxBw-cl8_laTofsJmRtXzl1_aJ68F0VQ2nOcBC63xLNWy7PuyYFmmaqXLFjORAigM7cWiReYxKIFJODTXqyDqIcoWZ080GHNCjb5kY_RWpuQlY76wFQN_BavlrSugxoGTGC4MA7IXQAbs7yS-O76UTttmQ1MLHwt5W76vLs4F7xUFNFRJUNPkbubp7xy89dbE7ys02jA]
+2021-04-22 17:59:50.906 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTEsImlhdCI6MTYxOTA5NDU5MSwianRpIjoiOTU1YTA1Y2YtNzFlMy00MjE1LWFmMzEtMTMyYzA2ZGQyMGZlIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6Ijc1YmM3Nzk5LWE3OGYtNDUzNS1iMjU0LTgyNDRmODI1YmNjNiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.bULjjpBiceXGeEDg4JuJVEL5zOO3oGxD77EW-mMOTD4EzUPbHOnpQMOCiaTUkxMKNG_BZrYnV_fibO6vt-ajKNEvKSJz-mCKQm68jxCyeV2zsjh9MfPY-oOeQvqrmGhDKp2Hl4RZUMW_iZOxBw-cl8_laTofsJmRtXzl1_aJ68F0VQ2nOcBC63xLNWy7PuyYFmmaqXLFjORAigM7cWiReYxKIFJODTXqyDqIcoWZ080GHNCjb5kY_RWpuQlY76wFQN_BavlrSugxoGTGC4MA7IXQAbs7yS-O76UTttmQ1MLHwt5W76vLs4F7xUFNFRJUNPkbubp7xy89dbE7ys02jA]
+2021-04-22 17:59:50.906 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:50.906 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:50.906 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Adding body content for Key = [[bankId, anVzdG9iYW5rLnYxSlVTVE5PS0s=]] and Value = [{]]
+2021-04-22 17:59:50.907 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Raw body needs to be added to request
+2021-04-22 17:59:50.907 [main] INFO  stepDefinition.StepDefinitions_API_Test           : {"bankId":"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d"}
+2021-04-22 17:59:50.907 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [POST] request
+2021-04-22 17:59:51.072 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=dff81df2-b61a-4fe2-88af-f751f0199666
+Content-Length=151
+Expires=Thu, 22 Apr 2021 12:29:51 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:51 GMT
+Connection=close
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=117
+Server-Timing=origin; dur=15
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:51.073 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:51.073 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [510]
+2021-04-22 17:59:51.073 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 510 Unknown]
+2021-04-22 17:59:51.073 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:51.073 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [164] milliseconds
+2021-04-22 17:59:51.074 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"id":"ff8be4ef-04fc-412c-b864-b03481762c5a","errorCode":"2006","message":"API Not found.","source":"C","type":"BAD_REQUEST","timestamp":1619094591477}]
+2021-04-22 17:59:51.074 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [510]
+2021-04-22 17:59:51.074 [main] ERROR stepDefinition.StepDefinitions_API_Test           : Please provide proper API area type
+2021-04-22 17:59:51.081 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:51.081 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:51.081 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that session API works to create new session for various combinations
+2021-04-22 17:59:51.081 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:51.081 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:51.082 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:51.082 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/session]
+2021-04-22 17:59:51.082 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Content-Type] and Value = [application/javascript]
+2021-04-22 17:59:51.082 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Content-Type] and Value = [application/javascript]
+2021-04-22 17:59:51.082 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = [Bearer Token]
+2021-04-22 17:59:51.522 [main] INFO  com.neonomics.corelibraries.Authorization         : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=3ff80fef-ebdb-477a-9a75-12e3c24a9298
+X-Content-Type-Options=nosniff
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Thu, 22 Apr 2021 12:29:51 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:51 GMT
+Content-Length=1238
+Connection=keep-alive
+Set-Cookie=KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/sandbox/; Secure; HttpOnly
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=367
+Server-Timing=origin; dur=35
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:51.522 [main] INFO  com.neonomics.corelibraries.Authorization         : Cookies :: [{KC_RESTART=}]
+2021-04-22 17:59:51.522 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Code :: [200]
+2021-04-22 17:59:51.522 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Line :: [HTTP/1.1 200 OK]
+2021-04-22 17:59:51.522 [main] INFO  com.neonomics.corelibraries.Authorization         : Session ID :: [null]
+2021-04-22 17:59:51.522 [main] INFO  com.neonomics.corelibraries.Authorization         : Response Time :: [434] milliseconds
+2021-04-22 17:59:51.523 [main] INFO  com.neonomics.corelibraries.Authorization         : Response :: [{"refresh_expires_in":2592000,"expires_in":86400,"session_state":"e004358f-d393-44d4-b301-8ae130ed7196","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTEsImlhdCI6MTYxOTA5NDU5MSwianRpIjoiYTVkOTBiOGUtMDAwMC00NTY1LWE4NTctOGI0NjA0NjE4MWZkIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6ImUwMDQzNThmLWQzOTMtNDRkNC1iMzAxLThhZTEzMGVkNzE5NiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.XCMhA9QEjjWgjlpbsYGw0WHcA65ZnUkNK9SuGM7RTAqGgIIBNOv7iqYsxgCIRR6zLZyXbHC0stnsuZHJXTlotyv6mwJfQrzbvw2ksvDt1VMbQwKDycqu5CjNa6kB3GnP1moLda4ffUCVdM4VvKcezGKyRYdTjktzrDzm0tuAVgdwsJVBWQ-kibf6qOrdAfpvs4-ONN1-WMhvaouks32bcLfB1irSTMOOVlQvaxBJq_98d-iqj6zusPrw2eWwtxJlLiHlGv6u1ct17HGQb1rdhg7Bs3i5G_1GubzJLBpBJw0iUDk9EQiIBBc74rvTk33E5G-vt5HgxziSDBhMmQJ2MQ","scope":"banqbridge_client","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2MjE2ODY1OTEsImlhdCI6MTYxOTA5NDU5MSwianRpIjoiMjIzMWEyNmQtZDcxOC00OTIxLWI2YzQtN2EyYzVhYTQ5NjhiIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiJlMDA0MzU4Zi1kMzkzLTQ0ZDQtYjMwMS04YWUxMzBlZDcxOTYiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.EgyXwy1AHOD6KTv8K2RojtAbLMtTr_wbhuQqFhSqIVY"}]
+2021-04-22 17:59:51.556 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Bearer token :: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTEsImlhdCI6MTYxOTA5NDU5MSwianRpIjoiYTVkOTBiOGUtMDAwMC00NTY1LWE4NTctOGI0NjA0NjE4MWZkIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6ImUwMDQzNThmLWQzOTMtNDRkNC1iMzAxLThhZTEzMGVkNzE5NiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.XCMhA9QEjjWgjlpbsYGw0WHcA65ZnUkNK9SuGM7RTAqGgIIBNOv7iqYsxgCIRR6zLZyXbHC0stnsuZHJXTlotyv6mwJfQrzbvw2ksvDt1VMbQwKDycqu5CjNa6kB3GnP1moLda4ffUCVdM4VvKcezGKyRYdTjktzrDzm0tuAVgdwsJVBWQ-kibf6qOrdAfpvs4-ONN1-WMhvaouks32bcLfB1irSTMOOVlQvaxBJq_98d-iqj6zusPrw2eWwtxJlLiHlGv6u1ct17HGQb1rdhg7Bs3i5G_1GubzJLBpBJw0iUDk9EQiIBBc74rvTk33E5G-vt5HgxziSDBhMmQJ2MQ]
+2021-04-22 17:59:51.557 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTEsImlhdCI6MTYxOTA5NDU5MSwianRpIjoiYTVkOTBiOGUtMDAwMC00NTY1LWE4NTctOGI0NjA0NjE4MWZkIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6ImUwMDQzNThmLWQzOTMtNDRkNC1iMzAxLThhZTEzMGVkNzE5NiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.XCMhA9QEjjWgjlpbsYGw0WHcA65ZnUkNK9SuGM7RTAqGgIIBNOv7iqYsxgCIRR6zLZyXbHC0stnsuZHJXTlotyv6mwJfQrzbvw2ksvDt1VMbQwKDycqu5CjNa6kB3GnP1moLda4ffUCVdM4VvKcezGKyRYdTjktzrDzm0tuAVgdwsJVBWQ-kibf6qOrdAfpvs4-ONN1-WMhvaouks32bcLfB1irSTMOOVlQvaxBJq_98d-iqj6zusPrw2eWwtxJlLiHlGv6u1ct17HGQb1rdhg7Bs3i5G_1GubzJLBpBJw0iUDk9EQiIBBc74rvTk33E5G-vt5HgxziSDBhMmQJ2MQ]
+2021-04-22 17:59:51.557 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:51.557 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:51.558 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Adding body content for Key = [[bankId, anVzdG9iYW5rLnYxSlVTVE5PS0s=]] and Value = [{]]
+2021-04-22 17:59:51.558 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Raw body needs to be added to request
+2021-04-22 17:59:51.558 [main] INFO  stepDefinition.StepDefinitions_API_Test           : {"bankId":"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d"}
+2021-04-22 17:59:51.558 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [POST] request
+2021-04-22 17:59:51.747 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=6e6ec50c-a7cb-4f12-9ed9-3f261b50cd2c
+Content-Length=148
+Expires=Thu, 22 Apr 2021 12:29:52 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:52 GMT
+Connection=close
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=125
+Server-Timing=origin; dur=33
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:51.748 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:51.748 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [520]
+2021-04-22 17:59:51.748 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 520 Unknown]
+2021-04-22 17:59:51.748 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:51.748 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [188] milliseconds
+2021-04-22 17:59:51.749 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"id":"6e6ec50c-a7cb-4f12-9ed9-3f261b50cd2c","errorCode":"3999","message":"Unknown error.","source":"N001","type":"FATAL","timestamp":1619094592144}]
+2021-04-22 17:59:51.749 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [520]
+2021-04-22 17:59:51.749 [main] ERROR stepDefinition.StepDefinitions_API_Test           : Please provide proper API area type
+2021-04-22 17:59:51.757 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:51.758 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:51.758 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that session API works to create new session for various combinations
+2021-04-22 17:59:51.758 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:51.758 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:51.758 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:51.758 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/session]
+2021-04-22 17:59:51.759 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Content-Type] and Value = [application/json]
+2021-04-22 17:59:51.759 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Content-Type] and Value = [application/json]
+2021-04-22 17:59:51.759 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = []
+2021-04-22 17:59:51.759 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = []
+2021-04-22 17:59:51.759 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:51.759 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:51.760 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Adding body content for Key = [[bankId, anVzdG9iYW5rLnYxSlVTVE5PS0s=]] and Value = [{]]
+2021-04-22 17:59:51.760 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Raw body needs to be added to request
+2021-04-22 17:59:51.760 [main] INFO  stepDefinition.StepDefinitions_API_Test           : {"bankId":"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d"}
+2021-04-22 17:59:51.760 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [POST] request
+2021-04-22 17:59:52.179 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json; charset=utf-8
+Access-Control-Allow-Origin=*
+x-correlation-id=a6ac2c39-a514-4909-b22f-35a469d9d0e3
+Content-Length=146
+Expires=Thu, 22 Apr 2021 12:29:52 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:52 GMT
+Connection=close
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=375
+Server-Timing=origin; dur=8
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:52.179 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:52.179 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [510]
+2021-04-22 17:59:52.179 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 510 Unknown]
+2021-04-22 17:59:52.179 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:52.179 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [417] milliseconds
+2021-04-22 17:59:52.179 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"id":"a6ac2c39-a514-4909-b22f-35a469d9d0e3","errorCode":"2003","message":"Not authorised","source":"A","type":"FATAL","timestamp":1619094592584}
+]
+2021-04-22 17:59:52.180 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [401]
+2021-04-22 17:59:52.180 [main] ERROR stepDefinition.StepDefinitions_API_Test           : expected [401] but found [510]
+2021-04-22 17:59:52.180 [main] ERROR stepDefinition.StepDefinitions_API_Test           : Please provide proper API area type
+2021-04-22 17:59:52.186 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:52.186 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:52.186 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that session API works to create new session for various combinations
+2021-04-22 17:59:52.186 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:52.186 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:52.187 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:52.187 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/session]
+2021-04-22 17:59:52.187 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Content-Type] and Value = [application/json]
+2021-04-22 17:59:52.187 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Content-Type] and Value = [application/json]
+2021-04-22 17:59:52.187 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = [Bearer Token]
+2021-04-22 17:59:52.600 [main] INFO  com.neonomics.corelibraries.Authorization         : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=46f3d405-5a17-4cad-a396-ef079b7a0481
+X-Content-Type-Options=nosniff
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Thu, 22 Apr 2021 12:29:53 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:53 GMT
+Content-Length=1236
+Connection=keep-alive
+Set-Cookie=KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/sandbox/; Secure; HttpOnly
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=341
+Server-Timing=origin; dur=29
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:52.600 [main] INFO  com.neonomics.corelibraries.Authorization         : Cookies :: [{KC_RESTART=}]
+2021-04-22 17:59:52.600 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Code :: [200]
+2021-04-22 17:59:52.600 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Line :: [HTTP/1.1 200 OK]
+2021-04-22 17:59:52.600 [main] INFO  com.neonomics.corelibraries.Authorization         : Session ID :: [null]
+2021-04-22 17:59:52.600 [main] INFO  com.neonomics.corelibraries.Authorization         : Response Time :: [407] milliseconds
+2021-04-22 17:59:52.601 [main] INFO  com.neonomics.corelibraries.Authorization         : Response :: [{"refresh_expires_in":2592000,"expires_in":86400,"session_state":"f82c4fea-7b04-49f3-a4e7-d57f1472c10b","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTIsImlhdCI6MTYxOTA5NDU5MiwianRpIjoiMGUxZGUwYWMtOGZhNC00YzJmLWI5NjctODBlZWE4ZWMyZTg2IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6ImY4MmM0ZmVhLTdiMDQtNDlmMy1hNGU3LWQ1N2YxNDcyYzEwYiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.ep1afHT3tcf4xo5LeepE2QG4JhudynhHEUH4YCKqP_71FCaUJ_dkukWSNdjGqdEh68zxQGpzf3aFok-9ElOKhC3LkRreOLJ2WLomhlSNMYZhV01wOaDgnmRzKtq78vBHUOVmUDzTA8FmR4FJpIN_HOeeidknJJqg2XNIVYqr2xTh1NFI2HIul7eZjyMD9uWrTYIsoBk_uK5KYuY6T3LzOXpmg4QN-dY5tFhYWJOYKxzXt_hKbYlpVXYn4RPlr1-QS6B2z2VB-O9iouF4drnak0OZK0eJs2LC8lYCRxGH_8qxUSL-qik5GRHa5YXm_OZlX0AhhCRcygnzs5RVlOIbeQ","scope":"banqbridge_client","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2MjE2ODY1OTIsImlhdCI6MTYxOTA5NDU5MiwianRpIjoiYzdhMDcxMGItM2Y0MC00NDMwLWI5NDItZThkNGU3YTU1MTcyIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiJmODJjNGZlYS03YjA0LTQ5ZjMtYTRlNy1kNTdmMTQ3MmMxMGIiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.5XGpfGS3jHpqjLakHvNvle4QGsKMtKi13BSuGBu778w"}]
+2021-04-22 17:59:52.630 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Bearer token :: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTIsImlhdCI6MTYxOTA5NDU5MiwianRpIjoiMGUxZGUwYWMtOGZhNC00YzJmLWI5NjctODBlZWE4ZWMyZTg2IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6ImY4MmM0ZmVhLTdiMDQtNDlmMy1hNGU3LWQ1N2YxNDcyYzEwYiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.ep1afHT3tcf4xo5LeepE2QG4JhudynhHEUH4YCKqP_71FCaUJ_dkukWSNdjGqdEh68zxQGpzf3aFok-9ElOKhC3LkRreOLJ2WLomhlSNMYZhV01wOaDgnmRzKtq78vBHUOVmUDzTA8FmR4FJpIN_HOeeidknJJqg2XNIVYqr2xTh1NFI2HIul7eZjyMD9uWrTYIsoBk_uK5KYuY6T3LzOXpmg4QN-dY5tFhYWJOYKxzXt_hKbYlpVXYn4RPlr1-QS6B2z2VB-O9iouF4drnak0OZK0eJs2LC8lYCRxGH_8qxUSL-qik5GRHa5YXm_OZlX0AhhCRcygnzs5RVlOIbeQ]
+2021-04-22 17:59:52.630 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTIsImlhdCI6MTYxOTA5NDU5MiwianRpIjoiMGUxZGUwYWMtOGZhNC00YzJmLWI5NjctODBlZWE4ZWMyZTg2IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6ImY4MmM0ZmVhLTdiMDQtNDlmMy1hNGU3LWQ1N2YxNDcyYzEwYiIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.ep1afHT3tcf4xo5LeepE2QG4JhudynhHEUH4YCKqP_71FCaUJ_dkukWSNdjGqdEh68zxQGpzf3aFok-9ElOKhC3LkRreOLJ2WLomhlSNMYZhV01wOaDgnmRzKtq78vBHUOVmUDzTA8FmR4FJpIN_HOeeidknJJqg2XNIVYqr2xTh1NFI2HIul7eZjyMD9uWrTYIsoBk_uK5KYuY6T3LzOXpmg4QN-dY5tFhYWJOYKxzXt_hKbYlpVXYn4RPlr1-QS6B2z2VB-O9iouF4drnak0OZK0eJs2LC8lYCRxGH_8qxUSL-qik5GRHa5YXm_OZlX0AhhCRcygnzs5RVlOIbeQ]
+2021-04-22 17:59:52.630 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = []
+2021-04-22 17:59:52.630 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = []
+2021-04-22 17:59:52.631 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Adding body content for Key = [[bankId, anVzdG9iYW5rLnYxSlVTVE5PS0s=]] and Value = [{]]
+2021-04-22 17:59:52.631 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Raw body needs to be added to request
+2021-04-22 17:59:52.631 [main] INFO  stepDefinition.StepDefinitions_API_Test           : {"bankId":"anVzdG9iYW5rLnYxSlVTVE5PS0s\u003d"}
+2021-04-22 17:59:52.631 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Making [POST] request
+2021-04-22 17:59:52.801 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Headers :: [Content-Type=application/json;charset=UTF-8
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=d86845ac-aea9-43aa-9fa6-0c2f8bc45628
+Content-Length=161
+Expires=Thu, 22 Apr 2021 12:29:53 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:53 GMT
+Connection=close
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=116
+Server-Timing=origin; dur=17
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:52.801 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Cookies :: [{}]
+2021-04-22 17:59:52.801 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Code :: [510]
+2021-04-22 17:59:52.801 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Status Line :: [HTTP/1.1 510 Unknown]
+2021-04-22 17:59:52.801 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Session ID :: [null]
+2021-04-22 17:59:52.801 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response Time :: [169] milliseconds
+2021-04-22 17:59:52.802 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Response :: [{"id":"d86845ac-aea9-43aa-9fa6-0c2f8bc45628","errorCode":"1001","message":"Missing required header.","source":"C","type":"BAD_REQUEST","timestamp":1619094593204}]
+2021-04-22 17:59:52.802 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Validating response code as [510]
+2021-04-22 17:59:52.802 [main] ERROR stepDefinition.StepDefinitions_API_Test           : Please provide proper API area type
+2021-04-22 17:59:52.810 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:52.810 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:52.810 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that session API for getting current status works for various combinations
+2021-04-22 17:59:52.810 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:52.810 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:52.811 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:52.811 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/session/{sessionId}]
+2021-04-22 17:59:52.811 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Accept] and Value = [application/json]
+2021-04-22 17:59:52.811 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Accept] and Value = [application/json]
+2021-04-22 17:59:52.811 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = [Bearer Token]
+2021-04-22 17:59:53.256 [main] INFO  com.neonomics.corelibraries.Authorization         : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=6457fb10-52c1-49eb-8aa1-5a2adca7b14a
+X-Content-Type-Options=nosniff
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Thu, 22 Apr 2021 12:29:53 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:53 GMT
+Content-Length=1237
+Connection=keep-alive
+Set-Cookie=KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/sandbox/; Secure; HttpOnly
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=361
+Server-Timing=origin; dur=27
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:53.256 [main] INFO  com.neonomics.corelibraries.Authorization         : Cookies :: [{KC_RESTART=}]
+2021-04-22 17:59:53.256 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Code :: [200]
+2021-04-22 17:59:53.256 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Line :: [HTTP/1.1 200 OK]
+2021-04-22 17:59:53.256 [main] INFO  com.neonomics.corelibraries.Authorization         : Session ID :: [null]
+2021-04-22 17:59:53.256 [main] INFO  com.neonomics.corelibraries.Authorization         : Response Time :: [438] milliseconds
+2021-04-22 17:59:53.256 [main] INFO  com.neonomics.corelibraries.Authorization         : Response :: [{"refresh_expires_in":2592000,"expires_in":86400,"session_state":"4ec3a7ea-abe4-4c19-9bfd-bad0e593face","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTMsImlhdCI6MTYxOTA5NDU5MywianRpIjoiOTdmMWEwNmYtODZlMS00NTVhLWI2MGEtZWNjMjE3NTIxMzYyIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjRlYzNhN2VhLWFiZTQtNGMxOS05YmZkLWJhZDBlNTkzZmFjZSIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.YiLpVBih3_uyR9uvk4AiZK4g1FbEvFFRCyAxYwxquP56lKAPUT_Nq4XvVU4kcYQ2JQJk77wyHtJxm3QMUX5XZbQEIZFSoVGdbX7eB496_xjo09B6qSp7P5aE2s-4Y1uRbx-aMFVsjjG8V2WkNl95iOtccfU3_N_tvw7aZDA86g7KQ2riuMt7BqqFIknMSnSFVNuapj3efbJ0f1hkwIUs4VAoORvtkjGKoRhcIgJzmR1dIo5hdrFGZeBZwSY-tsjmBEEHB7PRzTd3gInd3g6GlUpcXrqTTZCkzhpOh5mxNvyKKnjVI9vgHUZtdm6kztyITK02gCN6XlK0D-9Dwyq48w","scope":"banqbridge_client","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2MjE2ODY1OTMsImlhdCI6MTYxOTA5NDU5MywianRpIjoiYzM4MGE1N2YtZWVlYi00MTEzLThiODYtZDVmYTJhMjI2NTQ5IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiI0ZWMzYTdlYS1hYmU0LTRjMTktOWJmZC1iYWQwZTU5M2ZhY2UiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.pt8-xP0_9roh1aFHj2Aw0ON71uYMIMyykjWpizBeVVM"}]
+2021-04-22 17:59:53.286 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Bearer token :: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTMsImlhdCI6MTYxOTA5NDU5MywianRpIjoiOTdmMWEwNmYtODZlMS00NTVhLWI2MGEtZWNjMjE3NTIxMzYyIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjRlYzNhN2VhLWFiZTQtNGMxOS05YmZkLWJhZDBlNTkzZmFjZSIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.YiLpVBih3_uyR9uvk4AiZK4g1FbEvFFRCyAxYwxquP56lKAPUT_Nq4XvVU4kcYQ2JQJk77wyHtJxm3QMUX5XZbQEIZFSoVGdbX7eB496_xjo09B6qSp7P5aE2s-4Y1uRbx-aMFVsjjG8V2WkNl95iOtccfU3_N_tvw7aZDA86g7KQ2riuMt7BqqFIknMSnSFVNuapj3efbJ0f1hkwIUs4VAoORvtkjGKoRhcIgJzmR1dIo5hdrFGZeBZwSY-tsjmBEEHB7PRzTd3gInd3g6GlUpcXrqTTZCkzhpOh5mxNvyKKnjVI9vgHUZtdm6kztyITK02gCN6XlK0D-9Dwyq48w]
+2021-04-22 17:59:53.286 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTMsImlhdCI6MTYxOTA5NDU5MywianRpIjoiOTdmMWEwNmYtODZlMS00NTVhLWI2MGEtZWNjMjE3NTIxMzYyIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjRlYzNhN2VhLWFiZTQtNGMxOS05YmZkLWJhZDBlNTkzZmFjZSIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.YiLpVBih3_uyR9uvk4AiZK4g1FbEvFFRCyAxYwxquP56lKAPUT_Nq4XvVU4kcYQ2JQJk77wyHtJxm3QMUX5XZbQEIZFSoVGdbX7eB496_xjo09B6qSp7P5aE2s-4Y1uRbx-aMFVsjjG8V2WkNl95iOtccfU3_N_tvw7aZDA86g7KQ2riuMt7BqqFIknMSnSFVNuapj3efbJ0f1hkwIUs4VAoORvtkjGKoRhcIgJzmR1dIo5hdrFGZeBZwSY-tsjmBEEHB7PRzTd3gInd3g6GlUpcXrqTTZCkzhpOh5mxNvyKKnjVI9vgHUZtdm6kztyITK02gCN6XlK0D-9Dwyq48w]
+2021-04-22 17:59:53.286 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:53.286 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:53.286 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Creating session ID for bank ID [anVzdG9iYW5rLnYxSlVTVE5PS0s=] and Device ID [example_id_for_quickstart] for further API testing
+2021-04-22 17:59:53.568 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:53.568 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:53.569 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that session API for getting current status works for various combinations
+2021-04-22 17:59:53.569 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:53.569 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:53.569 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:53.569 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/sn/asa{sessionId}]
+2021-04-22 17:59:53.570 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Accept] and Value = [application/json]
+2021-04-22 17:59:53.570 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Accept] and Value = [application/json]
+2021-04-22 17:59:53.570 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = [Bearer Token]
+2021-04-22 17:59:54.015 [main] INFO  com.neonomics.corelibraries.Authorization         : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=53febfc2-b1b6-4fac-b05a-d023c9bfb366
+X-Content-Type-Options=nosniff
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Thu, 22 Apr 2021 12:29:54 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:54 GMT
+Content-Length=1240
+Connection=keep-alive
+Set-Cookie=KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/sandbox/; Secure; HttpOnly
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=345
+Server-Timing=origin; dur=28
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:54.015 [main] INFO  com.neonomics.corelibraries.Authorization         : Cookies :: [{KC_RESTART=}]
+2021-04-22 17:59:54.015 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Code :: [200]
+2021-04-22 17:59:54.015 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Line :: [HTTP/1.1 200 OK]
+2021-04-22 17:59:54.015 [main] INFO  com.neonomics.corelibraries.Authorization         : Session ID :: [null]
+2021-04-22 17:59:54.015 [main] INFO  com.neonomics.corelibraries.Authorization         : Response Time :: [439] milliseconds
+2021-04-22 17:59:54.016 [main] INFO  com.neonomics.corelibraries.Authorization         : Response :: [{"refresh_expires_in":2592000,"expires_in":86400,"session_state":"4fbbea99-72d3-4a5d-b870-08591c33c979","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTQsImlhdCI6MTYxOTA5NDU5NCwianRpIjoiNTU3Y2Q4MWMtNzhkOC00OTM5LThhNTItYWI3ODZkYTM5ZWZhIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjRmYmJlYTk5LTcyZDMtNGE1ZC1iODcwLTA4NTkxYzMzYzk3OSIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.NQ9gjQyh0ZM459XLsZ_r4i3moLoQqJTj08-RdtbtflzUUXfah9OTjhFMLuO17DlckbHxDvJw_4xKI2tkITiX8ey9XJ9abgsOFUTE7_M1rBqZoDnJgrqBjJh5861DmDcKZMBLvgEWQ1tTvQZ11Tx5k3t67amL5HTEtsB740fEKWdCpBXJD3oYSQakvTIVt9qj2YqPyUHIe17ZHyZaUZZmy-dPeMpWf4izdqSIZhkoXdCnLKRdTDCvWDj2io-enPx7ev36BV8fk6O63_OpZis0yJ7jxB15-TCYZDJ13qXka7h97mdKxIkkM0ty-XsIWoC31zlro6M9BeiNTwl-GYjNhA","scope":"banqbridge_client","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2MjE2ODY1OTQsImlhdCI6MTYxOTA5NDU5NCwianRpIjoiYzEyZGFmZjUtMzJjMS00NmFjLWEzOGItZjVhODU5MzBmZTA0IiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiI0ZmJiZWE5OS03MmQzLTRhNWQtYjg3MC0wODU5MWMzM2M5NzkiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.v8_F2xyJ6OtsE8i1Sonznn6v1TreiJ07kWaZDufopf4"}]
+2021-04-22 17:59:54.046 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Bearer token :: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTQsImlhdCI6MTYxOTA5NDU5NCwianRpIjoiNTU3Y2Q4MWMtNzhkOC00OTM5LThhNTItYWI3ODZkYTM5ZWZhIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjRmYmJlYTk5LTcyZDMtNGE1ZC1iODcwLTA4NTkxYzMzYzk3OSIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.NQ9gjQyh0ZM459XLsZ_r4i3moLoQqJTj08-RdtbtflzUUXfah9OTjhFMLuO17DlckbHxDvJw_4xKI2tkITiX8ey9XJ9abgsOFUTE7_M1rBqZoDnJgrqBjJh5861DmDcKZMBLvgEWQ1tTvQZ11Tx5k3t67amL5HTEtsB740fEKWdCpBXJD3oYSQakvTIVt9qj2YqPyUHIe17ZHyZaUZZmy-dPeMpWf4izdqSIZhkoXdCnLKRdTDCvWDj2io-enPx7ev36BV8fk6O63_OpZis0yJ7jxB15-TCYZDJ13qXka7h97mdKxIkkM0ty-XsIWoC31zlro6M9BeiNTwl-GYjNhA]
+2021-04-22 17:59:54.046 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTQsImlhdCI6MTYxOTA5NDU5NCwianRpIjoiNTU3Y2Q4MWMtNzhkOC00OTM5LThhNTItYWI3ODZkYTM5ZWZhIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjRmYmJlYTk5LTcyZDMtNGE1ZC1iODcwLTA4NTkxYzMzYzk3OSIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.NQ9gjQyh0ZM459XLsZ_r4i3moLoQqJTj08-RdtbtflzUUXfah9OTjhFMLuO17DlckbHxDvJw_4xKI2tkITiX8ey9XJ9abgsOFUTE7_M1rBqZoDnJgrqBjJh5861DmDcKZMBLvgEWQ1tTvQZ11Tx5k3t67amL5HTEtsB740fEKWdCpBXJD3oYSQakvTIVt9qj2YqPyUHIe17ZHyZaUZZmy-dPeMpWf4izdqSIZhkoXdCnLKRdTDCvWDj2io-enPx7ev36BV8fk6O63_OpZis0yJ7jxB15-TCYZDJ13qXka7h97mdKxIkkM0ty-XsIWoC31zlro6M9BeiNTwl-GYjNhA]
+2021-04-22 17:59:54.047 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:54.047 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = [example_id_for_quickstart]
+2021-04-22 17:59:54.047 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Creating session ID for bank ID [anVzdG9iYW5rLnYxSlVTVE5PS0s=] and Device ID [example_id_for_quickstart] for further API testing
+2021-04-22 17:59:54.220 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:54.220 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:54.220 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that session API for getting current status works for various combinations
+2021-04-22 17:59:54.220 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:54.220 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:54.220 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:54.220 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/session/{sessionId}]
+2021-04-22 17:59:54.221 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Accept] and Value = [application/json]
+2021-04-22 17:59:54.221 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Accept] and Value = [application/json]
+2021-04-22 17:59:54.221 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = []
+2021-04-22 17:59:54.221 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = []
+2021-04-22 17:59:54.221 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = []
+2021-04-22 17:59:54.221 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = []
+2021-04-22 17:59:54.221 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Creating session ID for bank ID [anVzdG9iYW5rLnYxSlVTVE5PS0s=] and Device ID [] for further API testing
+2021-04-22 17:59:54.658 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:54.658 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:54.658 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that session API for getting current status works for various combinations
+2021-04-22 17:59:54.658 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:54.658 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:54.659 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:54.659 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/session/{sessionId}]
+2021-04-22 17:59:54.659 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Accept] and Value = [application/x-www-form-urlencoded]
+2021-04-22 17:59:54.659 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Accept] and Value = [application/x-www-form-urlencoded]
+2021-04-22 17:59:54.659 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = [Bearer Token]
+2021-04-22 17:59:55.079 [main] INFO  com.neonomics.corelibraries.Authorization         : Headers :: [Content-Type=application/json
+x-xss-protection=1; mode=block
+x-content-type-options=nosniff
+Access-Control-Allow-Origin=*
+X-CORRELATION-ID=b83cf238-6d50-4150-b602-4478e5917af5
+X-Content-Type-Options=nosniff
+X-XSS-Protection=1; mode=block
+Vary=Accept-Encoding
+Content-Encoding=gzip
+Expires=Thu, 22 Apr 2021 12:29:55 GMT
+Cache-Control=max-age=0, no-cache, no-store
+Pragma=no-cache
+Date=Thu, 22 Apr 2021 12:29:55 GMT
+Content-Length=1237
+Connection=keep-alive
+Set-Cookie=KC_RESTART=; Version=1; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Max-Age=0; Path=/auth/realms/sandbox/; Secure; HttpOnly
+Server-Timing=cdn-cache; desc=MISS
+Server-Timing=edge; dur=347
+Server-Timing=origin; dur=32
+Strict-Transport-Security=max-age=86400 ; includeSubDomains ; preload]
+2021-04-22 17:59:55.079 [main] INFO  com.neonomics.corelibraries.Authorization         : Cookies :: [{KC_RESTART=}]
+2021-04-22 17:59:55.079 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Code :: [200]
+2021-04-22 17:59:55.079 [main] INFO  com.neonomics.corelibraries.Authorization         : Status Line :: [HTTP/1.1 200 OK]
+2021-04-22 17:59:55.079 [main] INFO  com.neonomics.corelibraries.Authorization         : Session ID :: [null]
+2021-04-22 17:59:55.079 [main] INFO  com.neonomics.corelibraries.Authorization         : Response Time :: [415] milliseconds
+2021-04-22 17:59:55.079 [main] INFO  com.neonomics.corelibraries.Authorization         : Response :: [{"refresh_expires_in":2592000,"expires_in":86400,"session_state":"237b35e6-a950-4bda-a8e8-457d150424ed","access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTUsImlhdCI6MTYxOTA5NDU5NSwianRpIjoiODYwOGVkNzQtZTRjZS00MTg4LWJjY2EtZWYyNzJkMDhiZTVlIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjIzN2IzNWU2LWE5NTAtNGJkYS1hOGU4LTQ1N2QxNTA0MjRlZCIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.SpLIdwWye3KjFRdqqF_rHmz9YJxEgRi47pGgMthbEnZfLGVao24RnCbjsh7Hw5O-vcknmRYEAeb6Bkc8E3CGIVYAc3j2bR4rtLhG-qkdw80YiRL8yXRknY1m3tx8RgML-wb9LmsAYuiSROEJ2x4UjfPUOC7NDt6nK-VceINSGRl87BV26ahiTO-OkDb8tqW4NRnZaVBnHo_ejPbfZrv63Q8tFZDdhE4yDOecjUXBj3nhyp3z1F5T9UIqtx3UZKzpkV-rdbISBFP8KhLWZNdm0bAVWGCDEiOvqJ9xII52KqrSWTRMVOVguSE5yVzGOvWpyUZK4m6b-4d2BR39nUSLJw","scope":"banqbridge_client","token_type":"bearer","refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTAzNjlhNy0yMTg3LTQ3OWYtOTU4NS02Y2QzYTczZDUxOWYifQ.eyJleHAiOjE2MjE2ODY1OTUsImlhdCI6MTYxOTA5NDU5NSwianRpIjoiMGUzZmZiYTUtZTczYS00OWY2LWFmZjMtODg5YzgwMjkzMDUzIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94IiwiYXVkIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsInNlc3Npb25fc3RhdGUiOiIyMzdiMzVlNi1hOTUwLTRiZGEtYThlOC00NTdkMTUwNDI0ZWQiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50In0.eoyUgp0L0uAkDp8yxA39wdJ-fswy32q3h5v-2hKFOyQ"}]
+2021-04-22 17:59:55.109 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Bearer token :: [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTUsImlhdCI6MTYxOTA5NDU5NSwianRpIjoiODYwOGVkNzQtZTRjZS00MTg4LWJjY2EtZWYyNzJkMDhiZTVlIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjIzN2IzNWU2LWE5NTAtNGJkYS1hOGU4LTQ1N2QxNTA0MjRlZCIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.SpLIdwWye3KjFRdqqF_rHmz9YJxEgRi47pGgMthbEnZfLGVao24RnCbjsh7Hw5O-vcknmRYEAeb6Bkc8E3CGIVYAc3j2bR4rtLhG-qkdw80YiRL8yXRknY1m3tx8RgML-wb9LmsAYuiSROEJ2x4UjfPUOC7NDt6nK-VceINSGRl87BV26ahiTO-OkDb8tqW4NRnZaVBnHo_ejPbfZrv63Q8tFZDdhE4yDOecjUXBj3nhyp3z1F5T9UIqtx3UZKzpkV-rdbISBFP8KhLWZNdm0bAVWGCDEiOvqJ9xII52KqrSWTRMVOVguSE5yVzGOvWpyUZK4m6b-4d2BR39nUSLJw]
+2021-04-22 17:59:55.109 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = [Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ2MmFQNDdIQXVTUi1qWmR5U3otNDVDV2RaOFhiWGFBMXNDbWhLbWtJLXRvIn0.eyJleHAiOjE2MTkxODA5OTUsImlhdCI6MTYxOTA5NDU5NSwianRpIjoiODYwOGVkNzQtZTRjZS00MTg4LWJjY2EtZWYyNzJkMDhiZTVlIiwiaXNzIjoiaHR0cHM6Ly9zYW5kYm94Lm5lb25vbWljcy5pby9hdXRoL3JlYWxtcy9zYW5kYm94Iiwic3ViIjoiMjE4MDlmM2EtOWJhOS00MDMxLTllM2QtOTdiNTY3Nzc5OWY5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiM2QzNWY2MDYtY2Q1Ny00NzRmLTg2NzYtYjc4ZGZiZWFjMzQ1Iiwic2Vzc2lvbl9zdGF0ZSI6IjIzN2IzNWU2LWE5NTAtNGJkYS1hOGU4LTQ1N2QxNTA0MjRlZCIsImFjciI6IjEiLCJzY29wZSI6ImJhbnFicmlkZ2VfY2xpZW50Iiwib3JnYW5pemF0aW9uSWQiOiI0MjRhNTc5My01NDQ4LTQ0NjMtODI2YS05NzdhOTc2MTY4NDIiLCJjbGllbnRJZCI6IjNkMzVmNjA2LWNkNTctNDc0Zi04Njc2LWI3OGRmYmVhYzM0NSIsImNsaWVudEhvc3QiOiIxMDMuMjAwLjEwNi4xNDAiLCJja2lkIjoiYmY2NGIzNTktOWFhZC00MjcxLWJjNjItNTFjNDI2NGQyZmQ3IiwiY2xpZW50QWRkcmVzcyI6IjEwMy4yMDAuMTA2LjE0MCJ9.SpLIdwWye3KjFRdqqF_rHmz9YJxEgRi47pGgMthbEnZfLGVao24RnCbjsh7Hw5O-vcknmRYEAeb6Bkc8E3CGIVYAc3j2bR4rtLhG-qkdw80YiRL8yXRknY1m3tx8RgML-wb9LmsAYuiSROEJ2x4UjfPUOC7NDt6nK-VceINSGRl87BV26ahiTO-OkDb8tqW4NRnZaVBnHo_ejPbfZrv63Q8tFZDdhE4yDOecjUXBj3nhyp3z1F5T9UIqtx3UZKzpkV-rdbISBFP8KhLWZNdm0bAVWGCDEiOvqJ9xII52KqrSWTRMVOVguSE5yVzGOvWpyUZK4m6b-4d2BR39nUSLJw]
+2021-04-22 17:59:55.109 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = [anything-different]
+2021-04-22 17:59:55.109 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = [anything-different]
+2021-04-22 17:59:55.109 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Creating session ID for bank ID [anVzdG9iYW5rLnYxSlVTVE5PS0s=] and Device ID [anything-different] for further API testing
+2021-04-22 17:59:55.284 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:55.284 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:55.284 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : --- Execution Started :::: Verify that session API for getting current status works for various combinations
+2021-04-22 17:59:55.284 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:55.284 [main] INFO  stepDefinition.StepDefinitions_Functional_Test    : ********************************************************************************************************
+2021-04-22 17:59:55.285 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Base URL [https://sandbox.neonomics.io]
+2021-04-22 17:59:55.285 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Endpoint path [/ics/v3/session/{sessionId}]
+2021-04-22 17:59:55.285 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Accept] and Value = []
+2021-04-22 17:59:55.285 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Accept] and Value = []
+2021-04-22 17:59:55.285 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [Authorization] and Value = []
+2021-04-22 17:59:55.285 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [Authorization] and Value = []
+2021-04-22 17:59:55.285 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Setting Header = [x-device-id] and Value = []
+2021-04-22 17:59:55.285 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Added :: Header = [x-device-id] and Value = []
+2021-04-22 17:59:55.285 [main] INFO  stepDefinition.StepDefinitions_API_Test           : Creating session ID for bank ID [anVzdG9iYW5rLnYxSlVTVE5PS0s=] and Device ID [] for further API testing

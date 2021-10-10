@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
 
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
@@ -16,6 +15,7 @@ import com.neonomics.constants.Endpoints;
 import com.neonomics.model.pojos.BankDataPOJO;
 import com.neonomics.model.responseschema.Schemas;
 import com.neonomics.utils.ConfigManager;
+import com.neonomics.utils.Print;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -26,7 +26,7 @@ public class Banks extends Authorization implements Schemas {
 
 	private static final String BASE_URL = ConfigManager.getInstance().getString("base_url");
 	private Logger logInstance = LogManager.getLogger();
-
+	
 	public Banks() {
 		RestAssured.baseURI = BASE_URL;
 	}
@@ -54,14 +54,7 @@ public class Banks extends Authorization implements Schemas {
 							.assertThat().body(JsonSchemaValidator.matchesJsonSchema(BanksSchema))
 							.extract().response();
 		
-			logInstance.info("Headers :: [{}]",resp.getHeaders());
-			logInstance.info("Cookies :: [{}]",resp.getCookies());
-			logInstance.info("Status Code :: [{}]",resp.getStatusCode());
-			logInstance.info("Status Line :: [{}]",resp.getStatusLine());
-			logInstance.info("Session ID :: [{}]",resp.getSessionId());
-			logInstance.info("Response Time :: [{}] milliseconds",resp.getTimeIn(TimeUnit.MILLISECONDS));
-			logInstance.info("Response :: [{}]",resp.print());
-		
+			Print.printResponse(resp);
 		
 			BankDB = objMap.readValue(resp.asString(), BankDataPOJO[].class);
 		} catch (JsonMappingException e) {

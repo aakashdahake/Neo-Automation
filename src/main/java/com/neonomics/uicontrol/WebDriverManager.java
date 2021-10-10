@@ -38,6 +38,9 @@ public class WebDriverManager {
 	    	break;
         case DriverType.CHROME : 
         	System.setProperty(CHROME_DRIVER_PROPERTY, driverLocation);
+        	//ChromeOptions options = new ChromeOptions();
+        	//options.addArguments("--headless");
+        	//driver = new ChromeDriver(options);
         	driver = new ChromeDriver();
     		break;
         }
